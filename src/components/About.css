@@ -1,0 +1,87 @@
+.about {
+  margin: 2rem auto;
+}
+.about .logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about .logos div {
+  width: 13%;
+}
+.about .logos .logos-item img {
+  width: 100%;
+}
+.about .info {
+  margin: 4rem auto;
+  text-emphasis: center;
+  height: 50vh;
+  color: #13699a;
+}
+
+.about .info > p {
+  margin: 2rem auto;
+  width: 50%;
+}
+.about .info > h4 {
+  text-align: center;
+  margin: auto;
+  font-size: 4rem;
+  display: inline-block;
+  width: 100%;
+  font-size: 4rem;
+}
+.about .info h4 span {
+  font-weight: lighter;
+}
+.about .info button {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: #3de2d5;
+  border-radius: 20px;
+  width: 10rem;
+  border: 1px solid #13699a;
+}
+.about-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4rem;
+  margin: 5rem auto;
+}
+
+.about-item {
+  width: 100%;
+}
+.about-item img {
+  width: 100%;
+}
+.about-item-container {
+  border: 1px solid #f7f7f7;
+  -webkit-box-shadow: 6px 18px 22px -4px rgba(242, 246, 251, 1);
+  -moz-box-shadow: 6px 18px 22px -4px rgba(242, 246, 251, 1);
+  box-shadow: 6px 18px 22px -4px rgba(242, 246, 251, 1);
+  border-radius: 3rem 3rem 3rem 3rem;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.about-item h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.about-item p {
+  font-size: 1.2rem;
+  margin: auto;
+  width: 90%;
+}
+
+.about-item button {
+  display: block;
+  background-color: #13699b;
+  width: 8rem;
+  color: #fff;
+  font-size: 1rem;
+  height: 2rem;
+  margin: 2rem auto;
+}
