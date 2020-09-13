@@ -45,3 +45,8 @@
     width: 50%;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .header-content {
+    width: 60%;
+  }
+}

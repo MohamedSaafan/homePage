@@ -58,3 +58,27 @@
     font-size: 0.75rem;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .navbar:nth-child(1) {
+    height: 4rem;
+  }
+  .navbar:nth-child(1) .logo {
+    width: 100%;
+    margin: auto;
+  }
+  .navbar:nth-child(1) .logo {
+    text-align: center;
+  }
+  .navbar .container {
+    flex-wrap: wrap;
+  }
+  .navbar:nth-child(1) ul {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+  }
+  .navbar:nth-child(1) ul li {
+    margin: 0 0.2rem;
+    font-size: 0.75rem;
+  }
+}

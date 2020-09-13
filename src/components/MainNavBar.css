@@ -140,3 +140,37 @@ a {
     width: 40%;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-navbar .toggle-links {
+    display: flex;
+    width: 3rem;
+    height: 2rem;
+    top: 5rem;
+    right: 2rem;
+  }
+  .main-navbar .container .logo {
+    width: 45%;
+    order: 1;
+  }
+  .main-navbar .container .logo h1 {
+    font-size: 1rem;
+  }
+  .main-navbar .container .logo span {
+    font-size: 1rem;
+  }
+  .main-navbar ul {
+    display: none;
+    order: 3;
+  }
+  .main-navbar .nav-end {
+    font-size: 0.75rem;
+  }
+  .main-navbar .container .nav-end {
+    order: 2;
+    width: 40%;
+  }
+  .main-navbar button {
+    width: 3rem;
+    font-size: 0.75rem;
+  }
+}
