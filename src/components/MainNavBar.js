@@ -8,6 +8,11 @@ const MainNavBar = (props) => {
     <div>
       <nav class="main-navbar">
         <div class="container">
+          <div class="toggle-links">
+            <span class="toggle half start"></span>
+            <span class="toggle "></span>
+            <span class="toggle half end"></span>
+          </div>
           <div class="logo">
             <img src={Logo} alt="logo" />
             <h1>Alts</h1>

@@ -15,8 +15,9 @@ button {
 }
 
 .container {
-  width: 90%;
+  width: 90vw;
   margin: auto;
+  overflow: hidden;
 }
 .list-unstyled {
   list-style-type: none;
