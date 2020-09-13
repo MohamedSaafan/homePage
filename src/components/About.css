@@ -1,5 +1,6 @@
 .about {
   margin: 2rem auto;
+  height: 150vh;
 }
 .about .logos {
   display: flex;
