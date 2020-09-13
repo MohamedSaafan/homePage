@@ -18,11 +18,11 @@
 .main-navbar .container .logo h1 {
   display: inline-block;
   font-size: 2.5rem;
-  color: #13699b;
+  color: #fff;
 }
 .main-navbar .container .logo span {
   font-size: 2.5rem;
-  color: #13699b;
+  color: #fff;
   font-style: normal;
 }
 .main-navbar .container .logo img {
@@ -38,35 +38,38 @@
 .main-navbar ul li {
 }
 .main-navbar ul li a {
-  color: #13699b;
+  color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
 }
 .main-navbar .nav-end {
   width: 25%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.5rem;
-  color: #13699b;
+  color: #fff;
 }
 .main-navbar i {
 }
 
 .main-navbar button {
-  border: 2px solid #13699b;
+  border: 2px solid #fff;
   border-radius: 20px;
   outline: none;
   font-size: 1.5rem;
   padding: 1rem;
   padding: 0.5rem;
-  background-color: #fff;
-  color: #13699b;
+  background-color: transparent;
+  color: #fff;
   width: 10rem;
 }
 .main-navbar .nav-end span {
   width: 2px;
   height: 2.5rem;
-  background-color: #13699b;
+  background-color: #fff;
   display: inline-block;
+}
+a {
+  color: #fff;
 }

@@ -1,0 +1,37 @@
+.main-header {
+  width: 100vwh;
+  background-image: url("../images/Banner.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
+  padding: 1px;
+  color: #fff;
+}
+
+.main-header img {
+  width: 100%;
+  height: 100%;
+}
+.header-content {
+  width: 25%;
+  margin-top: 10%;
+}
+.header-content h1 {
+  display: inline-block;
+}
+.header-content span {
+  font-size: 1.5rem;
+}
+.header-content p {
+  margin: 2rem 0;
+  font-size: 1rem;
+}
+.header-content button {
+  outline: none;
+  width: 8rem;
+  border-radius: 20px;
+  padding: 0.5rem;
+
+  background-image: linear-gradient(to right, #1fddce, #65ffec);
+}
