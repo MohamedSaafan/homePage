@@ -1,6 +1,6 @@
 .about {
   margin: 0 auto;
-  height: 150vh;
+  height: 160vh;
 }
 .about .logos {
   display: flex;
@@ -88,7 +88,7 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .about {
-    height: 120vh;
+    height: 130vh;
   }
   .about .logos div {
     width: 12%;
@@ -116,7 +116,7 @@
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .about {
-    height: 195vh;
+    height: 225vh;
     margin-top: -4rem;
   }
   .about-items {
@@ -128,7 +128,7 @@
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .about {
-    height: 260vh;
+    height: 322vh;
     margin-top: -4rem;
   }
   .about-items {

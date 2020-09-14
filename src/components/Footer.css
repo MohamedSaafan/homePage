@@ -52,7 +52,9 @@
   font-size: 3rem;
   width: 40%;
 }
-.footer footer span {
+
+.footer div span {
+  display: block;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
