@@ -129,7 +129,7 @@
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .about {
-    height: 320vh;
+    height: 280vh;
     margin-top: -4rem;
   }
   .about-items {

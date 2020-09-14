@@ -189,7 +189,7 @@ a {
     width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 0;
   }
   .main-navbar .nav-end {
