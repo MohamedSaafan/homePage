@@ -58,7 +58,7 @@ const Footer = (props) => {
         </div>
         <div className="designer">
           <div>
-            web designed by <span>Cinima Studio</span>{" "}
+            designed by <span>Cinima Studio</span>{" "}
           </div>
           <div>
             developed by <span>Mohamed Saafan</span>{" "}
