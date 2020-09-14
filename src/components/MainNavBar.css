@@ -161,16 +161,19 @@ a {
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
+  .main-navbar {
+    height: 4rem;
+  }
   .main-navbar .container {
     flex-wrap: wrap;
   }
-  .main-navbar .toggle-links {
+  /* .main-navbar .toggle-links {
     display: flex;
     width: 3rem;
     height: 2rem;
     top: 4.5rem;
     right: 1rem;
-  }
+  } */
   .main-navbar .container .logo {
     width: 100%;
     order: 0;
@@ -182,12 +185,12 @@ a {
     font-size: 3rem;
   }
   .main-navbar ul {
-    display: none;
+    display: flex;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 0;
   }
   .main-navbar .nav-end {
     font-size: 0.75rem;
