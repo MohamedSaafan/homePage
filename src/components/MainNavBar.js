@@ -24,6 +24,7 @@ const MainNavBar = (props) => {
         toggleLinks.classList.remove("animate-toggle");
         navLinks.style.display = "none";
         mainHeading.style.display = "block";
+
         navOpen = false;
       }
     });
