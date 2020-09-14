@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MainNavBar.css";
 import Logo from "../images/ATG Icon.png";
 import { Link } from "react-router-dom";
 
 const MainNavBar = (props) => {
+  useEffect(() => {
+    let toggleLinks = document.querySelector(".toggle-links");
+    let navLinks = document.querySelector(".nav-disktop");
+    let mainHeading = document.querySelector(".main-header .header-content");
+
+    let navOpen = false;
+
+    // toggleLinks Click EventListener
+
+    toggleLinks.addEventListener("click", (e) => {
+      if (!navOpen) {
+        toggleLinks.classList.add("animate-toggle");
+        navLinks.style.display = "flex";
+        mainHeading.style.display = "none";
+
+        navOpen = true;
+      } else {
+        toggleLinks.classList.remove("animate-toggle");
+        navLinks.style.display = "none";
+        mainHeading.style.display = "block";
+        navOpen = false;
+      }
+    });
+  }, []);
   return (
     <div>
       <nav class="main-navbar">
@@ -18,7 +42,7 @@ const MainNavBar = (props) => {
             <h1>Alts</h1>
             <span>Together</span>
           </div>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled  nav-disktop">
             <li>
               <Link to="/">about</Link>
             </li>

@@ -50,7 +50,7 @@
   transform: rotate(270deg);
 }
 .animate-toggle :nth-child(2) {
-  width: 76%;
+  width: 60%;
   transform-origin: left;
   transform: translate(0.55rem, 0);
 }
@@ -144,6 +144,9 @@ a {
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
+  .main-navbar .container {
+    flex-wrap: wrap;
+  }
   .main-navbar .toggle-links {
     display: flex;
     width: 3rem;
@@ -152,18 +155,22 @@ a {
     right: 2rem;
   }
   .main-navbar .container .logo {
-    width: 45%;
-    order: 1;
+    width: 100%;
+    order: 0;
   }
   .main-navbar .container .logo h1 {
-    font-size: 1rem;
+    font-size: 3rem;
   }
   .main-navbar .container .logo span {
-    font-size: 1rem;
+    font-size: 3rem;
   }
   .main-navbar ul {
     display: none;
-    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
   }
   .main-navbar .nav-end {
     font-size: 0.75rem;
@@ -175,5 +182,8 @@ a {
   .main-navbar button {
     width: 3rem;
     font-size: 0.75rem;
+  }
+  .main-navbar ul li {
+    padding: 1.5rem;
   }
 }
