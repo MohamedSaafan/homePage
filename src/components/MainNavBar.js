@@ -20,9 +20,6 @@ const MainNavBar = (props) => {
           </div>
           <ul class="list-unstyled">
             <li>
-              <Link to="/">home</Link>
-            </li>
-            <li>
               <Link to="/">about</Link>
             </li>
             <li>

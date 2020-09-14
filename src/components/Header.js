@@ -10,11 +10,12 @@ const Header = (props) => {
 
       <div className="container">
         <div className="header-content">
-          <h1>Alt</h1>
+          <h1>Alts</h1>
           <span>Together</span>
           <p>
             {" "}
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
+            Learn with Us and now Earn with us. Our Cardano stakepools are now
+            live.
           </p>
           <button>learn more</button>
         </div>

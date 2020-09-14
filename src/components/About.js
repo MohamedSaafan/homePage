@@ -33,9 +33,13 @@ const About = (props) => {
           Who <span> We Are</span>
         </h4>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
-          commodi non perferendis soluta assumenda maxime laudantium adipisci
-          laboriosam id incidunt, tenetur, fugiat numquam omnis fuga...
+          We were originally just a United Kingdom based Facebook group, but now
+          we want to bring our collective knowledge and guides to help all
+          people across the globe. From beginners to experts, we hope to be able
+          to bring something to you! Our Bitcoin Crypto: United Kingdom will
+          remain closed to the UK because advice here is based around the best
+          practices for the crypto enthusiasts in the United Kingdom and its
+          banking system, this may not be the case for you! Enjoy your visit.
         </p>
         <div className="centered">
           <button>learn more</button>

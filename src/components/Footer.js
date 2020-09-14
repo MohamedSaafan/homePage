@@ -36,10 +36,25 @@ const Footer = (props) => {
           Copyright &copy; 2020 <span>AltsTogother</span>
         </div>
         <div className="socials">
-          <li className="fa fa-facebook fa-xl"></li>
-          <li className="fa fa-youtube fa-xl"></li>
-          <li className="fa fa-instagram fa-xl"></li>
-          <li className="fa fa-twitter fa-xl"></li>
+          <a
+            href="https://www.facebook.com/groups/BitcoinAndCryptoUK/"
+            target="_blank"
+          >
+            <li className="fa fa-facebook fa-xl"></li>
+          </a>
+          <a
+            href=" https://www.youtube.com/channel/UC4J3ANOGWAePhlu9R057uEA"
+            target="_blank"
+          >
+            {" "}
+            <li className="fa fa-youtube fa-xl"></li>
+          </a>
+          <a href="https://www.instagram.com/altstogether/" target="_blank">
+            <li className="fa fa-instagram fa-xl"></li>
+          </a>
+          <a href="https://twitter.com/AltsTogether" target="_blank">
+            <li className="fa fa-twitter fa-xl"></li>
+          </a>
         </div>
         <div className="designer">
           <span>
