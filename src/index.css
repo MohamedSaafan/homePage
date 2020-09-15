@@ -15,7 +15,7 @@ button {
 }
 
 .container {
-  width: 90vw;
+  width: 90%;
   margin: auto;
   overflow: hidden;
 }
@@ -24,4 +24,8 @@ button {
 }
 button {
   cursor: pointer;
+}
+#root {
+  margin: auto;
+  overflow: hidden;
 }

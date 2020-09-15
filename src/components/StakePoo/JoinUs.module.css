@@ -1,0 +1,45 @@
+.joinUs {
+  background-color: #fdbe53;
+  color: #fff;
+  border-radius: 2rem;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.joinUs .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.joinUs h3 {
+  font-size: 3rem;
+}
+.joinUs span {
+  width: 4px;
+  height: 3rem;
+  display: block;
+  background-color: #fff;
+}
+.joinUs ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+.joinUs ul li i {
+  font-size: 3rem;
+}
+
+.joinUs button {
+  outline: none;
+  width: 7rem;
+  border-radius: 20px;
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, #8181d5, #67fdec);
+  color: #fff;
+}

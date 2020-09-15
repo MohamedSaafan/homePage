@@ -40,21 +40,34 @@ const MainNavBar = (props) => {
           </div>
           <div class="logo">
             <img src={Logo} alt="logo" />
-            <h1>Alts</h1>
-            <span>Together</span>
+            <h1 style={props.color ? { color: props.color } : {}}>Alts</h1>
+            <span style={props.color ? { color: props.color } : {}}>
+              Together
+            </span>
           </div>
           <ul class="list-unstyled  nav-disktop">
             <li>
-              <Link to="/">about</Link>
+              <Link to="/" style={props.color ? { color: props.color } : {}}>
+                about
+              </Link>
             </li>
             <li>
-              <Link to="/">videos</Link>
+              <Link to="/" style={props.color ? { color: props.color } : {}}>
+                videos
+              </Link>
             </li>
             <li>
-              <Link to="/">blog</Link>
+              <Link
+                to="/blog"
+                style={props.color ? { color: props.color } : {}}
+              >
+                blog
+              </Link>
             </li>
             <li>
-              <Link to="/">contact</Link>
+              <Link to="/" style={props.color ? { color: props.color } : {}}>
+                contact
+              </Link>
             </li>
           </ul>
           <div class="nav-end">

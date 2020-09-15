@@ -1,0 +1,124 @@
+.cards {
+  height: 160vh;
+}
+.aboutItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0;
+  margin: -4rem auto;
+  height: 45vh;
+}
+
+.aboutItem {
+  max-width: 12rem;
+  color: #13699b;
+}
+.aboutItems {
+  width: 60%;
+}
+.aboutItem img {
+  width: 100%;
+}
+.aboutItemContainer {
+  border: 1px solid #f7f7f7;
+  -webkit-box-shadow: 2px 13px 20px -7px rgba(238, 238, 238, 1);
+  -moz-box-shadow: 2px 13px 20px -7px rgba(238, 238, 238, 1);
+  box-shadow: 2px 13px 20px -7px rgba(238, 238, 238, 1);
+  border-radius: 2rem;
+  max-width: 17rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  max-height: 12rem;
+}
+.aboutItemContainer .container {
+  padding: 4rem;
+}
+.aboutItemContainer i {
+  color: #ffbd52;
+}
+.aboutItemContainer span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.aboutItemContainer div {
+  margin: 1rem auto;
+}
+.aboutItem h5 {
+  text-align: center;
+  margin: 0.5rem auto;
+  font-size: 1.5rem;
+}
+.cards .whyUs {
+  color: #13699b;
+}
+.cards .whyUs i {
+  color: #fea154;
+  font-size: 3rem;
+  padding: 2rem;
+
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+.cards .whyUs p {
+  width: 30%;
+  margin: 2rem auto;
+}
+.cards .whyUs h5 {
+  margin: 2rem auto;
+  font-size: 2rem;
+}
+.footerCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 3rem auto;
+}
+.footerCardsItem {
+  border: 1px solid #000;
+  color: #13699b;
+  border-radius: 1rem;
+}
+.footerCardsItem i {
+  margin: 1rem auto;
+  color: #fdbe53;
+  font-size: 2rem;
+}
+.footerCardsItem h6 {
+  font-size: 1rem;
+}
+.footerCardsItem span {
+  font-size: 3rem;
+  display: block;
+}
+.footerCardsItem hr {
+  margin: 1rem auto;
+}
+.footerCardsItem:nth-child(1),
+.footerCardsItem:nth-child(3) {
+  border: 1px solid #000;
+  border-top: none;
+
+  border-radius: 0 0 1rem 1rem;
+}
+.footerCardsItem:nth-child(2) {
+  border-bottom: none;
+  border-radius: 1rem 1rem 0 0;
+}
+.footerCards .links {
+  margin: 2rem auto;
+  text-align: center;
+}
+.links button {
+  outline: none;
+  width: 7rem;
+  border-radius: 20px;
+  padding: 0.5rem;
+  background-color: #fdbe53;
+  color: #fff;
+  display: block;
+  margin: 1rem auto;
+}
+.links a {
+  color: #13699b;
+}

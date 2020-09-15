@@ -1,7 +1,8 @@
 import React from "react";
 
-import "./Header.css";
+import "./Header.module.css";
 import MainNavBar from "./MainNavBar";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
@@ -17,7 +18,9 @@ const Header = (props) => {
             Learn with Us and now Earn with us. Our Cardano stakepools are now
             live.
           </p>
-          <button>learn more</button>
+          <Link to="/stakepool">
+            <button>learn more</button>
+          </Link>
         </div>
       </div>
     </header>
