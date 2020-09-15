@@ -9,9 +9,9 @@ import StakePool from "./pages/StakePool";
 function App() {
   return (
     <Router>
-      <Route path="/" exact component={Home} />
-      <Route path="/blogindex" component={BlogIndex} />
-      <Route path="/stakepool" component={StakePool} />
+      <Route path="homePage/" exact component={Home} />
+      <Route path="homePage/blogindex" component={BlogIndex} />
+      <Route path="homePage/stakepool" component={StakePool} />
     </Router>
   );
 }
