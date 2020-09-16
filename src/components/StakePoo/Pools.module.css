@@ -54,3 +54,10 @@
   height: 2rem;
   margin: 2rem auto;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .aboutItems {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+}

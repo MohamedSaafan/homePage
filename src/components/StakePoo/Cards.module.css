@@ -8,6 +8,13 @@
   margin: -4rem auto;
   height: 45vh;
 }
+.whiteAboutItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0;
+  margin: -4rem auto;
+  height: 45vh;
+}
 
 .aboutItem {
   max-width: 12rem;
@@ -122,4 +129,30 @@
 }
 .links a {
   color: #13699b;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .cards {
+    height: 320vh;
+  }
+  .aboutItems {
+    width: 88%;
+    grid-template-columns: 1fr;
+  }
+  .cards .whyUs p {
+    width: 80%;
+  }
+  .whiteAboutItems {
+    width: 60%;
+    grid-template-columns: 1fr;
+    height: 80vh;
+  }
+  .cards .whyUs {
+    height: 50vh;
+    margin-top: 6rem;
+  }
+  .footerCards {
+    height: 145vh;
+    grid-template-columns: 1fr;
+  }
 }

@@ -43,3 +43,19 @@
   background-image: linear-gradient(to right, #8181d5, #67fdec);
   color: #fff;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .joinUs h3 {
+    font-size: 1rem;
+  }
+  .joinUs span {
+    height: 1rem;
+    width: 2px;
+  }
+  .joinUs ul li a i {
+    font-size: 1rem;
+  }
+  .joinUs button {
+    width: 5rem;
+  }
+}

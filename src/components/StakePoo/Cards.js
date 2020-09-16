@@ -4,7 +4,7 @@ import Styles from "./Cards.module.css";
 const Cards = (props) => {
   return (
     <div className={Styles.cards}>
-      <div className={`${Styles.aboutItems} container`}>
+      <div className={`${Styles.whiteAboutItems} container`}>
         <div className={Styles.aboutItem}>
           <div className={Styles.aboutItemContainer}>
             <div className="container">

@@ -25,3 +25,12 @@
   background-image: linear-gradient(to right, #8181d5, #67fdec);
   color: #fff;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .about {
+    height: 60vh;
+  }
+  .about p {
+    width: 100%;
+  }
+}
