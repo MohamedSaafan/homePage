@@ -19,12 +19,14 @@
 .aboutItem {
   max-width: 12rem;
   color: #13699b;
+  margin: 1rem auto;
 }
 .aboutItems {
   width: 60%;
 }
 .aboutItem img {
   width: 100%;
+  max-height: 20rem;
 }
 .aboutItemContainer {
   border: 1px solid #f7f7f7;
@@ -143,7 +145,7 @@
     width: 90%;
   }
   .whiteAboutItems {
-    width: 60%;
+    width: 50%;
     grid-template-columns: 1fr;
     height: 90vh;
     margin: -3rem auto;

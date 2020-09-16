@@ -1,5 +1,4 @@
 .pools {
-  height: 100vh;
 }
 
 .aboutItems {
@@ -23,7 +22,7 @@
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 2rem;
   max-width: 17rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
   overflow: hidden;
   background-color: #ffbd52;
 }
