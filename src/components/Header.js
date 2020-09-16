@@ -5,9 +5,15 @@ import MainNavBar from "./MainNavBar";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
+  const handleNavOpen = () => {};
+  const handleNavClose = () => {};
   return (
     <header className={Styles.mainHeader}>
-      <MainNavBar />
+      <MainNavBar
+        styles={Styles}
+        handleNavOpen={handleNavOpen}
+        handleNavClose={handleNavClose}
+      />
 
       <div className="container">
         <div className={Styles.headerContent}>

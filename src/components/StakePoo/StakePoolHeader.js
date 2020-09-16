@@ -5,9 +5,22 @@ import styles from "./StakePoolHeader.module.css";
 import banner from "../../images/stakepool banner.png";
 
 const Header = (props) => {
+  const handleNavOpen = () => {
+    document.querySelector(`.${styles.headerImage}`).style.transform =
+      "translate(0,202px)";
+  };
+  const handleNavClose = () => {
+    document.querySelector(`.${styles.headerImage}`).style.transform =
+      "translate(0,0)";
+  };
   return (
     <header className={styles.mainHeader}>
-      <MainNavBar color="#13699b" />
+      <MainNavBar
+        color="#13699b"
+        styles={styles}
+        handleNavOpen={handleNavOpen}
+        handleNavClose={handleNavClose}
+      />
       <div className={styles.headerContentWrapper}>
         <div className={styles.container}>
           <div className={styles.headerContent}>

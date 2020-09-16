@@ -57,11 +57,30 @@
   width: 100%;
   height: 100%;
 }
+@media only screen and (min-width: 1024px) {
+  .headerImage {
+    width: 45vh;
+    order: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .aboutItem {
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .aboutItems {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
   .aboutItems {
     width: 90%;
-
+    margin: 0 auto;
     grid-template-columns: 1fr;
   }
   .aboutItem {

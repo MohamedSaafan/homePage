@@ -51,7 +51,7 @@ const Cards = (props) => {
         <div className={`${Styles.footerCardsItem}   centered`}>
           <div className="container">
             <i className="fa fa-handshake-o fa-lg"></i>
-            <h6>Pledge</h6>
+            <h6>Pledge (ADA)</h6>
             <span>99,000</span>
             <hr />
             <p>
@@ -64,26 +64,28 @@ const Cards = (props) => {
         <div className={`${Styles.footerCardsItem}   centered`}>
           <div className="container">
             <i className="fa fa-handshake-o fa-lg"></i>
-            <h6>Pledge</h6>
-            <span>99,000</span>
+            <h6>POOL FEE</h6>
+            <span>1%</span>
             <hr />
             <p>
-              A higher pledge gives reassurance that the best possible pool
-              performance is also in the pool operators own interest just as
-              much as it in yours!
+              Deducted from your delegation rewards. You receive 99% of your
+              delegation rewards. The difference between in ROS between a 3%
+              pool and 1% pool is only 0.1%. Not only do you get quality, we are
+              bringing you quantity too.
             </p>
           </div>
         </div>
         <div className={`${Styles.footerCardsItem}   centered`}>
           <div className="container">
             <i className="fa fa-handshake-o fa-lg"></i>
-            <h6>Pledge</h6>
-            <span>99,000</span>
+            <h6>FIXED </h6>
+            <span>FEE MINIMUM</span>
             <hr />
             <p>
-              A higher pledge gives reassurance that the best possible pool
-              performance is also in the pool operators own interest just as
-              much as it in yours!
+              The shelley protocol imposes a minimum fixed cost of 340 ADA per
+              epoch, deducted from total pool rewards. The difference in ROS
+              between a 10M pool and a 150M pool is only 02%. No need to choose
+              the biggest one: Just choose the pool you love!
             </p>
           </div>
         </div>

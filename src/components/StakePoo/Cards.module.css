@@ -87,8 +87,8 @@
   border: 1px solid #89b4cd;
   color: #13699b;
   border-radius: 1rem;
-  max-width: 12rem;
   padding: 1rem;
+  border: 1px solid #89b4cd;
 }
 .footerCardsItem i {
   margin: 1rem auto;
@@ -105,17 +105,7 @@
 .footerCardsItem hr {
   margin: 1rem auto;
 }
-.footerCardsItem:nth-child(1),
-.footerCardsItem:nth-child(3) {
-  border: 1px solid #89b4cd;
-  border-top: none;
 
-  border-radius: 0 0 1rem 1rem;
-}
-.footerCardsItem:nth-child(2) {
-  border-bottom: none;
-  border-radius: 1rem 1rem 0 0;
-}
 .footerCards .links {
   margin: 2rem auto;
   text-align: center;
@@ -134,6 +124,23 @@
   color: #13699b;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .cards .whyUs p {
+    width: 65%;
+  }
+  .footerCards {
+    grid-template-columns: 1fr;
+  }
+  .footerCards .footerCardsItem {
+    width: 50vh;
+    margin: 1rem auto;
+  }
+  .whiteAboutItems {
+    margin: -2rem auto;
+  }
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .cards {
   }

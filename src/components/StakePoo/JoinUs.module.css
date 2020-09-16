@@ -44,7 +44,29 @@
   color: #fff;
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+  .joinUs {
+    height: 12vh;
+  }
+  .joinUs h3 {
+    font-size: 1rem;
+  }
+  .joinUs span {
+    height: 1rem;
+    width: 2px;
+  }
+  .joinUs ul li a i {
+    font-size: 1rem;
+  }
+  .joinUs button {
+    width: 5rem;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
+  .joinUs {
+    height: 12vh;
+  }
   .joinUs h3 {
     font-size: 1rem;
   }
