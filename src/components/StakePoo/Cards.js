@@ -33,7 +33,8 @@ const Cards = (props) => {
               </div>
               <h5>Uptime</h5>
               <p>
-                Uptime of <span>99.99%</span>
+                Uptime of
+                <br /> <span>99.99%</span>
               </p>
             </div>
           </div>
