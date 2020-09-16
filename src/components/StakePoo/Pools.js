@@ -1,6 +1,7 @@
 import React from "react";
 
 import Styles from "./Pools.module.css";
+import commingSoon from "../../images/comming soon.png";
 
 const Pools = (props) => {
   return (
@@ -50,7 +51,8 @@ const Pools = (props) => {
       </div>
       <div className={Styles.aboutItem}>
         <div className={Styles.aboutItemContainer}>
-          <div className="container">
+          <img src={commingSoon} alt="comming soon " />
+          {/* <div className="container">
             <div className={Styles.aboutItemContent}>
               <h5>Pool#2</h5>
               <hr />
@@ -88,12 +90,13 @@ const Pools = (props) => {
                 <br />
               </div>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
       <div className={Styles.aboutItem}>
         <div className={Styles.aboutItemContainer}>
-          <div className="container">
+          <img src={commingSoon} alt="comming soon " />
+          {/*  <div className="container">
             <div className={Styles.aboutItemContent}>
               <h5>Pool#3</h5>
               <hr />
@@ -131,7 +134,7 @@ const Pools = (props) => {
                 <br />
               </div>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
     </div>

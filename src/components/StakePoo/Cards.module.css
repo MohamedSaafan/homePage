@@ -1,5 +1,5 @@
 .cards {
-  height: 160vh;
+  margin-bottom: 2rem;
 }
 .aboutItems {
   display: grid;
@@ -133,7 +133,6 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   .cards {
-    height: 320vh;
   }
   .aboutItems {
     width: 88%;
@@ -146,7 +145,8 @@
   .whiteAboutItems {
     width: 60%;
     grid-template-columns: 1fr;
-    height: 80vh;
+    height: 90vh;
+    margin: -3rem auto;
   }
   .cards .whyUs {
     height: 50vh;
