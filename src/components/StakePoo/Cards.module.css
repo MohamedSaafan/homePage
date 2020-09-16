@@ -137,10 +137,11 @@
   }
   .aboutItems {
     width: 88%;
+    margin: auto;
     grid-template-columns: 1fr;
   }
   .cards .whyUs p {
-    width: 80%;
+    width: 90%;
   }
   .whiteAboutItems {
     width: 60%;
