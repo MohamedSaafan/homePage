@@ -47,7 +47,7 @@ const Cards = (props) => {
               </div>
               <h5>Implementation</h5>
               <p>
-                scripts to automate <span>Intence restrain.</span>
+                scripts to automate <span>intance restrain</span>
               </p>
             </div>
           </div>
