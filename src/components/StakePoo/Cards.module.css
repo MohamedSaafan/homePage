@@ -15,6 +15,24 @@
   margin: -4rem auto;
   height: 45vh;
 }
+.whiteAboutItems .aboutItemIcon {
+  width: 50%;
+  margin: auto;
+}
+.whiteAboutItems .aboutItemIcon img {
+  width: 100%;
+}
+.whiteAboutItems .aboutItemContainer i {
+  font-size: 5rem;
+  color: #000;
+}
+.footerCardsItemIcon {
+  width: 25%;
+  margin: auto;
+}
+.footerCardsItemIcon img {
+  width: 100%;
+}
 
 .aboutItem {
   max-width: 12rem;
@@ -155,7 +173,7 @@
   .whiteAboutItems {
     width: 50%;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: 125vh;
     margin: -3rem auto;
   }
   .cards .whyUs {

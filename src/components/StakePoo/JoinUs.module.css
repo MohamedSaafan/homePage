@@ -31,8 +31,23 @@
   align-items: center;
   width: 40%;
 }
+.joinUs ul li {
+  width: 24%;
+  margin: auto;
+}
+.joinUs ul div {
+  width: 75%;
+  margin: auto;
+}
+.joinUs ul div img {
+  width: 100%;
+}
 .joinUs ul li i {
   font-size: 3rem;
+  color: #000;
+}
+.joinUs ul li:last-child {
+  display: none;
 }
 
 .joinUs button {

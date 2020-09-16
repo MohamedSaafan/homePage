@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Styles from "./JoinUs.module.css";
+import discord from "../../images/discord.png";
 
 const JoinUs = (props) => {
   return (
@@ -10,24 +10,29 @@ const JoinUs = (props) => {
         <span></span>
         <ul className="list-unstyled">
           <li>
-            <Link>
+            <a
+              href="https://www.facebook.com/groups/BitcoinAndCryptoUK/"
+              target="_blank"
+            >
               <i className="fa fa-facebook fa-lg"></i>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link>
+            <a href="https://twitter.com/AltsTogether" target="_blank">
               <i className="fa fa-twitter fa-lg"></i>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link>
-              <i className="fa fa-facebook fa-lg"></i>
-            </Link>
+            <a href="https://discord.gg/d2uySD" target="_blank">
+              <div>
+                <img src={discord} alt="discord" />
+              </div>
+            </a>
           </li>
           <li>
-            <Link>
+            <a href="/">
               <i className="fa fa-telegram fa-lg"></i>
-            </Link>
+            </a>
           </li>
         </ul>
         <span></span>

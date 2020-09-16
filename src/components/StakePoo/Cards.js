@@ -1,5 +1,10 @@
 import React from "react";
 import Styles from "./Cards.module.css";
+import time from "../../images/time.png";
+import maintanance from "../../images/maintenance.png";
+import handshaking from "../../images/partnership-handshake.png";
+import coin from "../../images/coin.png";
+import medal from "../../images/medal.png";
 
 const Cards = (props) => {
   return (
@@ -9,6 +14,7 @@ const Cards = (props) => {
           <div className={Styles.aboutItemContainer}>
             <div className="container">
               <i className="fa fa-user-secret fa-lg"></i>
+
               <h5>Security</h5>
               <p>
                 cloud Servers for <span>Security</span>
@@ -19,7 +25,9 @@ const Cards = (props) => {
         <div className={Styles.aboutItem}>
           <div className={Styles.aboutItemContainer}>
             <div className="container">
-              <i className="fa fa-user-secret fa-lg"></i>
+              <div className={Styles.aboutItemIcon}>
+                <img src={time} alt="icon" />
+              </div>
               <h5>Security</h5>
               <p>
                 cloud Servers for <span>Security</span>
@@ -30,7 +38,9 @@ const Cards = (props) => {
         <div className={Styles.aboutItem}>
           <div className={Styles.aboutItemContainer}>
             <div className="container">
-              <i className="fa fa-user-secret fa-lg"></i>
+              <div className={Styles.aboutItemIcon}>
+                <img src={maintanance} alt="icon" />
+              </div>
               <h5>Security</h5>
               <p>
                 cloud Servers for <span>Security</span>
@@ -50,7 +60,9 @@ const Cards = (props) => {
       <div className={`${Styles.footerCards} container `}>
         <div className={`${Styles.footerCardsItem}   centered`}>
           <div className="container">
-            <i className="fa fa-handshake-o fa-lg"></i>
+            <div className={Styles.footerCardsItemIcon}>
+              <img src={handshaking} alt="hand icon" />
+            </div>
             <h6>Pledge (ADA)</h6>
             <span>99,000</span>
             <hr />
@@ -63,7 +75,9 @@ const Cards = (props) => {
         </div>
         <div className={`${Styles.footerCardsItem}   centered`}>
           <div className="container">
-            <i className="fa fa-handshake-o fa-lg"></i>
+            <div className={Styles.footerCardsItemIcon}>
+              <img src={medal} alt="hand icon" />
+            </div>
             <h6>POOL FEE</h6>
             <span>1%</span>
             <hr />
@@ -77,7 +91,9 @@ const Cards = (props) => {
         </div>
         <div className={`${Styles.footerCardsItem}   centered`}>
           <div className="container">
-            <i className="fa fa-handshake-o fa-lg"></i>
+            <div className={Styles.footerCardsItemIcon}>
+              <img src={coin} alt="hand icon" />
+            </div>
             <h6>FIXED </h6>
             <span>FEE MINIMUM</span>
             <hr />
