@@ -14,6 +14,8 @@
 }
 .aboutItem img {
   width: 100%;
+  position: absolute;
+  height: 100%;
 }
 .aboutItemContainer {
   border: 1px solid #f7f7f7;
@@ -25,6 +27,8 @@
   margin: 1rem auto;
   overflow: hidden;
   background-color: #ffbd52;
+  position: relative;
+  max-height: 21rem;
 }
 
 .aboutItemContainer div {
