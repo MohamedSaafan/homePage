@@ -75,9 +75,10 @@
   margin: 3rem auto;
 }
 .footerCardsItem {
-  border: 1px solid #000;
+  border: 1px solid #89b4cd;
   color: #13699b;
   border-radius: 1rem;
+  max-width: 12rem;
 }
 .footerCardsItem i {
   margin: 1rem auto;
@@ -96,7 +97,7 @@
 }
 .footerCardsItem:nth-child(1),
 .footerCardsItem:nth-child(3) {
-  border: 1px solid #000;
+  border: 1px solid #89b4cd;
   border-top: none;
 
   border-radius: 0 0 1rem 1rem;
