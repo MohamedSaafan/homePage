@@ -1,6 +1,6 @@
 .about {
   margin: 0 auto;
-  height: 160vh;
+  height: 170vh;
 }
 .about .logos {
   display: flex;
@@ -116,7 +116,7 @@
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .about {
-    height: 230vh;
+    height: 243vh;
 
     margin-top: -4rem;
   }
