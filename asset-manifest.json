@@ -1,31 +1,32 @@
 {
   "files": {
-    "main.css": "/homePage/static/css/main.108d0d70.chunk.css",
-    "main.js": "/homePage/static/js/main.8a4ea24a.chunk.js",
-    "main.js.map": "/homePage/static/js/main.8a4ea24a.chunk.js.map",
+    "main.css": "/homePage/static/css/main.46e3153f.chunk.css",
+    "main.js": "/homePage/static/js/main.747f7b79.chunk.js",
+    "main.js.map": "/homePage/static/js/main.747f7b79.chunk.js.map",
     "runtime-main.js": "/homePage/static/js/runtime-main.00957640.js",
     "runtime-main.js.map": "/homePage/static/js/runtime-main.00957640.js.map",
     "static/css/2.7f1e2f6d.chunk.css": "/homePage/static/css/2.7f1e2f6d.chunk.css",
-    "static/js/2.99b0045e.chunk.js": "/homePage/static/js/2.99b0045e.chunk.js",
-    "static/js/2.99b0045e.chunk.js.map": "/homePage/static/js/2.99b0045e.chunk.js.map",
+    "static/js/2.79fc895b.chunk.js": "/homePage/static/js/2.79fc895b.chunk.js",
+    "static/js/2.79fc895b.chunk.js.map": "/homePage/static/js/2.79fc895b.chunk.js.map",
     "index.html": "/homePage/index.html",
-    "precache-manifest.38017efcb1d9eb96d662e395e833c7e0.js": "/homePage/precache-manifest.38017efcb1d9eb96d662e395e833c7e0.js",
+    "precache-manifest.f39146e505da8cae6fa98e6041d7d654.js": "/homePage/precache-manifest.f39146e505da8cae6fa98e6041d7d654.js",
     "service-worker.js": "/homePage/service-worker.js",
     "static/css/2.7f1e2f6d.chunk.css.map": "/homePage/static/css/2.7f1e2f6d.chunk.css.map",
-    "static/css/main.108d0d70.chunk.css.map": "/homePage/static/css/main.108d0d70.chunk.css.map",
-    "static/js/2.99b0045e.chunk.js.LICENSE.txt": "/homePage/static/js/2.99b0045e.chunk.js.LICENSE.txt",
+    "static/css/main.46e3153f.chunk.css.map": "/homePage/static/css/main.46e3153f.chunk.css.map",
+    "static/js/2.79fc895b.chunk.js.LICENSE.txt": "/homePage/static/js/2.79fc895b.chunk.js.LICENSE.txt",
     "static/media/ATG Icon.png": "/homePage/static/media/ATG Icon.959f1183.png",
     "static/media/Header.module.css": "/homePage/static/media/Banner.e297f7cb.png",
     "static/media/About.module.css": "/homePage/static/media/Footer.a1fa4634.png",
     "static/media/cinema.png": "/homePage/static/media/cinema.4fc05a11.png",
+    "static/media/comming soon.png": "/homePage/static/media/comming soon.22192d0d.png",
     "static/media/font-awesome.min.css": "/homePage/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/stakepool banner.png": "/homePage/static/media/stakepool banner.57d8e280.png"
   },
   "entrypoints": [
     "static/js/runtime-main.00957640.js",
     "static/css/2.7f1e2f6d.chunk.css",
-    "static/js/2.99b0045e.chunk.js",
-    "static/css/main.108d0d70.chunk.css",
-    "static/js/main.8a4ea24a.chunk.js"
+    "static/js/2.79fc895b.chunk.js",
+    "static/css/main.46e3153f.chunk.css",
+    "static/js/main.747f7b79.chunk.js"
   ]
 }
