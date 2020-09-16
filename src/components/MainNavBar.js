@@ -40,12 +40,16 @@ const MainNavBar = (props) => {
             <span class="toggle "></span>
             <span class="toggle half end"></span>
           </div>
+
           <div class="logo">
-            <img src={Logo} alt="logo" />
-            <h1 style={props.color ? { color: props.color } : {}}>Alts</h1>
-            <span style={props.color ? { color: props.color } : {}}>
-              Together
-            </span>
+            <Link to="/">
+              {" "}
+              <img src={Logo} alt="logo" />
+              <h1 style={props.color ? { color: props.color } : {}}>Alts</h1>
+              <span style={props.color ? { color: props.color } : {}}>
+                Together
+              </span>
+            </Link>
           </div>
           <ul class="list-unstyled  nav-disktop">
             <li>

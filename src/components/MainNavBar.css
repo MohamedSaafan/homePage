@@ -62,6 +62,9 @@
   justify-content: center;
   align-items: center;
 }
+.main-navbar .container .logo a {
+  text-decoration: none;
+}
 
 .main-navbar .container .logo h1 {
   display: inline-block;

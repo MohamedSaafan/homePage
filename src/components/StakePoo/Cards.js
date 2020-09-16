@@ -5,6 +5,7 @@ import maintanance from "../../images/maintenance.png";
 import handshaking from "../../images/partnership-handshake.png";
 import coin from "../../images/coin.png";
 import medal from "../../images/medal.png";
+import data from "../../images/data-center.png";
 
 const Cards = (props) => {
   return (
@@ -13,7 +14,9 @@ const Cards = (props) => {
         <div className={Styles.aboutItem}>
           <div className={Styles.aboutItemContainer}>
             <div className="container">
-              <i className="fa fa-user-secret fa-lg"></i>
+              <div className={Styles.aboutItemIcon}>
+                <img src={data} alt="icon" />
+              </div>
 
               <h5>Security</h5>
               <p>
@@ -28,9 +31,9 @@ const Cards = (props) => {
               <div className={Styles.aboutItemIcon}>
                 <img src={time} alt="icon" />
               </div>
-              <h5>Security</h5>
+              <h5>Uptime</h5>
               <p>
-                cloud Servers for <span>Security</span>
+                Uptime of <span>99.99%</span>
               </p>
             </div>
           </div>
@@ -41,9 +44,9 @@ const Cards = (props) => {
               <div className={Styles.aboutItemIcon}>
                 <img src={maintanance} alt="icon" />
               </div>
-              <h5>Security</h5>
+              <h5>Implementation</h5>
               <p>
-                cloud Servers for <span>Security</span>
+                scripts to automate <span>Intence restrain.</span>
               </p>
             </div>
           </div>
@@ -70,6 +73,9 @@ const Cards = (props) => {
               A higher pledge gives reassurance that the best possible pool
               performance is also in the pool operators own interest just as
               much as it in yours!
+              <span>
+                interest just as much as kjdflajdlkfjalkdjf it in yours!
+              </span>
             </p>
           </div>
         </div>
@@ -94,8 +100,8 @@ const Cards = (props) => {
             <div className={Styles.footerCardsItemIcon}>
               <img src={coin} alt="hand icon" />
             </div>
-            <h6>FIXED </h6>
-            <span>FEE MINIMUM</span>
+            <h6>FIXED FEE MINIMUM</h6>
+
             <hr />
             <p>
               The shelley protocol imposes a minimum fixed cost of 340 ADA per
@@ -108,7 +114,10 @@ const Cards = (props) => {
       </div>
       <div className={`${Styles.links} container centered `}>
         <button>learn how</button>
-        <a href="/" target="_blank">
+        <a
+          href="http://altstogether.com/NikkiDesigns/Website/Guides/HowToDelegate.pdf"
+          target="_blank"
+        >
           (download PDF here)
         </a>
       </div>

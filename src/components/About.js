@@ -4,6 +4,7 @@ import logo2 from "../images/coinjar.png";
 import logo3 from "../images/cinema.png";
 import banner from "../images/Banner.png";
 import "./About.css";
+import { Link } from "react-router-dom";
 
 const About = (props) => {
   return (
@@ -42,7 +43,10 @@ const About = (props) => {
           banking system, this may not be the case for you! Enjoy your visit.
         </p>
         <div className="centered">
-          <button>learn more</button>
+          <Link to="/stakepool">
+            {" "}
+            <button>learn more</button>
+          </Link>
         </div>
         <div className="about-items container">
           <div className="about-item">
@@ -51,7 +55,10 @@ const About = (props) => {
 
               <div className="about-item-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button>read more</button>
+                <Link to="/stakepool">
+                  {" "}
+                  <button>learn more</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -61,7 +68,10 @@ const About = (props) => {
 
               <div className="about-item-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button>read more</button>
+                <Link to="/stakepool">
+                  {" "}
+                  <button>learn more</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -71,7 +81,10 @@ const About = (props) => {
 
               <div className="about-item-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button>read more</button>
+                <Link to="/stakepool">
+                  {" "}
+                  <button>learn more</button>
+                </Link>
               </div>
             </div>
           </div>

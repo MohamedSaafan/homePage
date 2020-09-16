@@ -13,7 +13,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 0;
   margin: -4rem auto;
-  height: 45vh;
+  height: 60vh;
 }
 .whiteAboutItems .aboutItemIcon {
   width: 50%;
@@ -57,10 +57,17 @@
   overflow: hidden;
   background-color: #fff;
   text-align: center;
-  max-height: 12rem;
+  max-height: 14rem;
 }
 .aboutItemContainer .container {
   padding: 4rem;
+}
+.footerCards .footerCardsItem:nth-child(3) h6 {
+  margin: 1.5rem auto;
+}
+.footerCardsItem p span {
+  visibility: hidden;
+  font-size: 1rem;
 }
 .aboutItemContainer i {
   color: #ffbd52;
