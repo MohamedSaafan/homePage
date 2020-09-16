@@ -23,6 +23,7 @@
 .about .info > p {
   margin: 2rem auto;
   width: 50%;
+  text-align: center;
 }
 .about .info > h4 {
   text-align: center;
