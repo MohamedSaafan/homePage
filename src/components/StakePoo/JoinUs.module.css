@@ -6,6 +6,23 @@
   display: flex;
   align-items: center;
   margin-bottom: 4rem;
+  background-size: cover;
+  overflow: visible;
+  position: relative;
+}
+.joinUs .firstPlanets {
+  width: 60%;
+  position: absolute;
+  left: -44%;
+  bottom: -138%;
+  z-index: -1;
+}
+.joinUs .secondPlanets {
+  position: absolute;
+  right: -44%;
+  width: 63%;
+  top: -165%;
+  z-index: -1;
 }
 .joinUs .container {
   width: 90%;
@@ -14,6 +31,8 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  position: relative;
+  z-index: 10000;
 }
 .joinUs h3 {
   font-size: 3rem;
@@ -79,6 +98,20 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .joinUs .firstPlanets,
+  .joinUs .secondPlanets {
+    width: 75%;
+  }
+  .joinUs .secondPlanets {
+    position: absolute;
+    right: -53%;
+    top: -105%;
+  }
+  .joinUs .firstPlanets {
+    position: absolute;
+    left: -57%;
+    bottom: -81%;
+  }
   .joinUs {
     height: 12vh;
   }

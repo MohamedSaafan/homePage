@@ -1,13 +1,19 @@
 .about {
-  height: 55vh;
+  height: 70vh;
   background-image: url("../../images//Footer.png");
   background-size: cover;
-
+  background-position: bottom;
   border-radius: 1rem;
   text-align: center;
   vertical-align: center;
   color: #fff;
   padding: 2rem;
+  position: relative;
+  overflow: visible;
+}
+.about .container {
+  position: relative;
+  z-index: 100000;
 }
 .about h3 {
   font-size: 2rem;
@@ -16,6 +22,19 @@
 .about p {
   width: 50%;
   margin: 2rem auto;
+}
+.about .firstOrbit {
+  width: 50%;
+  position: absolute;
+  top: -9%;
+  left: -6%;
+}
+.about .secondOrbit {
+  width: 50%;
+  position: absolute;
+
+  top: 44%;
+  right: -26%;
 }
 .about button {
   outline: none;
@@ -27,6 +46,10 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .bout .firstOrbit,
+  .about .secondOrbit {
+    width: 80%;
+  }
   .about {
     height: 60vh;
   }

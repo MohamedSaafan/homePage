@@ -3,6 +3,7 @@
   background-image: none;
   padding: 1px;
   color: #13699b;
+  height: 100vh;
 }
 .headerContentWrapper {
   width: 100%;
@@ -10,23 +11,29 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  position: relative;
 }
 .headerContentWrapper .container {
-  width: 50%;
+  width: 40%;
   margin: 0;
+  position: absolute;
+  left: 4rem;
 }
 .headerImage {
-  width: 50vw;
+  width: 70vw;
   height: 50vh;
   order: -1;
+  position: absolute;
+  right: 0;
 }
 .headerImage img {
   width: 100%;
 }
 
 .headerContent {
-  width: 70%;
-  margin: 6rem auto;
+  width: 100%;
+  margin: 6rem 0;
+  padding-left: 5rem;
 }
 .headerContent h1 {
   display: inline-block;
@@ -49,7 +56,7 @@
 }
 @media only screen and (min-width: 1024px) {
   .headerImage {
-    width: 45vw;
+    width: 59vw;
     order: 0;
   }
 }
@@ -57,22 +64,16 @@
   .main-header {
     height: 80vh;
   }
-}
-@media (min-width: 481px) and (max-width: 767px) {
+  .headerImage {
+    width: 60vw;
+    order: 0;
+  }
+
   .headerContent {
-    width: 50%;
+    width: 40vw;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .headerImage {
-    width: 50vh;
-    order: 0;
-  }
-  .headerContent {
-    width: 50vh;
-  }
-}
 @media (min-width: 481px) and (max-width: 767px) {
   .headerImage {
     width: 90vw;
@@ -82,20 +83,34 @@
   }
   .headerContent {
     width: 100%;
+    position: absolute;
+    top: 60vh;
+    left: 0;
+    margin: 0;
+    padding: 0;
   }
   .headerContent p {
     width: 70%;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
+  .headerContent {
+    width: 75%;
+    margin: auto;
+    padding: 0;
+  }
   .headerContentWrapper {
     flex-wrap: wrap;
   }
   .headerContentWrapper .container {
     width: 80%;
   }
-  .headerContent {
+  .headerContentWrapper .container {
     width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0rem;
+    top: 38vh;
   }
 
   .headerImage {

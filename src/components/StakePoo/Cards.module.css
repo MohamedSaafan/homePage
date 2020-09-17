@@ -169,8 +169,6 @@
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  .cards {
-  }
   .aboutItems {
     width: 88%;
     margin: auto;
@@ -190,7 +188,7 @@
     margin-top: 6rem;
   }
   .footerCards {
-    height: 176vh;
+    height: 200vh;
     grid-template-columns: 1fr;
   }
 }

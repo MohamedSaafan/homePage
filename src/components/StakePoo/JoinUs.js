@@ -1,10 +1,12 @@
 import React from "react";
 import Styles from "./JoinUs.module.css";
 import discord from "../../images/discord.png";
-
+import planets from "../../images/Orbs III.png";
 const JoinUs = (props) => {
   return (
     <div className={`${Styles.joinUs} container `}>
+      <img src={planets} alt="planets" className={Styles.firstPlanets} />
+      <img src={planets} alt="planets" className={Styles.secondPlanets} />
       <div className={`${Styles.container}`}>
         <h3>Join Us </h3>
         <span></span>

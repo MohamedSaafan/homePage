@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MainNavBar from "../MainNavBar";
 import styles from "./StakePoolHeader.module.css";
-import banner from "../../images/stakepool banner.png";
+import banner from "../../images/Header.png";
 
 const Header = (props) => {
   const handleNavOpen = () => {
