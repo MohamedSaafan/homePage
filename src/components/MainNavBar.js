@@ -33,15 +33,15 @@ const MainNavBar = (props) => {
   }, [props]);
   return (
     <div>
-      <nav class="main-navbar">
-        <div class="container">
-          <div class="toggle-links">
-            <span class="toggle half start"></span>
-            <span class="toggle "></span>
-            <span class="toggle half end"></span>
+      <nav className="main-navbar">
+        <div className="container">
+          <div className="toggle-links">
+            <span className="toggle half start"></span>
+            <span className="toggle "></span>
+            <span className="toggle half end"></span>
           </div>
 
-          <div class="logo">
+          <div className="logo">
             <Link to="/">
               {" "}
               <img src={Logo} alt="logo" />
@@ -51,7 +51,7 @@ const MainNavBar = (props) => {
               </span>
             </Link>
           </div>
-          <ul class="list-unstyled  nav-disktop">
+          <ul className="list-unstyled  nav-disktop">
             <li>
               <Link to="/" style={props.color ? { color: props.color } : {}}>
                 about
@@ -76,8 +76,8 @@ const MainNavBar = (props) => {
               </Link>
             </li>
           </ul>
-          <div class="nav-end">
-            <i class="fa fa-search fa-xl"></i>
+          <div className="nav-end">
+            <i className="fa fa-search fa-xl"></i>
             <button>join us</button>
             <span></span>
             <Link to="/login">login</Link>

@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import "./FirstNavBar.css";
 
 const FirstNavBar = (props) => {
+  const [coins, setCoins] = useState(null);
+  useEffect(() => {
+    let url = new URL(
+      "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
+    );
+    let params = {
+      symbol: "BTC,ETH,XRP,LTC,EOS,XMR",
+      CMC_PRO_API_KEY: "982c8f11-bd68-4f67-9d77-8c7a3f200d77",
+    };
+    Object.keys(params).forEach((key) =>
+      url.searchParams.append(key, params[key])
+    );
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setCoins(data))
+      .catch((err) => console.log(err));
+  }, []);
+  console.log(coins, "from coins");
+  if (!coins) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       {" "}
@@ -12,22 +34,40 @@ const FirstNavBar = (props) => {
           </div>
           <ul className="list-unstyled">
             <li>
-              BTC $11,031.93 <span>-3.63%</span>
+              BTC ${coins.data.BTC.quote.USD.price.toFixed(2)}{" "}
+              <span>
+                {coins.data.BTC.quote.USD.percent_change_24h.toFixed(2)}%
+              </span>
             </li>
             <li>
-              ETH$415.43 <span>-7.15%</span>
+              ETH ${coins.data.ETH.quote.USD.price.toFixed(2)}{" "}
+              <span>
+                {coins.data.ETH.quote.USD.percent_change_24h.toFixed(2)}%
+              </span>
             </li>
             <li>
-              XRP $0.26 <span>-5.95%</span>
+              XRP ${coins.data.XRP.quote.USD.price.toFixed(2)}{" "}
+              <span>
+                {coins.data.XRP.quote.USD.percent_change_24h.toFixed(2)}%
+              </span>
             </li>
             <li>
-              LTC $55.29 <span>-5.95%</span>
+              LTC ${coins.data.LTC.quote.USD.price.toFixed(2)}{" "}
+              <span>
+                {coins.data.LTC.quote.USD.percent_change_24h.toFixed(2)}%
+              </span>
             </li>
             <li>
-              EOS $2.93 <span>-.35%</span>
+              EOS ${coins.data.EOS.quote.USD.price.toFixed(2)}{" "}
+              <span>
+                {coins.data.EOS.quote.USD.percent_change_24h.toFixed(2)}%
+              </span>
             </li>
             <li>
-              XMR $86.27 <span>-5.13%</span>
+              XMR ${coins.data.XMR.quote.USD.price.toFixed(2)}{" "}
+              <span>
+                {coins.data.XMR.quote.USD.percent_change_24h.toFixed(2)}%
+              </span>
             </li>
           </ul>
         </div>
