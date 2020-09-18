@@ -6,7 +6,7 @@ const FirstNavBar = (props) => {
   const [coins, setCoins] = useState(null);
   useEffect(() => {
     let url = new URL(
-      "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
+      "https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
     );
     let params = {
       symbol: "BTC,ETH,XRP,LTC,EOS,XMR",
