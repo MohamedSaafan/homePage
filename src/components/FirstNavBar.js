@@ -22,7 +22,7 @@ const FirstNavBar = (props) => {
   }, []);
   console.log(coins, "from coins");
   if (!coins) {
-    return <div>Loading...</div>;
+    return <div className="navbar"></div>;
   }
   return (
     <div>

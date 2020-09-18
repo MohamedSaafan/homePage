@@ -1,0 +1,28 @@
+.guides {
+  min-height: 100vh;
+}
+.guides h4 {
+  text-align: center;
+  margin: auto;
+}
+.guides h6 {
+  font-size: 1rem;
+}
+.guides .step {
+  margin: 2rem auto;
+}
+.guides .step a {
+  color: blue;
+  text-decoration: underline;
+}
+.guides image {
+  text-align: center;
+}
+.guides .center {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.guides .guides-content {
+  margin: 2rem auto;
+}

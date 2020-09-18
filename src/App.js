@@ -10,6 +10,7 @@ import {
 import Home from "./pages/Home";
 import BlogIndex from "./pages/BlogIndex";
 import StakePool from "./pages/StakePool";
+import Guides from "./pages/Guides";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/blogindex" component={BlogIndex} />
-        <Route path="/stakepool" component={StakePool} />
+        <Route path="/stakepool" exact component={StakePool} />
+        <Route path="/stakepool/guides" component={Guides} />
         <Redirect to="/" />
       </Switch>
     </Router>
