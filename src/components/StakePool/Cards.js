@@ -6,6 +6,7 @@ import handshaking from "../../images/partnership-handshake.png";
 import coin from "../../images/coin.png";
 import medal from "../../images/medal.png";
 import data from "../../images/data-center.png";
+import { Link } from "react-router-dom";
 
 const Cards = (props) => {
   return (
@@ -114,7 +115,9 @@ const Cards = (props) => {
         </div>
       </div>
       <div className={`${Styles.links} container centered `}>
-        <button>learn how</button>
+        <Link to="/stakepool/guides">
+          <button>learn how</button>
+        </Link>
         <a
           href="http://altstogether.com/NikkiDesigns/Website/Guides/HowToDelegate.pdf"
           target="_blank"

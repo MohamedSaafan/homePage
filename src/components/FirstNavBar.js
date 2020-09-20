@@ -22,7 +22,26 @@ const FirstNavBar = (props) => {
   }, []);
   console.log(coins, "from coins");
   if (!coins) {
-    return <div className="navbar"></div>;
+    return (
+      <div>
+        {" "}
+        <nav className="navbar">
+          <div className="container">
+            <div className="logo">
+              <h2>MARKET DATA</h2>
+            </div>
+            <ul className="list-unstyled">
+              <li>BTC</li>
+              <li>ETH</li>
+              <li>XRP</li>
+              <li>LTC</li>
+              <li>EOS</li>
+              <li>XMR</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    );
   }
   return (
     <div>

@@ -147,7 +147,9 @@
   color: #fff;
   display: block;
   margin: 1rem auto;
+  text-decoration: underline;
 }
+
 .links a {
   color: #13699b;
 }

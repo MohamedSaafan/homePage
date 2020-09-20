@@ -131,7 +131,7 @@
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .about {
-    height: 280vh;
+    height: 290vh;
     margin-top: -4rem;
   }
   .about-items {
@@ -156,5 +156,10 @@
   }
   .about .info p {
     text-align: center;
+  }
+}
+@media (min-width: 425px) and (max-width: 479px) {
+  .about {
+    height: 305vh;
   }
 }

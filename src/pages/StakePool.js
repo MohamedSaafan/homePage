@@ -1,10 +1,10 @@
 import React from "react";
 import FirstNavBar from "../components/FirstNavBar";
-import Header from "../components/StakePoo/StakePoolHeader.js";
-import About from "../components/StakePoo/About";
-import Pools from "../components/StakePoo/Pools";
-import Cards from "../components/StakePoo/Cards";
-import JoinUs from "../components/StakePoo/JoinUs";
+import Header from "../components/StakePool/StakePoolHeader.js";
+import About from "../components/StakePool/About";
+import Pools from "../components/StakePool/Pools";
+import Cards from "../components/StakePool/Cards";
+import JoinUs from "../components/StakePool/JoinUs";
 import Footer from "../components/Footer";
 
 function StakePool(props) {

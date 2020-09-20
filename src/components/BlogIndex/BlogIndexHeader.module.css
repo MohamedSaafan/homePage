@@ -1,0 +1,76 @@
+header .container {
+  position: relative;
+}
+header img {
+  width: 100%;
+}
+
+.headerCover {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.headerCover .headerTop {
+  height: 50%;
+}
+.headerCover .headerTop button {
+  display: block;
+  width: 10rem;
+  border-radius: 0 20px 20px 0;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.5rem;
+}
+.headerCover .button1 {
+  margin: 2rem 0 1rem;
+  background-color: #fea175;
+}
+.headerCover .button2 {
+  background-color: #1edbcd;
+}
+.headerCover .headerEnd {
+  width: 50%;
+  color: #fff;
+}
+.headerCover .headerEnd h2 {
+  font-size: 2rem;
+}
+.headerCover .headerEnd p {
+  margin: 1rem 0;
+}
+.headerCover .info {
+  display: flex;
+  align-items: center;
+}
+
+.headerCover .headerEnd h3 {
+  display: inlineblock;
+}
+.headerCover .headerEnd .horizontal {
+  width: 2rem;
+  height: 2px;
+  background-color: #fff;
+  display: inlineblock;
+  margin: 0 1rem;
+}
+.headerCover .headerEnd .vertical {
+  width: 2px;
+  height: 1.5rem;
+  background-color: #fff;
+  display: inlineblock;
+  margin: 0 1rem;
+}
+
+.headerCover .headerEnd button {
+  width: 10rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  outline: none;
+  background-image: linear-gradient(to right, #8181d5, #67fdec);
+  color: #fff;
+  margin: 1rem 0;
+  padding: 1rem;
+}

@@ -8,18 +8,18 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home";
-import BlogIndex from "./pages/BlogIndex";
 import StakePool from "./pages/StakePool";
 import Guides from "./pages/Guides";
+import Blog from "./pages/BlogIndex";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/blogindex" component={BlogIndex} />
         <Route path="/stakepool" exact component={StakePool} />
         <Route path="/stakepool/guides" component={Guides} />
+        <Route path="/blog" component={Blog} />
         <Redirect to="/" />
       </Switch>
     </Router>

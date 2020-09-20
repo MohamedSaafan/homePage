@@ -1,0 +1,215 @@
+.posts {
+  margin-top: 3rem;
+  height: 320vh;
+}
+.posts > .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 3rem;
+}
+.mainPosts {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.postsHeader {
+  margin: 3rem 0;
+}
+.posts .postsHeader h5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.postsHeader button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.postsItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 95%;
+  margin: auto;
+}
+.postsItem {
+  width: 100%;
+  margin: auto;
+}
+.postsItem img {
+  width: 100%;
+}
+.postsItemContainer {
+  border: 1px solid #f7f7f7;
+
+  -webkit-box-shadow: 1px 22px 26px 5px rgba(238, 238, 238, 1);
+  -moz-box-shadow: 1px 22px 26px 5px rgba(238, 238, 238, 1);
+  box-shadow: 1px 22px 26px 5px rgba(238, 238, 238, 1);
+  border-radius: 0 0 3rem 3rem;
+  margin: 1rem 0;
+}
+.postsItem h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.postsItem p {
+  font-size: 1.2rem;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.postsItem .info .horizontal {
+  background-color: #000;
+  width: 2rem;
+  height: 2px;
+  display: inline-block;
+  margin: 0 1rem;
+}
+.postsItem .info h3 {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.postsItem .info .vertical {
+  width: 2px;
+  height: 1.5rem;
+  background-color: #000;
+  display: inline-block;
+  margin: 0 1rem;
+}
+.postsItem button {
+  display: block;
+  background-color: #13699b;
+  width: 8rem;
+  color: #fff;
+  font-size: 1rem;
+  height: 2rem;
+  margin: 2rem auto;
+}
+.mainPosts > hr {
+  display: inline-block;
+  width: 35%;
+}
+.mainPosts > button {
+  width: 11rem;
+  background: #fff;
+  outline: none;
+  border: 1px solid #000;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  margin: 0 1rem;
+}
+
+/* ========== Starting The Sidebar ======== */
+.sidePosts {
+  margin: 2rem 0;
+}
+.sidePosts .sidePostsHeader {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sidePosts .sidePostsHeader input::after {
+  width: 2px;
+  height: 2rem;
+  background-color: #000;
+  display: block;
+  margin-left: 1rem;
+}
+
+.sidePostsHeader input {
+  font-size: 1.5rem;
+  outline: none;
+}
+.sidePosts img {
+  width: 100%;
+}
+.sidePosts .sidePostsItem {
+  margin: 2rem 0;
+}
+.sidePosts h3 {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+}
+.sidePosts .sidePostsContent p {
+  margin: 0.5rem 0;
+}
+.sidePostsItem {
+  display: flex;
+}
+.sidePostsItem .side-img {
+  width: 45%;
+}
+.sidePostsItem .sidePostsContent {
+  width: 55%;
+  padding: 0 0.5rem;
+}
+.sidePostsItem .info {
+  margin: 1rem 0;
+}
+.sidePostsItem .info span {
+  display: inline-block;
+  padding: 0 0.2rem;
+}
+.sidePosts .info span:nth-child(1) {
+  border-right: 1px solid #000;
+}
+.sidePostsItem a {
+  color: #1f1f1f;
+}
+.subscribe {
+  border: 2px solid #000;
+  height: 50vh;
+}
+.subscribe p {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+.subscribe h2 {
+  font-size: 4rem;
+}
+.subscribe input {
+  display: block;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+.subscribe button {
+  display: inline-block;
+  width: 15rem;
+  background-color: #13699b;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  outline: none;
+  margin: auto;
+}
+
+.category .social {
+  margin: 2rem 0;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.category i {
+  display: inline-block;
+  margin: 0 2rem;
+  color: #1edbdb;
+  font-size: 4rem;
+  border-radius: 50%;
+}
+.category h6 {
+  font-size: 3rem;
+}
+.category li {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
