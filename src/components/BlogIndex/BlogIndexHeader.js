@@ -14,7 +14,7 @@ const Header = (props) => {
           </div>
           <div className={`${Styles.headerEnd}`}>
             <div className={`${Styles.container} container`}>
-              <h2>Black Chain: What You Need To Know</h2>
+              <h2>Block Chain: What You Need To Know</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Blanditiis commodi non perferendis soluta assumenda maxime

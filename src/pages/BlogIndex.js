@@ -7,13 +7,21 @@ import Header from "../components/BlogIndex/BlogIndexHeader";
 import Posts from "../components/BlogIndex/BlogIndexPosts";
 
 const Blog = (props) => {
+  const handleNavOpen = () => {
+    console.log("navOpen handled");
+    const links = document.querySelector(".toggle-links");
+    links.style.zIndex = "1000";
+    const navBar = document.querySelector(".main-navbar ul");
+    navBar.classList.add(Styles.navOpen);
+  };
   return (
     <div className={Styles.blog}>
       <FirstNavBar />
       <MainNavBar
         color="#13699b"
-        handleNavOpen={() => {}}
+        handleNavOpen={handleNavOpen}
         handleNavClose={() => {}}
+        shouldManipulate={true}
       />
       <Header />
       <Posts />

@@ -42,10 +42,6 @@
 }
 .postsItemContainer {
   border: 1px solid #f7f7f7;
-
-  -webkit-box-shadow: 1px 22px 26px 5px rgba(238, 238, 238, 1);
-  -moz-box-shadow: 1px 22px 26px 5px rgba(238, 238, 238, 1);
-  box-shadow: 1px 22px 26px 5px rgba(238, 238, 238, 1);
   border-radius: 0 0 3rem 3rem;
   margin: 1rem 0;
 }
@@ -87,11 +83,11 @@
   height: 2rem;
   margin: 2rem auto;
 }
-.mainPosts > hr {
+.mainPosts > div > hr {
   display: inline-block;
   width: 35%;
 }
-.mainPosts > button {
+.mainPosts .loadmore > button {
   width: 11rem;
   background: #fff;
   outline: none;
@@ -142,7 +138,7 @@
 .sidePostsItem {
   display: flex;
 }
-.sidePostsItem .side-img {
+.sidePostsItem .sideImg {
   width: 45%;
 }
 .sidePostsItem .sidePostsContent {
@@ -212,4 +208,333 @@
 .category li {
   font-size: 2rem;
   margin: 1rem 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .posts {
+    height: 785vh;
+  }
+  .posts .container {
+    grid-template-columns: 1fr;
+    width: 95vw;
+  }
+  .mainPosts .postsItems {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    width: 95vw;
+    margin: 0;
+  }
+  .postsItem {
+  }
+  .postsItemContainer {
+    box-shadow: none;
+  }
+  .postsItem p {
+    display: none;
+  }
+
+  .postsItems .postsItem .postsItemContainer {
+    width: 95%;
+    margin: 2rem auto;
+  }
+  .postsItemContainer .container > div {
+    width: 85%;
+    margin: auto;
+  }
+  .postsItemContainer .container > div h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+  }
+  .postsItemContainer button {
+    display: none;
+  }
+
+  .mainPosts .loadmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+  }
+  .mainPosts .loadmore button {
+    width: 8rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0 1rem;
+  }
+
+  .mainPosts .loadmore hr {
+    height: 2px;
+    flex-grow: 0;
+    display: none;
+  }
+  .sidePosts .sidePostsHeader {
+    font-size: 1rem;
+    width: 90vw;
+  }
+  .sidePosts .sidePostsHeader input {
+    font-size: 1rem;
+  }
+  /* =================== Side Posts ====================== */
+  .sidePostsItem .sideImg {
+    width: 20%;
+  }
+  .sidePostsItem h2 {
+    font-size: 0.9rem;
+  }
+  .sidePostsItem .info {
+    margin: 0;
+  }
+  .subscribe {
+    width: 70vw;
+    padding: 0 2rem;
+    margin: auto;
+  }
+  .subscribe h2 {
+    font-size: 2rem;
+  }
+  .subscribe input {
+    font-size: 1rem;
+  }
+  .category .social {
+    justify-content: space-around;
+  }
+  .social i {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .category h6 {
+    font-size: 2rem;
+  }
+
+  .category li {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .posts {
+    height: 785vh;
+  }
+  .posts .container {
+    grid-template-columns: 1fr;
+    width: 95vw;
+  }
+  .mainPosts .postsItems {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    width: 95vw;
+    margin: 0;
+  }
+  .postsItem {
+  }
+  .postsItemContainer {
+    box-shadow: none;
+  }
+  .postsItem p {
+    display: none;
+  }
+
+  .postsItems .postsItem .postsItemContainer {
+    width: 95%;
+    margin: 2rem auto;
+  }
+  .postsItemContainer .container > div {
+    width: 85%;
+    margin: auto;
+  }
+  .postsItemContainer .container > div h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+  }
+  .postsItemContainer button {
+    display: none;
+  }
+
+  .mainPosts .loadmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+  }
+  .mainPosts .loadmore button {
+    width: 8rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0 1rem;
+  }
+
+  .mainPosts .loadmore hr {
+    height: 2px;
+    flex-grow: 0;
+    display: none;
+  }
+  .sidePosts .sidePostsHeader {
+    font-size: 1rem;
+    width: 90vw;
+  }
+  .sidePosts .sidePostsHeader input {
+    font-size: 1rem;
+  }
+  /* =================== Side Posts ====================== */
+  .sidePostsItem .sideImg {
+    width: 20%;
+  }
+  .sidePostsItem h2 {
+    font-size: 0.9rem;
+  }
+  .sidePostsItem .info {
+    margin: 0;
+  }
+  .subscribe {
+    width: 70vw;
+    padding: 0 2rem;
+    margin: auto;
+  }
+  .subscribe h2 {
+    font-size: 2rem;
+  }
+  .subscribe input {
+    font-size: 1rem;
+  }
+  .category .social {
+    justify-content: space-around;
+  }
+  .social i {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .category h6 {
+    font-size: 2rem;
+  }
+
+  .category li {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+  .posts {
+    height: 738vh;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 640px) {
+  .posts {
+    height: 712vh;
+  }
+}
+@media (min-width: 481px) and (max-width: 538px) {
+  .posts {
+    height: 654vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .posts {
+    height: 585vh;
+  }
+  .posts .container {
+    grid-template-columns: 1fr;
+    width: 95vw;
+  }
+  .mainPosts .postsItems {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    width: 95vw;
+    margin: 0;
+  }
+  .postsItem {
+  }
+  .postsItemContainer {
+    box-shadow: none;
+  }
+  .postsItem p {
+    display: none;
+  }
+
+  .postsItems .postsItem .postsItemContainer {
+    width: 95%;
+    margin: 2rem auto;
+  }
+  .postsItemContainer .container > div {
+    width: 85%;
+    margin: auto;
+  }
+  .postsItemContainer .container > div h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+  }
+  .postsItemContainer button {
+    display: none;
+  }
+
+  .mainPosts .loadmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+  }
+  .mainPosts .loadmore button {
+    width: 8rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0 1rem;
+  }
+
+  .mainPosts .loadmore hr {
+    height: 2px;
+    flex-grow: 0;
+    display: none;
+  }
+  .sidePosts .sidePostsHeader {
+    font-size: 1rem;
+    width: 90vw;
+  }
+  .sidePosts .sidePostsHeader input {
+    font-size: 1rem;
+  }
+  /* =================== Side Posts ====================== */
+  .sidePostsItem .sideImg {
+    width: 20%;
+  }
+  .sidePostsItem h2 {
+    font-size: 0.9rem;
+  }
+  .sidePostsItem .info {
+    margin: 0;
+  }
+  .subscribe {
+    width: 90vw;
+    padding: 0 2rem;
+  }
+  .subscribe h2 {
+    font-size: 2rem;
+  }
+  .subscribe input {
+    font-size: 1rem;
+  }
+  .category .social {
+    justify-content: space-around;
+  }
+  .social i {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .category h6 {
+    font-size: 2rem;
+  }
+
+  .category li {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 337px) and (max-width: 480px) {
+  .posts {
+    height: 630vh;
+  }
 }

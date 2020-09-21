@@ -5,8 +5,14 @@ import MainNavBar from "./MainNavBar";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  const handleNavOpen = () => {};
-  const handleNavClose = () => {};
+  const handleNavOpen = () => {
+    let mainHeading = document.querySelector(`.${props.styles.headerContent}`);
+    mainHeading.style.display = "none";
+  };
+  const handleNavClose = () => {
+    let mainHeading = document.querySelector(`.${props.styles.headerContent}`);
+    mainHeading.style.display = "block";
+  };
   return (
     <header className={Styles.mainHeader}>
       <MainNavBar

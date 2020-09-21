@@ -7,7 +7,6 @@ const MainNavBar = (props) => {
   useEffect(() => {
     let toggleLinks = document.querySelector(".toggle-links");
     let navLinks = document.querySelector(".nav-disktop");
-    let mainHeading;
     let shouldManipulateTheDom = props.shouldManipulate;
 
     let navOpen = false;
@@ -19,10 +18,6 @@ const MainNavBar = (props) => {
         toggleLinks.classList.add("animate-toggle");
         navLinks.style.display = "flex";
         if (shouldManipulateTheDom) {
-          mainHeading = document.querySelector(
-            `.${props.styles.headerContent}`
-          );
-          mainHeading.style.display = "none";
           props.handleNavOpen();
         }
 
@@ -31,10 +26,6 @@ const MainNavBar = (props) => {
         toggleLinks.classList.remove("animate-toggle");
         navLinks.style.display = "none";
         if (shouldManipulateTheDom) {
-          mainHeading = document.querySelector(
-            `.${props.styles.headerContent}`
-          );
-          mainHeading.style.display = "block";
           props.handleNavClose();
         }
 

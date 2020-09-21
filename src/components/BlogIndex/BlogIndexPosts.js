@@ -21,7 +21,7 @@ const Posts = (props) => {
               <div className={`${Styles.postsItemContainer}`}>
                 <img src={post1} alt="" />
                 <div className={`${Styles.container} container`}>
-                  <div className={`${Styles.postItemContent}`}>
+                  <div className={` container `}>
                     <h3>Bitcoin and Cryptocrruncy</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -45,7 +45,7 @@ const Posts = (props) => {
               <div className={`${Styles.postsItemContainer}`}>
                 <img src={post2} alt="" />
                 <div className={`${Styles.container} container`}>
-                  <div className={`${Styles.postItemContent}`}>
+                  <div className={`container`}>
                     <h3>Bitcoin and Cryptocrruncy</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -69,7 +69,7 @@ const Posts = (props) => {
               <div className={`${Styles.postsItemContainer}`}>
                 <img src={post1} alt="" />
                 <div className={`${Styles.container} container`}>
-                  <div className={`${Styles.postItemContent}`}>
+                  <div className={`container`}>
                     <h3>Bitcoin and Cryptocrruncy</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -93,7 +93,7 @@ const Posts = (props) => {
               <div className={`${Styles.postsItemContainer}`}>
                 <img src={post2} alt="" />
                 <div className={`${Styles.container} container`}>
-                  <div className={`${Styles.postItemContent}`}>
+                  <div className={`container`}>
                     <h3>Bitcoin and Cryptocrruncy</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -117,7 +117,7 @@ const Posts = (props) => {
               <div className={`${Styles.postsItemContainer}`}>
                 <img src={post1} alt="" />
                 <div className={`${Styles.container} container`}>
-                  <div className={`${Styles.postItemContent}`}>
+                  <div className={`container`}>
                     <h3>Bitcoin and Cryptocrruncy</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -141,7 +141,7 @@ const Posts = (props) => {
               <div className={`${Styles.postsItemContainer}`}>
                 <img src={post2} alt="" />
                 <div className={`${Styles.container} container`}>
-                  <div className={`${Styles.postItemContent}`}>
+                  <div className={`container`}>
                     <h3>Bitcoin and Cryptocrruncy</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -162,9 +162,11 @@ const Posts = (props) => {
               </div>
             </div>
           </div>
-          <hr />
-          <button>LOAD MORE</button>
-          <hr />
+          <div className={`${Styles.loadmore}`}>
+            <hr />
+            <button>LOAD MORE</button>
+            <hr />
+          </div>
         </div>
         <div className={`${Styles.sidePosts}`}>
           <div className={`${Styles.sidePostsHeader}`}>
@@ -183,7 +185,7 @@ const Posts = (props) => {
               <h2>Bit Coin Correlation With Gold</h2>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               <div className={`${Styles.info}`}>
-                <span>AlexBrockenbrow</span>
+                <span>Alex Brockenbrow</span>
                 <span className={`${Styles.vertical}`}></span>
                 <span>September 9.2020</span>
                 <br />
@@ -199,7 +201,7 @@ const Posts = (props) => {
               <h2>Bit Coin Correlation With Gold</h2>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               <div className={`${Styles.info}`}>
-                <span>AlexBrockenbrow</span>
+                <span>Alex Brockenbrow</span>
                 <span className={`${Styles.vertical}`}></span>
                 <span>September 9.2020</span>
                 <br />
@@ -215,7 +217,7 @@ const Posts = (props) => {
               <h2>Bit Coin Correlation With Gold</h2>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               <div className={`${Styles.info}`}>
-                <span>AlexBrockenbrow</span>
+                <span>Alex Brockenbrow</span>
                 <span className={`${Styles.vertical}`}></span>
                 <span>September 9.2020</span>
                 <br />
@@ -231,7 +233,7 @@ const Posts = (props) => {
               <h2>Bit Coin Correlation With Gold</h2>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               <div className={`${Styles.info}`}>
-                <span>AlexBrockenbrow</span>
+                <span>Alex Brockenbrow</span>
                 <span className={`${Styles.vertical}`}></span>
                 <span>September 9.2020</span>
                 <br />
@@ -242,7 +244,7 @@ const Posts = (props) => {
           <div className={`${Styles.subscribe}`}>
             <div className={`${Styles.container} container`}>
               <p>Subscribe</p>
-              <h2>AlthTogether</h2>
+              <h2>AltsTogether</h2>
               <input type="email" placeholder="Type Your Email" />
               <div className={`${Styles.centered}`}>
                 <button>Subscribe</button>

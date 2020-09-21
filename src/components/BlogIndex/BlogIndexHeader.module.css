@@ -1,5 +1,9 @@
+header {
+  height: 100vh;
+}
 header .container {
   position: relative;
+  overflow: visible;
 }
 header img {
   width: 100%;
@@ -21,7 +25,7 @@ header img {
   width: 10rem;
   border-radius: 0 20px 20px 0;
   font-size: 1.5rem;
-  color: #fff;
+  color: #000;
   padding: 0.5rem;
 }
 .headerCover .button1 {
@@ -33,13 +37,20 @@ header img {
 }
 .headerCover .headerEnd {
   width: 50%;
-  color: #fff;
+  color: #000000;
+  width: 90%;
+  bottom: -14rem;
+  position: absolute;
 }
 .headerCover .headerEnd h2 {
   font-size: 2rem;
 }
 .headerCover .headerEnd p {
   margin: 1rem 0;
+  width: 50vh;
+  text-align: left;
+
+  text-align: center;
 }
 .headerCover .info {
   display: flex;
@@ -47,19 +58,19 @@ header img {
 }
 
 .headerCover .headerEnd h3 {
-  display: inlineblock;
+  display: inline-block;
 }
 .headerCover .headerEnd .horizontal {
   width: 2rem;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   display: inlineblock;
   margin: 0 1rem;
 }
 .headerCover .headerEnd .vertical {
   width: 2px;
   height: 1.5rem;
-  background-color: #fff;
+  background-color: #000;
   display: inlineblock;
   margin: 0 1rem;
 }
@@ -73,4 +84,181 @@ header img {
   color: #fff;
   margin: 1rem 0;
   padding: 1rem;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    height: 65vh;
+  }
+  header .container {
+    overflow: visible;
+  }
+  header img {
+    height: auto;
+  }
+  .headerCover .headerTop {
+    height: 30%;
+  }
+  .headerCover .headerTop button {
+    display: block;
+    width: 4rem;
+    border-radius: 0 20px 20px 0;
+    font-size: 0.5rem;
+    color: #fff;
+    padding: 0.2rem;
+  }
+  .headerTop .button1 {
+    margin: 1rem 0 0.5rem;
+  }
+  .headerCover .headerEnd {
+    width: 90%;
+    position: absolute;
+    bottom: -4rem;
+    color: #000;
+  }
+  .headerCover .headerEnd h2 {
+    font-size: 1rem;
+  }
+  .headerCover p {
+    display: none;
+  }
+  .headerCover .headerEnd h3 {
+    font-size: 0.75rem;
+  }
+  .headerCover .headerEnd .horizontal {
+    width: 1rem;
+    background-color: #000;
+  }
+  .headerCover .headerEnd .vertical {
+    height: 1rem;
+    background-color: #000;
+  }
+  .headerEnd .info span {
+    font-size: 0.75rem;
+  }
+  .headerCover .headerEnd button {
+    width: 4rem;
+    padding: 0.1rem;
+    margin: 0.5rem auto;
+    font-size: 0.75rem;
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  header {
+    height: 55vh;
+  }
+  header .container {
+    overflow: visible;
+  }
+  header img {
+    height: auto;
+  }
+  .headerCover .headerTop {
+    height: 30%;
+  }
+  .headerCover .headerTop button {
+    display: block;
+    width: 4rem;
+    border-radius: 0 20px 20px 0;
+    font-size: 0.5rem;
+    color: #fff;
+    padding: 0.2rem;
+  }
+  .headerTop .button1 {
+    margin: 1rem 0 0.5rem;
+  }
+  .headerCover .headerEnd {
+    width: 90%;
+    position: absolute;
+    bottom: -4rem;
+    color: #000;
+  }
+  .headerCover .headerEnd h2 {
+    font-size: 1rem;
+  }
+  .headerCover p {
+    display: none;
+  }
+  .headerCover .headerEnd h3 {
+    font-size: 0.75rem;
+  }
+  .headerCover .headerEnd .horizontal {
+    width: 1rem;
+    background-color: #000;
+  }
+  .headerCover .headerEnd .vertical {
+    height: 1rem;
+    background-color: #000;
+  }
+  .headerEnd .info span {
+    font-size: 0.75rem;
+  }
+  .headerCover .headerEnd button {
+    width: 4rem;
+    padding: 0.1rem;
+    margin: 0.5rem auto;
+    font-size: 0.75rem;
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    height: 30vh;
+  }
+  header .container {
+    overflow: visible;
+  }
+  header img {
+    height: 25vh;
+  }
+  .headerCover .headerTop {
+    height: 30%;
+  }
+  .headerCover .headerTop button {
+    display: block;
+    width: 4rem;
+    border-radius: 0 20px 20px 0;
+    font-size: 0.5rem;
+    color: #fff;
+    padding: 0.2rem;
+  }
+  .headerTop .button1 {
+    margin: 1rem 0 0.5rem;
+  }
+  .headerCover .headerEnd {
+    width: 90%;
+    position: absolute;
+    bottom: -4rem;
+    color: #000;
+  }
+  .headerCover .headerEnd h2 {
+    font-size: 1rem;
+  }
+  .headerCover p {
+    display: none;
+  }
+  .headerCover .headerEnd h3 {
+    font-size: 0.75rem;
+  }
+  .headerCover .headerEnd .horizontal {
+    width: 1rem;
+    background-color: #000;
+  }
+  .headerCover .headerEnd .vertical {
+    height: 1rem;
+    background-color: #000;
+  }
+  .headerEnd .info span {
+    font-size: 0.75rem;
+  }
+  .headerCover .headerEnd button {
+    width: 4rem;
+    padding: 0.1rem;
+    margin: 0.5rem auto;
+    font-size: 0.75rem;
+    display: none;
+  }
 }
