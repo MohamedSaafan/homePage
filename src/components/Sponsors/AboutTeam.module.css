@@ -1,0 +1,33 @@
+.aboutTeam form {
+  width: 100%;
+  background-color: #ffbd52;
+
+  border-radius: 1rem;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6;
+  padding: 4rem;
+  color: #fff;
+  column-gap: 2rem;
+  margin: 5rem auto;
+}
+.aboutTeam h3 {
+  grid-column: auto / span 2;
+  text-align: center;
+}
+.aboutTeam input[type="text"],
+.aboutTeam input[type="email"] {
+  background-color: #ffbd52;
+  margin: 2rem auto;
+  border-bottom: 2px solid #ffce7d;
+  padding-bottom: 0.5rem;
+  color: #ffce7d;
+  width: 100%;
+}
+
+.aboutTeam textarea {
+  color: #ffbd52;
+  height: 30vh;
+  grid-column: auto / span 2;
+}

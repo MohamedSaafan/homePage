@@ -1,9 +1,12 @@
 .navOpen {
   position: absolute;
-  top: 0;
+  top: -2rem;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 100;
   background-color: rgba(151, 154, 163, 0.7);
+}
+.navOpen li a {
+  color: #fff;
 }

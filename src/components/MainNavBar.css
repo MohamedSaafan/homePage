@@ -126,6 +126,14 @@
 a {
   color: #fff;
 }
+@media (min-width: 767px) and (max-width: 1024px) {
+  .main-navbar .container .logo {
+    width: 30%;
+  }
+  .main-navbar ul {
+    width: 60%;
+  }
+}
 @media (min-width: 481px) and (max-width: 767px) {
   .main-navbar .container .logo {
     width: 50%;
@@ -165,6 +173,9 @@ a {
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
+  .main-navbar .container .logo a img {
+    height: auto;
+  }
   .main-navbar {
     height: 4rem;
   }

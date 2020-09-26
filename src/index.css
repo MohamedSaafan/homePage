@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 input {
   border: 0;
@@ -24,6 +25,16 @@ button {
 }
 button {
   cursor: pointer;
+  width: 8rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(128, 131, 213),
+    rgb(104, 246, 235)
+  );
+  border-radius: 2rem;
+  color: #fff;
 }
 #root {
   margin: auto;

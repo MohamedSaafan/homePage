@@ -12,7 +12,7 @@ const Header = (props) => {
             <button className={`${Styles.button1}`}>FEATURED</button>
             <button className={`${Styles.button2}`}>BITCOIN</button>
           </div>
-          <div className={`${Styles.headerEnd}`}>
+          {/* <div className={`${Styles.headerEnd}`}>
             <div className={`${Styles.container} container`}>
               <h2>Block Chain: What You Need To Know</h2>
               <p>
@@ -31,7 +31,7 @@ const Header = (props) => {
 
               <button>read more</button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

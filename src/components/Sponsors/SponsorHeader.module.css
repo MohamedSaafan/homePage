@@ -1,0 +1,27 @@
+.header {
+  height: 60vh;
+  display: flex;
+  color: rgb(28, 111, 159);
+}
+.header .headerImage {
+  width: 60%;
+  order: 1;
+}
+.header .headerImage img {
+  width: 100%;
+}
+.header .container {
+  width: 40%;
+}
+.headerContent {
+  width: 30%;
+  margin: 4rem auto 0 auto;
+}
+.header h2 + p {
+  font-weight: bold;
+  color: rgb(255, 190, 84);
+  margin: 1rem auto;
+}
+.header p + button {
+  margin-top: 2rem;
+}

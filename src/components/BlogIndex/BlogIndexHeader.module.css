@@ -1,5 +1,5 @@
 header {
-  height: 100vh;
+  height: 70vh;
 }
 header .container {
   position: relative;
@@ -116,6 +116,7 @@ header img {
     position: absolute;
     bottom: -4rem;
     color: #000;
+    display: none;
   }
   .headerCover .headerEnd h2 {
     font-size: 1rem;
@@ -125,6 +126,7 @@ header img {
   }
   .headerCover .headerEnd h3 {
     font-size: 0.75rem;
+    font-weight: normal;
   }
   .headerCover .headerEnd .horizontal {
     width: 1rem;

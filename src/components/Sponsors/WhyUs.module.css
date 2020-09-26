@@ -1,0 +1,68 @@
+.whyUs {
+  text-align: center;
+  color: rgb(19, 105, 155);
+}
+
+.whyUs .line {
+  width: 10rem;
+  margin: auto;
+  display: inline-block;
+  border-color: #8183d6;
+  margin-bottom: 6rem;
+}
+.whyUsContentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6rem;
+}
+.whyUsMainContent h3 {
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+.whyUsMainContent p {
+  text-align: left;
+}
+.lambs i {
+  color: #fea154;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+.whyUsContentCard {
+  display: grid;
+  margin-bottom: 10rem;
+  grid-template-columns: 1fr 1fr;
+  background-image: url("../../images/orbit2.png");
+  background-size: cover;
+  background-position: bottom;
+}
+.card {
+  border-radius: 1rem;
+  border: 1px solid #eee;
+  height: 10rem;
+  width: 10rem;
+  margin: auto;
+  padding: 1rem;
+}
+.lambs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 5rem;
+}
+.firstLambs i:nth-child(1) {
+  align-self: flex-start;
+  font-size: 2rem;
+}
+.firstLambs i:nth-child(2) {
+  align-self: flex-end;
+  font-size: 4rem;
+}
+.lastLambs i:nth-child(2) {
+  align-self: flex-start;
+  font-size: 2rem;
+  font-size: 4rem;
+}
+.lastLambs i:nth-child(3) {
+  margin-top: 2rem;
+  font-size: 2rem;
+}

@@ -1,3 +1,6 @@
+.details {
+  height: 200vh;
+}
 .posts {
   margin-top: 3rem;
   height: 290vh;
@@ -11,94 +14,25 @@
   position: relative;
   padding-bottom: 2rem;
 }
-.postsHeader {
-  margin: 3rem 0;
-}
-.posts .postsHeader h5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.postsHeader button {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.postsItems {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 95%;
-  margin: auto;
-}
-.postsItem {
-  width: 100%;
-  margin: auto;
-}
-.postsItem img {
-  width: 100%;
-}
-.postsItemContainer {
-  border: 1px solid #f7f7f7;
-  border-radius: 0 0 3rem 3rem;
-  margin: 1rem 0;
-}
-.postsItem h3 {
-  font-size: 2rem;
-  margin: 1rem 0;
-}
-.postsItem p {
-  font-size: 1.2rem;
-}
-.info {
+.mainPosts .avatar {
+  height: 30vh;
   display: flex;
   align-items: center;
 }
-.postsItem .info .horizontal {
-  background-color: #000;
-  width: 1rem;
-  height: 2px;
+.mainPosts .avatar img {
+  width: 25%;
+  border-radius: 50%;
+}
+.mainPosts .avatar .content {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 0 0 2rem;
 }
-.postsItem .info h3 {
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: normal;
+
+.mainPosts video {
+  width: 100%;
 }
-.postsItem .info .vertical {
-  width: 2px;
-  height: 1.5rem;
-  background-color: #000;
-  display: inline-block;
-  margin: 0 1rem;
-}
-.postsItem button {
-  display: block;
-  background-color: #13699b;
-  width: 8rem;
-  color: #fff;
-  font-size: 1rem;
-  height: 2rem;
-  margin: 2rem auto;
-  display: none;
-}
-.loadmore {
-  margin: auto;
-  width: 90%;
-  text-align: center;
-}
-.mainPosts .loadmore > button {
-  width: 11rem;
-  background: #fff;
-  outline: none;
-  border: 1px solid #000;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  padding: 0.5rem;
-  margin: 0 1rem;
+.mainPosts p {
+  line-height: 2rem;
 }
 
 /* ========== Starting The Sidebar ======== */
@@ -119,7 +53,7 @@
   background-color: #000;
   display: block;
 }
-margin-left.mainPosts .sidePostsHeader input {
+.mainPosts .sidePostsHeader input {
   font-size: 1.5rem;
   outline: none;
 }

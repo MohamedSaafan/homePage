@@ -1,0 +1,7 @@
+.mainNavBar {
+  margin: 0 0 2rem 0;
+  height: 15vh;
+}
+.mainNavBar .container {
+  height: 100%;
+}

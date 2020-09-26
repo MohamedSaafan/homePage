@@ -1,0 +1,51 @@
+.about {
+  margin-bottom: 10rem;
+  overflow: visible;
+}
+
+.avatar {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  width: 18rem;
+  margin: auto;
+  color: #8183d6;
+  transform: translateX(20%);
+}
+.avatar i {
+  color: #fff;
+  background-color: #8183d6;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.avatar .content {
+  display: inline-block;
+  margin: 0 0 0 0.5rem;
+}
+.box {
+  color: #fff;
+  background-image: linear-gradient(to right, rgb(142, 143, 217), #0dedba);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 4rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+.box p + h3 {
+  margin: 2rem auto 0;
+}
+.boxImage {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(50%, 0);
+  transform: translate(-50%, 50%);
+}
+.boxImage img {
+  border-radius: 50%;
+}

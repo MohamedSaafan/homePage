@@ -35,8 +35,15 @@ const MainNavBar = (props) => {
   }, [props]);
   return (
     <div>
-      <nav className="main-navbar">
-        <div className="container">
+      <nav
+        className={`main-navbar ${props.mainNav} `}
+        style={
+          props.backgroundImage
+            ? { backgroundImage: props.backgroundImage }
+            : {}
+        }
+      >
+        <div className={`container ${props.container}`}>
           <div className="toggle-links">
             <span className="toggle half start"></span>
             <span className="toggle "></span>

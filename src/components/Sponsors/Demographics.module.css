@@ -1,0 +1,26 @@
+.graphics h3 {
+  text-align: center;
+  color: #8385d7;
+  margin: 4rem auto;
+  font-size: 2rem;
+}
+
+.ulContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  background-image: url("../../images//sponsor/Demographics.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #8385d7;
+  margin: 0.5rem auto;
+}
+.graphics ul li:nth-child(1) {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.graphics ul:nth-child(1) {
+  text-align: right;
+}
