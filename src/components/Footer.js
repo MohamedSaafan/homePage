@@ -33,7 +33,7 @@ const Footer = (props) => {
 
       <footer>
         <div className="copy-wrights">
-          Copyright &copy; 2020 <span>AltsTogother</span>
+          Copyright &copy; 2020 <span>AltsTogether</span>
         </div>
         <div className="socials">
           <a

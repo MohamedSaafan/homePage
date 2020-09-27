@@ -24,3 +24,15 @@
 .graphics ul:nth-child(1) {
   text-align: right;
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .ulContainer {
+    column-gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .ulContainer {
+    column-gap: 2rem;
+  }
+}

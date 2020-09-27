@@ -9,41 +9,41 @@ import { fetchPosts } from "../../actions/index";
 import Post from "../../pages/BlogPost";
 
 class Posts extends React.Component {
-  state = {
-    posts: null,
-  };
-  componentDidMount = () => {
-    async function fetchData() {
-      await this.props.fetchPosts();
-    }
-    fetchData.bind(this)();
-  };
-  rednerPosts = () => {
-    if (this.props.posts.length === 0) {
-      return "loading ....";
-    }
-    return this.props.posts.map((post) => (
-      <div className={`${Styles.postsItem}`}>
-        <div className={`${Styles.postsItemContainer}`}>
-          <img src={post1} alt="" />
-          <div className={`${Styles.container} container`}>
-            <div className={` container `}>
-              <h3>{post.heading}</h3>
-              <p>{Post.description}</p>
-              <div className={`${Styles.info}`}>
-                <span className={`${Styles.horizontal}`}></span>
-                <h3>{post.author}</h3>
-                <span className={`${Styles.vertical}`}></span>
-                <span>{post.data}</span>
-                <br />
-              </div>
-              <button>read more</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    ));
-  };
+  // state = {
+  //   posts: null,
+  // };
+  // componentDidMount = () => {
+  //   async function fetchData() {
+  //     await this.props.fetchPosts();
+  //   }
+  //   fetchData.bind(this)();
+  // };
+  // rednerPosts = () => {
+  //   if (this.props.posts.length === 0) {
+  //     return "loading ....";
+  //   }
+  //   return this.props.posts.map((post) => (
+  //     <div className={`${Styles.postsItem}`}>
+  //       <div className={`${Styles.postsItemContainer}`}>
+  //         <img src={post1} alt="" />
+  //         <div className={`${Styles.container} container`}>
+  //           <div className={` container `}>
+  //             <h3>{post.heading}</h3>
+  //             <p>{Post.description}</p>
+  //             <div className={`${Styles.info}`}>
+  //               <span className={`${Styles.horizontal}`}></span>
+  //               <h3>{post.author}</h3>
+  //               <span className={`${Styles.vertical}`}></span>
+  //               <span>{post.data}</span>
+  //               <br />
+  //             </div>
+  //             <button>read more</button>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   ));
+  // };
 
   render = () => {
     console.log(this.props.posts[1], "from the class");
@@ -65,8 +65,7 @@ class Posts extends React.Component {
               </button>
             </div>
             <div className={`${Styles.postsItems}`}>
-              {this.rednerPosts()}
-              {/* <div className={`${Styles.postsItem}`}>
+              <div className={`${Styles.postsItem}`}>
                 <div className={`${Styles.postsItemContainer}`}>
                   <img src={post1} alt="" />
                   <div className={`${Styles.container} container`}>
@@ -209,7 +208,7 @@ class Posts extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
             <div className={`${Styles.loadmore}`}>
               <button>LOAD MORE</button>

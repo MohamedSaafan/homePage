@@ -18,8 +18,8 @@ const Graphics = (props) => {
         </ul>
         <ul className="list-unstyled">
           <li>Top Countries</li>
-          <li>United States, canada</li>
-          <li>United Kingdom, Hong Kong</li>
+          <li> United Kingdom, United States </li>
+          <li> Canada, Hong Kong</li>
           <li>Australia, Singapore, Germany, France</li>
         </ul>
       </div>

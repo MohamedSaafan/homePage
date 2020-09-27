@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   BrowserRouter as Router,
@@ -6,7 +6,6 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-
 import Home from "./pages/Home";
 import StakePool from "./pages/StakePool";
 import Guides from "./pages/Guides";

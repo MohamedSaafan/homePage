@@ -6,29 +6,22 @@ const AboutTeam = (props) => {
     <div className={`${Styles.aboutTeam} container`}>
       <form className="container">
         <h3>About Your Team</h3>
-        <input type="text" name="name" placeholder="Company name" />
+        <input type="text" name="companyName" placeholder="Company name" />
         <input type="email" name="email" placeholder="Email" />
-        <textarea placeholder="Describe Your Product/Service"></textarea>
 
+        <input type="text" name="contactName" placeholder="Contact name" />
+        <input type="text" name="website" placeholder="Website" />
+        <textarea placeholder="Describe Your Product/Service"></textarea>
+        <h3>Select all that apply :</h3>
         <div>
           {" "}
           <input
             type="checkbox"
-            id="Advertisement"
-            name="Advertisement"
-            value="advertisement"
+            id="siteSponsorship"
+            name="siteSponsorship"
+            value="siteSponsorship"
           />
-          <label htmlFor="Advertisement"> Advertisement</label>
-          <br />
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            id="sponsoredTrack"
-            name="sponsoredCommunityTrack"
-            value="sponsoredCommunityTrack"
-          />
-          <label htmlFor="sponsoredTrack"> Sponsored Community Track</label>
+          <label htmlFor="siteSponsorship">site sponsorship </label>
           <br />
         </div>
         <div>
@@ -38,10 +31,22 @@ const AboutTeam = (props) => {
             name="sponsoredContent"
             value="sponsoredContent"
           />
-          <label htmlFor="sponsoredContent">Sponsored Content</label>
+          <label htmlFor="sponsoredContent">sponsored Content</label>
           <br />
         </div>
+
         <div>
+          <input
+            type="checkbox"
+            id="SponsoredVideo"
+            name="SponsoredVideo"
+            value="SponsoredVideo"
+          />
+          <label htmlFor="SponsoredVideo">Sponsored video</label>
+          <br />
+        </div>
+
+        <div style={{ display: "none" }}>
           <input
             type="checkbox"
             id="sponsoredEmail"
@@ -51,27 +56,21 @@ const AboutTeam = (props) => {
           <label htmlFor="sponsoredEmail">Sponsored Email</label>
           <br />
         </div>
+
         <div>
           <input
             type="checkbox"
-            id="sponsoredWebinar"
-            name="sponsoredWebinar"
-            value="sponsoredWebinar"
+            id="sponsoredCryptoCamperChallenge"
+            name="sponsoredCryptoCamperChallenge"
+            value="sponsoredCryptoCamperChallenge"
           />
-          <label htmlFor="sponsoredWebinar">Sponsored Webinar</label>
-          <br />
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            id="partneship"
-            name="partneship"
-            value="partneship"
-          />
-          <label htmlFor="partneship">partneship</label>
+          <label htmlFor="sponsoredCryptoCamperChallenge">
+            Sponsored crypto Challenge
+          </label>
           <br />
         </div>
       </form>
+      <button>Submit</button>
     </div>
   );
 };

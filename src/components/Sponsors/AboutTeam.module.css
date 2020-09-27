@@ -3,31 +3,68 @@
   background-color: #ffbd52;
 
   border-radius: 1rem;
-  height: 90vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
   grid-template-rows: 6;
   padding: 4rem;
   color: #fff;
   column-gap: 2rem;
-  margin: 5rem auto;
+  margin: 5rem auto 2rem;
 }
 .aboutTeam h3 {
   grid-column: auto / span 2;
   text-align: center;
 }
+.aboutTeam h3:nth-of-type(2) {
+  text-align: left;
+  font-size: 1rem;
+}
 .aboutTeam input[type="text"],
 .aboutTeam input[type="email"] {
   background-color: #ffbd52;
-  margin: 2rem auto;
+  margin: auto;
   border-bottom: 2px solid #ffce7d;
   padding-bottom: 0.5rem;
   color: #ffce7d;
   width: 100%;
+}
+.aboutTeam div {
+  grid-column: auto / span 2;
+  text-transform: capitalize;
 }
 
 .aboutTeam textarea {
   color: #ffbd52;
   height: 30vh;
   grid-column: auto / span 2;
+  padding: 0.5rem;
+}
+.aboutTeam input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+.aboutTeam button {
+  display: block;
+  margin: 3rem auto;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .aboutTeam form {
+    padding: 1rem;
+  }
+  .aboutTeam form input[type="text"],
+  .aboutTeam form input[type="email"] {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .aboutTeam form {
+    padding: 1rem;
+  }
+  .aboutTeam form input[type="text"],
+  .aboutTeam form input[type="email"] {
+    margin-bottom: 2rem;
+  }
 }

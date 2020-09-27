@@ -10,11 +10,13 @@ const WhyUs = (props) => {
           <h3>Why AltsTogether?</h3>
           <p>
             {" "}
-            We were originally just a United Kingdom based Facebook group, but
-            now we want to bring our collective knowledge and guides to help all
-            people across the globe.
-            <br /> <br /> From beginners to experts, we hope to be able to bring
-            something to you! Our Bitcoin Crypto:
+            We want to help build credibility & awareness and get your leads to
+            actively engage with our users across our different platforms and a
+            greater audience beyond.
+            <br /> <br /> We are a community interest group, and all profits
+            will benefit the crypto community and your sponsorship will allow us
+            to bring further reviews, guides, education, and crypto knowledge to
+            all crypto enthusiasts.
           </p>
         </div>
         <div className={`${Styles.whyUsContentCard}`}>

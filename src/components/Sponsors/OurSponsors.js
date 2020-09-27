@@ -38,12 +38,13 @@ const OurSponsors = (props) => {
         <div className={`${Styles.imageContainer}`}>
           <img src={banner} alt="collaborations" />
         </div>
-        <div className={`${Styles.sponsorsDetailsContent}`}>
+        <div className={`${Styles.sponsorsDetailsContent} container`}>
           <hr />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            fugiat, saepe atque quod corporis consequuntur voluptatem? Ea
-            aspernatur molestiae optio?
+            Our UK Community Interest Group is now at 5k+ members, and we will
+            be passing on our crypto learning program, tutorials, video guide
+            series and technology reviews to a much a larger global audience -
+            while maintaining our community interest ethos.
           </p>
         </div>
       </div>

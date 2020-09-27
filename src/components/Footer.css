@@ -86,4 +86,7 @@
   .footer .designer {
     width: 35%;
   }
+  .footer footer {
+    height: 25%;
+  }
 }

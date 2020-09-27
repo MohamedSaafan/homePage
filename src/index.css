@@ -4,6 +4,12 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+p {
+  line-height: 140%;
+}
+a {
+  text-decoration: none;
+}
 input {
   border: 0;
 }
@@ -39,4 +45,6 @@ button {
 #root {
   margin: auto;
   overflow: hidden;
+}
+.active {
 }

@@ -41,7 +41,6 @@
   font-size: 1rem;
   padding: 0.5rem;
   background-color: transparent;
-  color: #3de2d5;
   border-radius: 20px;
   width: 10rem;
   border: 1px solid #13699a;
@@ -115,10 +114,13 @@
   .about-items {
     margin: 4rem auto;
   }
+  .about .info button {
+    width: 7rem;
+  }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .about {
-    height: 243vh;
+    height: 256vh;
 
     margin-top: -4rem;
   }
@@ -128,10 +130,14 @@
   .about .logos-item {
     font-size: 0.5rem;
   }
+
+  .about .info button {
+    width: 7rem;
+  }
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .about {
-    height: 290vh;
+    height: 324vh;
     margin-top: -4rem;
   }
   .about-items {
@@ -160,6 +166,6 @@
 }
 @media (min-width: 425px) and (max-width: 479px) {
   .about {
-    height: 305vh;
+    height: 324vh;
   }
 }

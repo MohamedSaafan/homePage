@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./MainNavBar.css";
 import Logo from "../images/ATG Icon.png";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const MainNavBar = (props) => {
   useEffect(() => {
@@ -33,6 +33,7 @@ const MainNavBar = (props) => {
       }
     });
   }, [props]);
+  // making the active class
   return (
     <div>
       <nav
@@ -62,34 +63,45 @@ const MainNavBar = (props) => {
           </div>
           <ul className="list-unstyled  nav-disktop">
             <li>
-              <Link to="/" style={props.color ? { color: props.color } : {}}>
+              <NavLink
+                to="/about"
+                style={props.color ? { color: props.color } : {}}
+              >
                 about
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/" style={props.color ? { color: props.color } : {}}>
+              <NavLink
+                to="/videos"
+                style={props.color ? { color: props.color } : {}}
+              >
                 videos
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/blog"
+                exact
                 style={props.color ? { color: props.color } : {}}
               >
                 blog
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/" style={props.color ? { color: props.color } : {}}>
-                contact
-              </Link>
+              <NavLink
+                to="/sponsors"
+                exact
+                style={props.color ? { color: props.color } : {}}
+              >
+                sponsor Us
+              </NavLink>
             </li>
           </ul>
           <div className="nav-end">
             <i className="fa fa-search fa-xl"></i>
             <button>join us</button>
             <span></span>
-            <Link to="/login">login</Link>
+            <NavLink to="/login">login</NavLink>
           </div>
         </div>
       </nav>
