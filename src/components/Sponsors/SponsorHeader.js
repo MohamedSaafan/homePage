@@ -3,6 +3,11 @@ import Styles from "./SponsorHeader.module.css";
 import hero from "../../images/sponsor/Hero.png";
 
 const Header = (props) => {
+  const handleClick = () => {
+    const form = document.forms[0];
+    console.log(form);
+    form.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <header className={`${Styles.header}`}>
       <div className={`${Styles.headerImage}`}>
@@ -11,13 +16,15 @@ const Header = (props) => {
       <div className={`${Styles.headerContent} `}>
         <h2>Work with AltsTogether</h2>
 
-        <p>Promote Your business, advertise with us.</p>
+        <p>Promote Your Business by Sponsoring AltsTogether.</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          repudiandae laboriosam eaque doloribus earum dolor harum vel quasi
-          dolorum aperiam!
+          Get noticed & reach a community of thousands of crypto enthusiasts
+          from technology developers, investors and entrepreneurs.
+          <br /> <br /> Our own community interest programs can offer you
+          high-quality, lead generation and brand exposure across a variety of
+          platforms and in a variety of innovative fun methods.
         </p>
-        <button>get in touch</button>
+        <button onClick={handleClick}>get in touch</button>
       </div>
     </header>
   );

@@ -22,9 +22,7 @@ const WhyUs = (props) => {
         <div className={`${Styles.whyUsContentCard}`}>
           <div className={`${Styles.whyUsContentCardItem}`}>
             <div className={`${Styles.card}`}>
-              <p>
-                We were originally just a United Kingdom based Facebook group,
-              </p>
+              <p>Direct access to crypto and blockchain enthusiasts.</p>
             </div>
             <div className={`${Styles.lambs} ${Styles.firstLambs}`}>
               <i className="fa fa-lightbulb-o fa-sm"></i>
@@ -38,9 +36,7 @@ const WhyUs = (props) => {
               <i className="fa fa-lightbulb-o fa-lg"></i>
             </div>
             <div className={`${Styles.card}`}>
-              <p>
-                We were originally just a United Kingdom based Facebook group,
-              </p>
+              <p>Sponsor us to help further our community projects.</p>
             </div>
           </div>
         </div>

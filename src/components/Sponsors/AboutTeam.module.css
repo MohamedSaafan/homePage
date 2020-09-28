@@ -13,6 +13,9 @@
   column-gap: 2rem;
   margin: 5rem auto 2rem;
 }
+.aboutTeam div {
+  display: inline-block;
+}
 .aboutTeam h3 {
   grid-column: auto / span 2;
   text-align: center;
@@ -27,10 +30,10 @@
   margin: auto;
   border-bottom: 2px solid #ffce7d;
   padding-bottom: 0.5rem;
-  color: #ffce7d;
+  color: #fff;
   width: 100%;
 }
-.aboutTeam div {
+.aboutTeam .checkBox {
   grid-column: auto / span 2;
   text-transform: capitalize;
 }
@@ -53,18 +56,10 @@
   .aboutTeam form {
     padding: 1rem;
   }
-  .aboutTeam form input[type="text"],
-  .aboutTeam form input[type="email"] {
-    margin-bottom: 2rem;
-  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .aboutTeam form {
     padding: 1rem;
-  }
-  .aboutTeam form input[type="text"],
-  .aboutTeam form input[type="email"] {
-    margin-bottom: 2rem;
   }
 }
