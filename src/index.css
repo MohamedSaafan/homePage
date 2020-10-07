@@ -7,9 +7,7 @@
 p {
   line-height: 140%;
 }
-a {
-  text-decoration: none;
-}
+
 input {
   border: 0;
   outline: none;
@@ -48,6 +46,4 @@ input[type="submit"] {
 #root {
   margin: auto;
   overflow: hidden;
-}
-.active {
 }

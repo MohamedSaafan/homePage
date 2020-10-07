@@ -9,7 +9,6 @@ import Details from "../components/BlogPost/PostDetails";
 const Post = (props) => {
   return (
     <div>
-      <FirstNavBar />
       <MainNavBar
         backgroundImage="linear-gradient(to right, #8181d5, #67fdec)"
         mainNav={Styles.mainNavBar}

@@ -20,7 +20,6 @@ const Blog = (props) => {
   };
   return (
     <div className={Styles.blog}>
-      <FirstNavBar />
       <MainNavBar
         color="#13699b"
         handleNavOpen={handleNavOpen}

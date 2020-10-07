@@ -1,0 +1,39 @@
+.signUp {
+  background-color: #ffbd52;
+  border-radius: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.signUp h3 {
+  color: #fff;
+  text-align: center;
+  margin: 2rem auto;
+}
+.signUp input {
+  background-color: transparent;
+  text-align: center;
+  margin: auto;
+}
+.signUp label {
+  color: #fff;
+  width: 100%;
+}
+.signUp button {
+  margin: 2rem auto;
+}
+.signUp a {
+  text-decoration: underline;
+}
+@media only screen and (min-width: 930px) {
+  .signUp {
+    width: 55%;
+  }
+  .signUp label {
+    font-size: 1.5rem;
+  }
+  .signUp input {
+    font-size: 1.5rem;
+  }
+}

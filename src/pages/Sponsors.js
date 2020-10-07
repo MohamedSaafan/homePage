@@ -13,7 +13,6 @@ import AboutTeam from "../components/Sponsors/AboutTeam";
 const Sponsors = (props) => {
   return (
     <>
-      <FirstNavBar />
       <MainNavBar color="rgb(28,111,159)" />
       <Header />
       <About />

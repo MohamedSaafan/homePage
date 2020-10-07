@@ -1,0 +1,10 @@
+.breadCrumb {
+  margin: 2rem auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 5rem;
+}

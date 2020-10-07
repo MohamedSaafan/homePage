@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  position: relative;
+}
+
+.header__content {
+  width: 33%;
+  position: absolute;
+  left: 5%;
+  top: 25%;
+}
+
+.header__content {
+  font-size: 1rem;
+  color: #3a80a9;
+}
+.header__heading {
+  color: #2976a3;
+  font-size: 2rem;
+}
+.header__description {
+  color: #ffc76c;
+  margin: 0.7rem auto;
+}
+.header__details {
+  margin: 0.7rem auto;
+}
+
+.header__banner {
+  width: 75%;
+  margin-left: auto;
+}
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+.sponsors__item {
+  width: 10%;
+  margin: 1rem;
+  font-size: 2rem;
+}
+.sponsors__image {
+  width: 100%;
+}

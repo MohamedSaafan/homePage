@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "./MainNavBar.css";
 import Logo from "../images/ATG Icon.png";
 import { NavLink, Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { signOut } from "../actions";
 
 const MainNavBar = (props) => {
   useEffect(() => {
@@ -80,6 +82,14 @@ const MainNavBar = (props) => {
             </li>
             <li>
               <NavLink
+                to="/campervan"
+                style={props.color ? { color: props.color } : {}}
+              >
+                campervan
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/blog"
                 exact
                 style={props.color ? { color: props.color } : {}}
@@ -93,20 +103,37 @@ const MainNavBar = (props) => {
                 exact
                 style={props.color ? { color: props.color } : {}}
               >
-                sponsor Us
+                sponsor us
               </NavLink>
             </li>
           </ul>
           <div className="nav-end">
             <i className="fa fa-search fa-xl"></i>
-            <button>join us</button>
-            <span></span>
-            <NavLink to="/login">login</NavLink>
+            {props.name ? "Hi, " + props.name : <button>join us</button>}
+
+            <span
+              style={props.color ? { backgroundColor: props.color } : {}}
+            ></span>
+
+            {props.name ? (
+              <button onClick={props.signOut}>logout</button>
+            ) : (
+              <Link to="/signin">login</Link>
+            )}
           </div>
         </div>
       </nav>
     </div>
   );
 };
-
-export default MainNavBar;
+const mapStateToProps = (state) => {
+  if (state.auth.isSignedIn) {
+    return {
+      name: state.auth.userAttributes.name,
+    };
+  }
+  return {
+    name: false,
+  };
+};
+export default connect(mapStateToProps, { signOut })(MainNavBar);

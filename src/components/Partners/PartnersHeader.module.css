@@ -1,0 +1,10 @@
+.partners ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+  width: 80%;
+}
+.partners ul li {
+  width: 50%;
+  margin: 1rem auto;
+}

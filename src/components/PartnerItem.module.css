@@ -1,0 +1,28 @@
+.partner {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #deedfc;
+  padding: 1rem;
+  position: relative;
+}
+.partner__heading {
+  font-size: 2rem;
+  color: #044f8d;
+  margin-bottom: 0.5rem;
+}
+.partner__hr {
+  margin-bottom: 0.5rem;
+}
+.partner__wrapper {
+  display: flex;
+}
+.partner__logo {
+}
+.partner__image {
+  width: 100%;
+}
+.partner__highlighted {
+  position: absolute;
+  right: 2%;
+  top: -10%;
+}

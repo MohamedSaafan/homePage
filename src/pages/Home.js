@@ -8,7 +8,6 @@ const Home = (props) => {
   return (
     <>
       {" "}
-      <FirstNavBar />
       <Header />
       <About />
       <Footer />

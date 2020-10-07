@@ -10,7 +10,6 @@ import Footer from "../components/Footer";
 function StakePool(props) {
   return (
     <div>
-      <FirstNavBar />
       <Header />
       <Pools />
       <About />

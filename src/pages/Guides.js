@@ -7,13 +7,20 @@ import "./Guides.css";
 const Guides = (props) => {
   return (
     <div className="guides">
-      <FirstNavBar />
       <MainNavBar color="blue" shouldManipulate={false} />
       <div className="guides-content container">
         <h4>Cardano StakePool Delegation AltsTogether</h4>
         <br />
         <br />
         <div className="step1 step">
+          <div className="step-content"></div>
+          <div className="step-image">
+            <img
+              className="center"
+              src="http://placehold.it/100x100"
+              alt="instruction"
+            />
+          </div>
           <h6>Step 1: Update your hardware wallet </h6> <br />
           <br />
           <p>
@@ -34,15 +41,17 @@ const Guides = (props) => {
             <br />
             <p>Choose the option “Hardware Wallet” :</p>​
           </p>
-          <img
-            className="center"
-            src="http://placehold.it/150x150"
-            alt="instruction"
-          />
           <p>
             Then choose the model you use (We will proceed with Ledger Nano S as
             it is the one we use ourselves):
           </p>
+          <div className="step-image">
+            <img
+              className="center"
+              src="http://placehold.it/100x100"
+              alt="instruction"
+            />
+          </div>
         </div>
         <div className="step3 step">
           <h6>Step 3: Export Public keys </h6>
@@ -67,11 +76,13 @@ const Guides = (props) => {
             amount of ADA on your Ledger. In order to stake them klick “Convert
             to stakable” on the right side:
           </p>
-          <img
-            className="center"
-            src="http://placehold.it/150x150"
-            alt="instructions"
-          />
+          <div className="step-image">
+            <img
+              className="center"
+              src="http://placehold.it/100x100"
+              alt="instruction"
+            />
+          </div>
         </div>
         <div className="step5 step">
           <h6>Step 5: Choose stakepool and delegate </h6>
@@ -96,6 +107,13 @@ const Guides = (props) => {
             HomePage:{" "}
             <a href="https://altstogether.com">Https://altstogether.com</a>
           </p>
+          <div className="step-image">
+            <img
+              className="center"
+              src="http://placehold.it/100x100"
+              alt="instruction"
+            />
+          </div>
         </div>
         <p>
           we are looking forward to your delegations and if you have questions
