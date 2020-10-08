@@ -1,0 +1,44 @@
+.whyUs {
+  background-image: url("../../images/Footer.png");
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1rem;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 13rem;
+  overflow: visible;
+  padding: 2rem;
+}
+.whyUs__heading {
+  font-size: 2.5rem;
+}
+.whyUs__planets {
+  position: absolute;
+}
+.whyUs__planetsRight {
+  right: -31%;
+  bottom: -42%;
+}
+.whyUs__planetsLeft {
+  left: -22%;
+  top: -27%;
+}
+
+.whyUs__highlighted {
+  font-weight: bold;
+  margin: 2rem auto;
+  width: 75%;
+}
+.whyUs__details {
+  width: 75%;
+
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.whyUs__button {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+}

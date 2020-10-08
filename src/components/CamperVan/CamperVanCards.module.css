@@ -1,0 +1,81 @@
+:root {
+  --campervanHorizontalLine: 10rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--campervanHorizontalLine);
+}
+.cards__item {
+  border: 1px solid #8183d6;
+  position: relative;
+  width: 17rem;
+  height: 22rem;
+
+  border-radius: 10px;
+  margin-bottom: 9rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #8183d6;
+  padding: 2rem 0.5rem;
+}
+.cards__icon {
+  position: absolute;
+  top: -23.5%;
+  left: 50%;
+  width: 30%;
+  transform: translateX(-50%);
+}
+.cards__iconLittle {
+  top: -18%;
+}
+.cards__image {
+  width: 100%;
+}
+.cards__highlighted {
+  color: #ffbd52;
+  margin: 1rem auto;
+}
+.cards__heading {
+  font-size: 2.5rem;
+}
+.cards__itemRight {
+  margin-left: auto;
+}
+
+.cards__planets {
+  width: 15rem;
+  height: 10rem;
+  margin-left: auto;
+}
+.cards__itemMargened {
+  margin-top: 4rem;
+}
+.cards__line {
+  width: var(--campervanHorizontalLine);
+  height: 1.5px;
+  background-color: #8183d6;
+  position: absolute;
+}
+.cards__lineTop {
+  top: 10%;
+  left: -60%;
+}
+.cards__lineBottom {
+  bottom: 10%;
+  left: -60%;
+}
+.cards__circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #ffbd52;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

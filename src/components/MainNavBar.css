@@ -80,14 +80,13 @@
   width: 12%;
 }
 .main-navbar ul {
-  width: 35%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   margin: 0;
 }
-.main-navbar ul li {
-}
+
 .main-navbar ul li a {
   color: #fff;
   text-decoration: none;
