@@ -6,7 +6,6 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "amazon-cognito-identity-js": "^4.4.0",
-    "aws-sdk": "^2.767.0",
     "axios": "^0.20.0",
     "emailjs-com": "^2.6.3",
     "font-awesome": "^4.7.0",
@@ -25,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "react-scripts build && aws s3 rm s3://altstogether-site.com/ --recursive && aws s3 cp ./build s3://altstogether-site.com/ --recursive --acl public-read"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,7 +42,6 @@
     ]
   },
   "devDependencies": {
-    "faker": "^5.1.0",
-    "gh-pages": "^3.1.0"
+    "faker": "^5.1.0"
   }
 }

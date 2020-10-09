@@ -1,5 +1,6 @@
 import {
   FETCH_POSTS,
+  SAVE_CURRENT_USER,
   SAVE_USER_ATTRIBUTES,
   SIGN_IN,
   SIGN_OUT,
@@ -8,7 +9,7 @@ import {
 import UserPool from "../components/UserPool";
 
 import { AuthenticationDetails, CognitoUser } from "amazon-cognito-identity-js";
-import * as AWS from "aws-sdk/global";
+
 
 let authenticatedUser;
 
@@ -75,6 +76,35 @@ export const signIn = (email, password, callback) => async (
 
       // retreiving user attributes
       authenticatedUser = cognitoUser;
+      
+      // skip these lines of codes
+
+      dispatch({ type: SAVE_CURRENT_USER, payload: UserPool.getCurrentUser() });
+      const user = UserPool.getCurrentUser();
+      if (user != null) {
+        user.getSession(function(err, session) {
+          if (err) {
+            alert(err.message || JSON.stringify(err));
+            return;
+          }
+          console.log('session validity: ' + session.isValid());
+      
+          // NOTE: getSession must be called to authenticate user before calling getUserAttributes
+          user.getUserAttributes(function(err, attributes) {
+            if (err) {
+              // Handle error
+              console.log(err)
+            } else {
+              // Do something with attributes
+              console.log(attributes)
+            }
+          });
+        })
+      }
+      
+      
+
+      // end of the skipping code
 
       cognitoUser.getUserAttributes(function (err, result) {
         if (err) {
@@ -86,29 +116,29 @@ export const signIn = (email, password, callback) => async (
           userAttributes[result[i].getName()] = result[i].getValue();
         }
 
-        //POTENTIAL: Region needs to be set if not already set previously elsewhere.
-        AWS.config.region = "us-east-2";
+        // //POTENTIAL: Region needs to be set if not already set previously elsewhere.
+        // AWS.config.region = "us-east-2";
 
-        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-          IdentityPoolId: "us-east-2:3ea1fef6-38f2-4dd5-9adb-2dc507036e7b", // your identity pool id here
-          Logins: {
-            // Change the key below according to the specific region your user pool is in.
-            "cognito-idp.us-east-2.amazonaws.com/us-east-2_dzwTIyza2": session
-              .getIdToken()
-              .getJwtToken(),
-          },
-        });
+        // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        //   IdentityPoolId: "us-east-2:3ea1fef6-38f2-4dd5-9adb-2dc507036e7b", // your identity pool id here
+        //   Logins: {
+        //     // Change the key below according to the specific region your user pool is in.
+        //     "cognito-idp.us-east-2.amazonaws.com/us-east-2_dzwTIyza2": session
+        //       .getIdToken()
+        //       .getJwtToken(),
+        //   },
+        // });
 
-        //refreshes credentials using AWS.CognitoIdentity.getCredentialsForIdentity()
-        AWS.config.credentials.refresh((error) => {
-          if (error) {
-            console.error(error);
-          } else {
-            // Instantiate aws sdk service objects now that the credentials have been updated.
-            // example: var s3 = new AWS.S3();
-            console.log("Successfully logged!");
-          }
-        });
+        // //refreshes credentials using AWS.CognitoIdentity.getCredentialsForIdentity()
+        // AWS.config.credentials.refresh((error) => {
+        //   if (error) {
+        //     console.error(error);
+        //   } else {
+        //     // Instantiate aws sdk service objects now that the credentials have been updated.
+        //     // example: var s3 = new AWS.S3();
+        //     console.log("Successfully logged!");
+        //   }
+        // });
         dispatch({ type: SAVE_USER_ATTRIBUTES, payload: userAttributes });
         callback();
       });

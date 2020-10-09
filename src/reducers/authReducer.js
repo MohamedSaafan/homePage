@@ -1,5 +1,6 @@
 import {
-  SAVE_COGNITO_USER,
+  
+  SAVE_CURRENT_USER,
   SAVE_USER_ATTRIBUTES,
   SIGN_IN,
   SIGN_OUT,
@@ -16,6 +17,8 @@ export default (state = {}, action) => {
       return { ...state, userAttributes: action.payload };
     case SIGN_OUT:
       return { isSigned: false };
+      case SAVE_CURRENT_USER:
+        return{...state,currentUser:action.payload}
     default:
       return state;
   }

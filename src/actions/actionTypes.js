@@ -4,3 +4,4 @@ export const SIGN_UP = "SIGN_UP";
 export const SIGN_IN = "SIGN_IN";
 export const SAVE_USER_ATTRIBUTES = "SAVE_USER_ATTRIBUTES";
 export const SIGN_OUT = "SIGN_OUT";
+export const SAVE_CURRENT_USER = 'SAVE_CURRENT_USER';
