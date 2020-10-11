@@ -2,7 +2,7 @@ import {
   FETCH_POSTS,
   SAVE_CURRENT_USER,
   SAVE_USER_ATTRIBUTES,
-  SIGN_IN,
+  SAVE_ERROR,
   SIGN_OUT,
   SIGN_UP,
 } from "./actionTypes";
@@ -34,7 +34,11 @@ export const signUp = (name, surName, email, password) => async (
     ],
     null,
     (err, data) => {
-      if (err) return console.log(err);
+      if (err){
+        console.log(err);
+
+        return dispatch({type:SAVE_ERROR,payload:err})
+      } 
       const user = data.user;
 
       dispatch({ type: SIGN_UP, payload: user.getUsername() });
@@ -68,103 +72,27 @@ export const signIn = (email, password, callback) => async (
     Pool: UserPool,
   };
   const cognitoUser = new CognitoUser(userData);
-  // storing cognitoUser for changing password
-  // it is a good data to store in our store
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: (session) => {
-      dispatch({ type: SIGN_IN, payload: session });
-
-      // retreiving user attributes
       authenticatedUser = cognitoUser;
-      
-      // skip these lines of codes
-
-      dispatch({ type: SAVE_CURRENT_USER, payload: UserPool.getCurrentUser() });
-      const user = UserPool.getCurrentUser();
-      if (user != null) {
-        user.getSession(function(err, session) {
-          if (err) {
-            alert(err.message || JSON.stringify(err));
-            return;
-          }
-          console.log('session validity: ' + session.isValid());
-      
-          // NOTE: getSession must be called to authenticate user before calling getUserAttributes
-          user.getUserAttributes(function(err, attributes) {
-            if (err) {
-              // Handle error
-              console.log(err)
-            } else {
-              // Do something with attributes
-              console.log(attributes)
-            }
-          });
-        })
-      }
-      
-      
-
-      // end of the skipping code
-
+      dispatch({type:SAVE_CURRENT_USER, payload:cognitoUser.getUsername()})
       cognitoUser.getUserAttributes(function (err, result) {
         if (err) {
-          console.log(err);
+          dispatch({type:SAVE_ERROR,payload:err})
           return;
         }
         const userAttributes = {};
         for (let i = 0; i < result.length; i++) {
           userAttributes[result[i].getName()] = result[i].getValue();
         }
-
-        // //POTENTIAL: Region needs to be set if not already set previously elsewhere.
-        // AWS.config.region = "us-east-2";
-
-        // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-        //   IdentityPoolId: "us-east-2:3ea1fef6-38f2-4dd5-9adb-2dc507036e7b", // your identity pool id here
-        //   Logins: {
-        //     // Change the key below according to the specific region your user pool is in.
-        //     "cognito-idp.us-east-2.amazonaws.com/us-east-2_dzwTIyza2": session
-        //       .getIdToken()
-        //       .getJwtToken(),
-        //   },
-        // });
-
-        // //refreshes credentials using AWS.CognitoIdentity.getCredentialsForIdentity()
-        // AWS.config.credentials.refresh((error) => {
-        //   if (error) {
-        //     console.error(error);
-        //   } else {
-        //     // Instantiate aws sdk service objects now that the credentials have been updated.
-        //     // example: var s3 = new AWS.S3();
-        //     console.log("Successfully logged!");
-        //   }
-        // });
         dispatch({ type: SAVE_USER_ATTRIBUTES, payload: userAttributes });
         callback();
       });
-
-      // another data to be stored into our store
-
-      // you must need to set the region here
-      // stablishing a seesion
     },
-    onFailure: (err) => console.log(err),
+    onFailure: (err) => {
+      dispatch({type:SAVE_ERROR, payload: err})
+    },
   });
-
-  // const user = new CognitoUser({
-  //   Username: email,
-  //   Pool: UserPool,
-  // });
-  // const authDetails = new AuthenticationDetails({
-  //   Username: email,
-  //   Password: password,
-  // });
-  // user.authenticateUser(authDetails, {
-  //   onSuccess: (data) => console.log("onSuccess ", data),
-  //   onFailure: (err) => console.log("onFailure ", err),
-  //   newPasswordRequired: (data) =>
-  //     console.log("new Password Required ", data),
-  // });
 };
 
 export const changePassword = (oldPassword, newPassword) => async (
@@ -177,8 +105,35 @@ export const changePassword = (oldPassword, newPassword) => async (
   });
 };
 
-export const signOut = (props) => {
-  return {
-    type: SIGN_OUT,
-  };
+export const signOut = ()=> (dispatch,getState) => {
+  UserPool.getCurrentUser().signOut();
+  dispatch({type:SIGN_OUT})
 };
+
+export const retreiveUserInfo = ()=> async (dispatch,getState) => {
+
+  const user = UserPool.getCurrentUser();
+  dispatch({ type: SAVE_CURRENT_USER, payload: user });
+
+  if (user != null) {
+    user.getSession(function(err, session) {
+      if (err) {
+        return dispatch({type:SAVE_ERROR, payload: err});
+      }
+      console.log('session validity: ' + session.isValid());
+  
+      // NOTE: getSession must be called to authenticate user before calling getUserAttributes
+      user.getUserAttributes(function(err, attributes) {
+        if (err) {
+          return dispatch({type:SAVE_ERROR, payload: err})
+        } else {
+          const userAttributes = {};
+          for (let i = 0; i < attributes.length; i++) {
+            userAttributes[attributes[i].getName()] = attributes[i].getValue();
+          }
+          dispatch({ type: SAVE_USER_ATTRIBUTES, payload: userAttributes });
+        }
+      });
+    })
+  }
+}

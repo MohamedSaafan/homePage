@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 import {
   BrowserRouter as Router,
@@ -22,8 +22,7 @@ import Partner from "./pages/Partner";
 import AddPartner from "./pages/AddPartner";
 import Sponsor from "./pages/Sponsor";
 import CamparVan from "./pages/CamperVan";
-
-function App() {
+const App = props =>{
   return (
     <Router>
       <FirstNavBar />

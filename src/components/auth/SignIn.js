@@ -35,13 +35,21 @@ const SignIn = (props) => {
           />{" "}
         </label>
         <br />
+        <p className = 'error'>{props.message}</p>
+        <br />
         <button type="submit">login</button>
       </form>
     </div>
   );
 };
-
-export default connect(null, { signIn })(
+const mapStateToProps = state => {
+  if(state.auth.err){
+    return{
+      message: state.auth.err.message
+    }
+  }
+}
+export default connect(mapStateToProps, { signIn })(
   reduxForm({
     form: "signIn",
   })(SignIn)

@@ -1,27 +1,27 @@
 import React from "react";
-
 import { reduxForm, Field } from "redux-form";
-import axios from "axios";
-import Post from "./BlogPost";
+import Styles from './AddPartner.module.css'
 
+
+function renderField  ({
+  input,
+  label,
+  placeholder,
+  type,
+  meta: { touched, error },
+}) {
+  console.log(input);
+  return (
+    <div className = {`${Styles.input}`}>
+      <label>
+        {label} <br /><input {...input} placeholder={placeholder} type={type} />
+      </label>
+      {touched && error && <span>{error}</span>}
+    </div>
+  );
+};
 const AddSponsor = (props) => {
-  const renderField = ({
-    input,
-    label,
-    placeholder,
-    type,
-    meta: { touched, error },
-  }) => {
-    console.log(input);
-    return (
-      <div>
-        <label>
-          {label} <input {...input} placeholder={placeholder} type={type} />
-        </label>
-        {touched && error && <span>{error}</span>}
-      </div>
-    );
-  };
+ 
 
   const handleSubmit = (values) => {
     fetch(
@@ -34,11 +34,14 @@ const AddSponsor = (props) => {
         body: JSON.stringify(values),
       }
     )
-      .then((data) => console.log(data, "succedd "))
-      .catch((err) => console.log(err, "from error of our request"));
+      .then((data) => alert(JSON.stringify(data)))
+      .catch((err) => alert(JSON.stringify(err)));
+  };
+   const renderError = ({ meta: { touched, error } }) => {
+    return <div>{touched && error && <span>{error}</span>}</div>;
   };
   return (
-    <form className="container" onSubmit={props.handleSubmit(handleSubmit)}>
+    <form className={`${Styles.form}`} onSubmit={props.handleSubmit(handleSubmit)}>
       <Field
         name="name"
         type="text"
@@ -61,13 +64,15 @@ const AddSponsor = (props) => {
         component={renderField}
       />
       <div>
-        <label>Long Description: </label>
+        <label>Long Description: </label><br />
         <Field
           component="textarea"
           name="fullDescription"
           placeholder="enter the full Description: "
+          rows = '12'
+          
         />
-        <Field name="fullDescription" component={renderField} />
+        <Field name="fullDescription" component={renderError} />
       </div>
       <Field
         component={renderField}

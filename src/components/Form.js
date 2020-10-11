@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 const Form = (props) => {
   const [name, setName] = useState("");
@@ -12,7 +11,10 @@ const Form = (props) => {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("image", file, "image.jpg");
-    axios.post("http://localhost:3000", formData);
+    fetch('http://localhost:3000',{
+      method:'POST',
+      body:formData
+    })
   };
   const handleNameInputChange = (event) => {
     setName(event.target.value);

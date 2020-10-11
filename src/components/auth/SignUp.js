@@ -61,7 +61,11 @@ const SignUp = (props) => {
 
         <br />
         <br />
+        <p className = {`${Styles.error}`}>{props.message}</p>
+        <br /> 
+        <br />
         <button type="submit">Sign Up</button>
+        
       </form>
     );
   };
@@ -85,7 +89,8 @@ const SignUp = (props) => {
             name="confirm"
           />{" "}
         </label>
-
+        <br />
+        <p className = {`${Styles.error}`}>{props.message}</p>
         <br />
         <button type="submit">Verify</button>
       </form>
@@ -102,6 +107,11 @@ const SignUp = (props) => {
   );
 };
 const mapStateToProps = (state) => {
+  if(state.auth.err){
+    return{
+      message: state.auth.err.message
+    }
+  }
   return {
     email: state.auth.email,
   };

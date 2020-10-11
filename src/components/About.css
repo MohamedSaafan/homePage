@@ -36,14 +36,17 @@
 .about .info h4 span {
   font-weight: lighter;
 }
+.about .info a {
+  text-decoration: none;
+}
 .about .info button {
   text-align: center;
   font-size: 1rem;
   padding: 0.5rem;
+  line-height: 1rem;
   background-color: transparent;
   border-radius: 20px;
   width: 10rem;
-  border: 1px solid #13699a;
 }
 .about-items {
   display: grid;

@@ -26,6 +26,9 @@
 .signUp a {
   text-decoration: underline;
 }
+.error {
+  color: red;
+}
 @media only screen and (min-width: 930px) {
   .signUp {
     width: 55%;

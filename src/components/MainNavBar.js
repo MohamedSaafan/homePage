@@ -3,7 +3,7 @@ import "./MainNavBar.css";
 import Logo from "../images/ATG Icon.png";
 import { NavLink, Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { signOut } from "../actions";
+import { signOut,retreiveUserInfo } from "../actions";
 
 const MainNavBar = (props) => {
   useEffect(() => {
@@ -35,7 +35,9 @@ const MainNavBar = (props) => {
       }
     });
   }, [props]);
+  
   // making the active class
+  console.log(props.name,'from name in the nab bar')
   return (
     <div>
       <nav
@@ -109,7 +111,7 @@ const MainNavBar = (props) => {
           </ul>
           <div className="nav-end">
             <i className="fa fa-search fa-xl"></i>
-            {props.name ? "Hi, " + props.name : <button>join us</button>}
+            {props.name ? <p  style = {props.color?{color:props.color}:{}}>Hi {props.name}</p>: <Link to = '/signup'><button >join us</button></Link>}
 
             <span
               style={props.color ? { backgroundColor: props.color } : {}}
@@ -118,7 +120,7 @@ const MainNavBar = (props) => {
             {props.name ? (
               <button onClick={props.signOut}>logout</button>
             ) : (
-              <Link to="/signin">login</Link>
+              <Link to="/signin" style = {props.color?{color:props.color}:{}}>login</Link>
             )}
           </div>
         </div>
@@ -127,7 +129,7 @@ const MainNavBar = (props) => {
   );
 };
 const mapStateToProps = (state) => {
-  if (state.auth.isSignedIn) {
+  if (state.auth.currentUserName) {
     return {
       name: state.auth.userAttributes.name,
     };
@@ -136,4 +138,4 @@ const mapStateToProps = (state) => {
     name: false,
   };
 };
-export default connect(mapStateToProps, { signOut })(MainNavBar);
+export default connect(mapStateToProps, { signOut,retreiveUserInfo })(MainNavBar);

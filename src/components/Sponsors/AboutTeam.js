@@ -30,17 +30,17 @@ const validate = (values) => {
   }
   return errors;
 };
-
+const renderInput = ({ input, label, type, meta: { touched, error } }) => {
+  return (
+    <div>
+      <input {...input} placeholder={label} type={type} />
+      {touched && error && <span>{error}</span>}
+    </div>
+  );
+};
 const AboutTeam = (props) => {
   const formEl = useRef(null);
-  const renderInput = ({ input, label, type, meta: { touched, error } }) => {
-    return (
-      <div>
-        <input {...input} placeholder={label} type={type} />
-        {touched && error && <span>{error}</span>}
-      </div>
-    );
-  };
+
 
   const sendEmail = () => {
     emailjs
