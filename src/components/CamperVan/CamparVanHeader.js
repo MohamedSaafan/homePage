@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Styles from "./CamperVanHeader.module.css";
-import { Link } from "react-router-dom";
 
 import banner from "../../images/camperva/CampBanner.png";
 import coinjar from "../../images/coinjar.png";
 import echunter from "../../images/ECHunterSG (1).png";
+import {connect} from 'react-redux';
 
 const Header = (props) => {
+
+const handleclick = ()=> {
+  const challange = document.querySelector('#compervanChallenge');
+  challange.scrollIntoView({behavior: "smooth"});
+}
+ 
+
+  
   return (
     <>
       <header className={`${Styles.header}`}>
@@ -16,16 +24,16 @@ const Header = (props) => {
           </h2>
 
           <p className={`${Styles.header__description}`}>
-            lorem ipsum dolor sit amet.
+            Sponsoring AltsTogether
           </p>
           <p className={`${Styles.header__details}`}>
-            We were originally just a United Kingdom based Facebook group, but
-            now we want to bring our collective knowledge and guides to help all
-            people across the globe. From beginners to experts,
+            We were originally a  Facebook group 
+            based in the United Kingdom-but now we want to bring our
+             collective knowledge, help, guides and advice to help
+              everyone interested in learning about crypto.,
           </p>
-          <Link to="/">
-            <button>read more</button>
-          </Link>
+            <button onClick = {handleclick}>read more</button>
+          
         </div>
         <div className={`${Styles.header__banner}`}>
           <img
@@ -55,4 +63,5 @@ const Header = (props) => {
     </>
   );
 };
+
 export default Header;

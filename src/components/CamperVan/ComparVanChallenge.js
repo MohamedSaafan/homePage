@@ -1,9 +1,11 @@
 import React from "react";
 
 import Styles from "./ComparVanChallenge.module.css";
-import van from "../../images/camperva/Van.png";
+import van from "../../images/camperva/Van.png"
 
 const TheChallenge = (props) => {
+  
+
   return (
     <section className={`${Styles.challenge}`}>
       <header className={`${Styles.challenge__header}`}>
@@ -14,7 +16,7 @@ const TheChallenge = (props) => {
           challenge.
         </p>
       </header>
-      <main className={`${Styles.challenge__main}`}>
+      <main id = 'compervanChallenge' className={`${Styles.challenge__main}`}>
         <div className={`${Styles.main__item}  ${Styles.main__itemRight}`}>
           <div className={`${Styles.main__card} ${Styles.main__cardLeft}`}>
             <span className={`${Styles.main__circle}`}>1</span>
@@ -29,7 +31,7 @@ const TheChallenge = (props) => {
             </p>
           </div>
         </div>
-        <div className={`${Styles.main__item} ${Styles.main__itemPositioned}`}>
+        <div  className={`${Styles.main__item} ${Styles.main__itemPositioned}`}>
           <img src={van} alt="car" className={`${Styles.main__image}`} />
           <div className={`${Styles.main__line}`}>
             <span className={`${Styles.line__line}`}>
@@ -50,7 +52,7 @@ const TheChallenge = (props) => {
           <div className={`${Styles.main__card}`}>
             <span className={`${Styles.main__circle}`}>4</span>
             <p className={`${Styles.main__details}`}>
-              Carry Out Challenges Set By Followers
+              Carry Out Challenges Set By Followe
             </p>
           </div>
         </div>
@@ -69,8 +71,11 @@ const TheChallenge = (props) => {
         </p>
         <br />
         <p className={`${Styles.p}`}>
-          The idea from the get go, is to carry out the travel challenge
-          entirely with crypt... from buying the van, any part...
+        What will happen if we break down? Well let's hope the
+         local mechanic accepts crypto!! Buying food and
+          other tasks will be a challenge - introducing
+         stores to crypto, and even a monthly  stay in a 
+         hotel-no crypto means I can't have a comfy night's sleep as a treat! 
         </p>
         <br />
         <p className={`${Styles.p}`}>

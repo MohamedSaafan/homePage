@@ -5,7 +5,6 @@ import hero from "../../images/sponsor/Hero.png";
 const Header = (props) => {
   const handleClick = () => {
     const form = document.forms[0];
-    console.log(form);
     form.scrollIntoView({ behavior: "smooth" });
   };
   return (

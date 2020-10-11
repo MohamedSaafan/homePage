@@ -1,8 +1,17 @@
 import React from "react";
 import Styles from "./WhyUs.module.css";
 import planets from "../../images/camperva/planets.png";
+import {Link} from 'react-router-dom'
 
 const WhyUs = (props) => {
+  const handleClick = e => {
+    setTimeout(()=>{
+      const form = document.forms[0];
+     form.scrollIntoView({ behavior: "smooth" });
+    },0)
+    
+    
+  }
   return (
     <section className={`${Styles.whyUs} container`}>
       <h3 className={`${Styles.whyUs__heading}`}>Why Sponsor Us?</h3>
@@ -18,7 +27,7 @@ const WhyUs = (props) => {
         custom video that will placed on our soon to be made Youtube series for
         this challenge!
       </p>
-      <button className={`${Styles.whyUs__button}`}>get in touch</button>
+      <Link to = '/sponsors'><button onClick = {handleClick} className={`${Styles.whyUs__button}`}>get in touch</button></Link>
       <div className={`${Styles.whyUs__planets} ${Styles.whyUs__planetsRight}`}>
         <img src={planets} alt="planets" className={Styles.whyUs__image} />
       </div>

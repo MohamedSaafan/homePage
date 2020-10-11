@@ -85,9 +85,10 @@ const AboutTeam = (props) => {
     return <div>{touched && error && <span>{error}</span>}</div>;
   };
   return (
-    <div className={`${Styles.aboutTeam} container`}>
-      <form
+    <div className={`${Styles.aboutTeam} container`} >
+      <form 
         className="container"
+        id = 'sponsorForm'
         onSubmit={props.handleSubmit(handleSubmit)}
         ref={formEl}
       >
