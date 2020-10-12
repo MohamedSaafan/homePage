@@ -17,7 +17,7 @@ const SignUp = (props) => {
         <br />
         <br />
         <label>
-          First Name:{" "}
+          First Name:{" "}<br />
           <Field
             component="input"
             name="firstName"
@@ -26,9 +26,9 @@ const SignUp = (props) => {
           />
         </label>
         <br />
-        <br />
+   
         <label>
-          Surname:{" "}
+          Surname:{" "} <br />
           <Field
             component="input"
             name="surName"
@@ -37,9 +37,9 @@ const SignUp = (props) => {
           />
         </label>
         <br />
-        <br />
+      
         <label>
-          Email:{" "}
+          Email:{" "}<br />
           <Field
             component="input"
             name="email"
@@ -48,9 +48,9 @@ const SignUp = (props) => {
           />
         </label>
         <br />
-        <br />
+    
         <label>
-          Password:{" "}
+          Password:{" "}<br />
           <Field
             component="input"
             name="password"
@@ -100,9 +100,9 @@ const SignUp = (props) => {
   return (
     <div className={`${Styles.signUp} container`}>
       {props.email ? renderConfirmationForm() : renderSingUpForm()}
-      <div className={`container`}>
-        <Link to="/signin">already have an account?</Link>
-      </div>
+      <p className={`container`}>
+       already have an account? <Link to="/signin">Sign in</Link>
+      </p>
     </div>
   );
 };
