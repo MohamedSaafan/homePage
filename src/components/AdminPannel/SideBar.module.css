@@ -1,0 +1,27 @@
+.sidebar {
+  background-color: #232c33;
+  height: 100vh;
+  color: #fff;
+}
+.sidebar__heading {
+  color: #5f5f5f;
+  background-color: #fff;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.highlighted {
+  color: #ebc77c;
+}
+.nav__item {
+  width: 95%;
+  margin: auto;
+  height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav__link {
+  text-decoration: none;
+}

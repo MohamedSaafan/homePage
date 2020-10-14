@@ -22,10 +22,9 @@ if (user) {
 
   const userAttributes = {};
   user.getSession(function(err, session) {
-  
-
     // NOTE: getSession must be called to authenticate user before calling getUserAttributes
     user.getUserAttributes(function(err, attributes) {
+      if(err) return console.log(err);
         for (let i = 0; i < attributes.length; i++) {
           userAttributes[attributes[i].getName()] = attributes[i].getValue();
         }
