@@ -3,6 +3,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { signIn } from "../../actions/index";
 import { reduxForm, Field } from "redux-form";
+import {Link} from 'react-router-dom'
 import Styles from "./SignUp.module.css";
 const SignIn = (props) => {
   const handleSubmit = ({ email, password }) => {
@@ -13,7 +14,7 @@ const SignIn = (props) => {
 
   return (
     <div className={`${Styles.signUp} container`}>
-      <form onSubmit={props.handleSubmit(handleSubmit)}>
+      <form className = 'container' onSubmit={props.handleSubmit(handleSubmit)}>
         <h3>LogIn</h3>
         <label>
           Email:
@@ -38,16 +39,20 @@ const SignIn = (props) => {
         <p className = 'error'>{props.message}</p>
         <br />
         <button type="submit">login</button>
+        <p>don't have an account?<Link to = '/signup'>Sign up</Link></p>
       </form>
+      
     </div>
   );
 };
 const mapStateToProps = state => {
-  if(state.auth.err){
-    return{
-      message: state.auth.err.message
+
+    if(state.auth.err){
+      return{
+        message: state.auth.err.message
+      }
     }
-  }
+
 }
 export default connect(mapStateToProps, { signIn })(
   reduxForm({

@@ -19,17 +19,20 @@ const MainNavBar = (props) => {
       if (!navOpen) {
         toggleLinks.classList.add("animate-toggle");
         navLinks.style.display = "flex";
-        if (shouldManipulateTheDom) {
-          props.handleNavOpen();
+        const links = document.querySelector(".toggle-links");
+        links.style.zIndex = "1000";
+        const navBar = document.querySelector(".main-navbar ul");
+        navBar.style.maringTop = 0;
+        const lis = document.querySelectorAll(".main-navbar ul li a");
+        for (let a of lis) {
+          a.style.color = "#fff";
         }
+        navBar.classList.add('navOpen');
 
         navOpen = true;
       } else {
         toggleLinks.classList.remove("animate-toggle");
         navLinks.style.display = "none";
-        if (shouldManipulateTheDom) {
-          props.handleNavClose();
-        }
 
         navOpen = false;
       }
@@ -100,12 +103,22 @@ const MainNavBar = (props) => {
               </NavLink>
             </li>
             <li>
+            
               <NavLink
                 to="/sponsors"
                 exact
                 style={props.color ? { color: props.color } : {}}
               >
                 sponsor us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/admin"
+                exact
+                style={props.color ? { color: props.color } : {}}
+              >
+              {props.isAdmin?'Panel':null}
               </NavLink>
             </li>
           </ul>
@@ -129,7 +142,8 @@ const MainNavBar = (props) => {
   );
 };
 const mapStateToProps = (state) => {
-  if (state.auth.currentUserName) {
+
+  if (state.auth.userAttributes) {
     return {
       name: state.auth.userAttributes.name,
     };

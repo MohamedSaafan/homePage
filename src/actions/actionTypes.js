@@ -6,3 +6,4 @@ export const SAVE_USER_ATTRIBUTES = "SAVE_USER_ATTRIBUTES";
 export const SIGN_OUT = "SIGN_OUT";
 export const SAVE_CURRENT_USER = 'SAVE_CURRENT_USER';
 export const SAVE_ERROR = 'SAVE_ERROR';
+export const SAVE_ADMIN = 'SAVE_ADMIN';

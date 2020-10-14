@@ -8,15 +8,6 @@
   padding: 1px;
   color: #fff;
 }
-.navOpen {
-  position: absolute;
-  top: -2rem;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 100;
-  background-color: rgba(151, 154, 163, 0.7);
-}
 
 .mainHeader img {
   width: 100%;

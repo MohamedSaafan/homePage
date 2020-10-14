@@ -17,10 +17,10 @@ let store;
 
 const user = UserPool.getCurrentUser();
 if (user) {
-  
-const currentUserName = UserPool.getCurrentUser().getUsername(); 
+  const initialState = {}
+  let auth = {}
 
-const userAttributes = {};
+  const userAttributes = {};
   user.getSession(function(err, session) {
   
 
@@ -29,14 +29,20 @@ const userAttributes = {};
         for (let i = 0; i < attributes.length; i++) {
           userAttributes[attributes[i].getName()] = attributes[i].getValue();
         }
+        console.log(userAttributes,'from user attributes')
+        if(userAttributes.email === 'muhammadsaafaan@gmail.com'){
+          auth.isAdmin = true
+        }
+        else{
+          auth.isAdmin = false
+        }
+        auth.userAttributes = userAttributes
+        initialState.auth = auth
   
         store = createStore(
           reducers,
-          {auth:{
-            currentUserName,
-             userAttributes
-            }
-          },
+         initialState
+          ,
           composeEnhancers(applyMiddleware(reduxThunk)));
           ReactDOM.render(
             <Provider store={store}>

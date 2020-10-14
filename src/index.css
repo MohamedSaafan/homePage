@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
+:root {
+  --campervanHorizontalLine: 10rem;
+}
+
 p {
   line-height: 140%;
 }
@@ -46,4 +51,16 @@ input[type="submit"] {
 #root {
   margin: auto;
   overflow: hidden;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  :root {
+    --campervanHorizontalLine: 3rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  :root {
+    --campervanHorizontalLine: 2rem;
+  }
 }

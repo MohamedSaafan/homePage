@@ -45,3 +45,37 @@
 .sponsors__image {
   width: 100%;
 }
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .header {
+    height: 100vh;
+  }
+  .header__content {
+    width: 70%;
+    top: 60%;
+  }
+  .header__banner {
+    width: 100%;
+  }
+
+  .sponsors__item {
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .header {
+    height: 80vh;
+  }
+  .header img {
+    height: auto;
+  }
+  .header__content {
+    width: 95%;
+    top: 46%;
+  }
+  .header__banner {
+    width: 100%;
+  }
+  .sponsors__item {
+    font-size: 1rem;
+  }
+}

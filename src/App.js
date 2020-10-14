@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 
 import {
   BrowserRouter as Router,
@@ -6,6 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import {connect} from 'react-redux'
 import Home from "./pages/Home";
 import StakePool from "./pages/StakePool";
 import Guides from "./pages/Guides";
@@ -22,6 +23,7 @@ import Partner from "./pages/Partner";
 import AddPartner from "./pages/AddPartner";
 import Sponsor from "./pages/Sponsor";
 import CamparVan from "./pages/CamperVan";
+import AdminPannel from "./pages/AdminPannel";
 const App = props =>{
   return (
     <Router>
@@ -42,10 +44,19 @@ const App = props =>{
         <Route path="/partners/:name/add" component={AddPartner} />
         <Route path="/partners/:name/:parnter" component={Sponsor} />
         <Route path="/campervan" component={CamparVan} />
+        <Route path = '/admin' ><AdminPannel isAdmin = {props.isAdmin}/></Route>
         <Redirect to="/" />
       </Switch>
     </Router>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+const {isAdmin} = state.auth
+  return {
+    isAdmin
+  }
+ 
+}
+
+export default connect(mapStateToProps)(App);

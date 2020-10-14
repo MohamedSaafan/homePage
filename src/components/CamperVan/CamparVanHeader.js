@@ -30,7 +30,7 @@ const handleclick = ()=> {
             We were originally a  Facebook group 
             based in the United Kingdom-but now we want to bring our
              collective knowledge, help, guides and advice to help
-              everyone interested in learning about crypto.,
+              everyone interested in learning about crypto.
           </p>
             <button onClick = {handleclick}>read more</button>
           

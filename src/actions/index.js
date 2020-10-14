@@ -5,6 +5,7 @@ import {
   SAVE_ERROR,
   SIGN_OUT,
   SIGN_UP,
+  SAVE_ADMIN,
   
 } from "./actionTypes";
 import UserPool from "../components/UserPool";
@@ -87,6 +88,9 @@ export const signIn = (email, password, callback) => async (
           userAttributes[result[i].getName()] = result[i].getValue();
         }
         dispatch({ type: SAVE_USER_ATTRIBUTES, payload: userAttributes });
+        if (userAttributes.email === 'muhammadsaafaan@gmail.com'){
+          dispatch({type:SAVE_ADMIN});
+        }
         callback();
       });
     },
@@ -131,6 +135,10 @@ export const retreiveUserInfo = ()=> async (dispatch,getState) => {
           const userAttributes = {};
           for (let i = 0; i < attributes.length; i++) {
             userAttributes[attributes[i].getName()] = attributes[i].getValue();
+          }
+          console.log(userAttributes.email, 'from retreiving info')
+          if(userAttributes.email ==='muhammadsaafaan@gmail.com'){
+            dispatch({type:SAVE_ADMIN})
           }
           dispatch({ type: SAVE_USER_ATTRIBUTES, payload: userAttributes });
         }

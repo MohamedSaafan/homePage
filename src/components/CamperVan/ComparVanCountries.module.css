@@ -85,3 +85,31 @@
 .line__circleLast {
   bottom: -6px;
 }
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .line__item:nth-of-type(3n + 0) {
+    display: none;
+  }
+  .line__country {
+    display: none;
+  }
+  .description {
+    width: 85%;
+  }
+  .title {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .line__item:nth-of-type(odd) {
+    display: none;
+  }
+  .line__country {
+    display: none;
+  }
+  .description {
+    width: 85%;
+  }
+  .title {
+    width: 85%;
+  }
+}
