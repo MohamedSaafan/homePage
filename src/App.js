@@ -12,7 +12,7 @@ import StakePool from "./pages/StakePool";
 import Guides from "./pages/Guides";
 import Blog from "./pages/BlogIndex";
 import Post from "./pages/BlogPost";
-import Form from "./components/Form";
+import AddPost from "./pages/AddPost";
 import Sponsors from "./pages/Sponsors";
 import FirstNavBar from "./components/FirstNavBar";
 import SignUp from "./components/auth/SignUp";
@@ -34,7 +34,7 @@ const App = props =>{
         <Route path="/stakepool/guides" component={Guides} />
         <Route path="/blog" exact component={Blog} />
         <Route path="/blog/posts/:id" component={Post} />
-        <Route path="/posts/submit" component={Form} />
+        <Route path="/admin/addpost" component={AddPost} />
         <Route path="/sponsors" exact component={Sponsors} />
         <Route path="/signup" component={SignUp} />
         <Route path="/signin" component={SignIn} />

@@ -6,6 +6,7 @@ import {
   SIGN_OUT,
   SIGN_UP,
   SAVE_ADMIN,
+  FETCH_POST,
   
 } from "./actionTypes";
 import UserPool from "../components/UserPool";
@@ -14,15 +15,105 @@ import { AuthenticationDetails, CognitoUser } from "amazon-cognito-identity-js";
 
 
 let authenticatedUser;
+const compareDates = (date1,date2) => {
+  const year1 = +date1.slice(0,4);
+  const year2 = +date2.slice(0,4);
+  const month1 = +date1.slice(5,7)
+  const month2 = +date2.slice(5,7)
+  const day1 = +date1.slice(8,10);
+  const day2 = +date2.slice(8,10);
+  const hour1 = +date1.slice(11,13);
+  const hour2 = +date2.slice(11,13);
+  const minuite1 = +date1.slice(14,16);
+  const minuite2 = +date2.slice(14,16);
+  const second1 = +date1.slice(17,19);
+  const second2 = +date2.slice(17,19)
+  if(year1>year2){
+    return 1
+    
+  }
+  else if(year1<year2){
+    return -1;
+  }
+  else if(year1 === year2){
+    if(month1>month2){
+      return 1
+    }
+    else if(month1 < month2){
+      return -1;
+    }
+    else if (month1 === month2){
+      if(day1 > day2){
+        return 1;
+      }
+      else if (day1 < day2){
+        return -1;
+      }
+      else if (day1 === day2){
+        if( hour1 > hour2){
+          return 1;
+        }
+        else if (hour1 < hour2){
+          return -1;
+        }
+        else if (hour1 === hour2){
+          if (minuite1> minuite2){
+            return 1;
+          }
+          else if (minuite1 < minuite2){
+            return -1;
+          }
+          else if (minuite1 === minuite2){
+              if(second1 > second2){
+                return 1;
+              }
+              else if (second1 < second2){
+                return -1;
+              }
+              else if(second1 === second2) {
+                return 0
+              }
+          }
+        }
+      }
+    }
+  }
+}
 
 export const fetchPosts = () => async (dispatch) => {
   const response = await fetch(
     "https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/posts"
   );
   const data = await response.json();
-  dispatch({ type: FETCH_POSTS, payload: data });
-};
+  let mappedData = [];
+  for(let item of data.Items){
+    mappedData.push({
+      heading:item.heading.S,
+      description:item.description.S,
+      body:item.body.S,
+      id:item.postID.S,
+      author:item.author.S,
+      date:item.date.S
+    })
+  }
+  mappedData.sort(function compare(a, b) {
+   
+   return compareDates(b.date,a.date)
+  });
 
+  dispatch({ type: FETCH_POSTS, payload:mappedData  });
+};
+export const addPost = (data,callback)=> async (dispatch,getState)=> {
+  data.id = getState().posts.length
+  data.date = new Date().toISOString();
+  fetch('https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/posts',{
+      method:'POST',
+      body:JSON.stringify(data)
+    }).then(response => response.json()).then(data=> {
+      dispatch({type:FETCH_POST,payload:data})
+      callback();
+    })
+}
 export const signUp = (name, surName, email, password) => async (
   dispatch,
   getState
@@ -88,7 +179,7 @@ export const signIn = (email, password, callback) => async (
           userAttributes[result[i].getName()] = result[i].getValue();
         }
         dispatch({ type: SAVE_USER_ATTRIBUTES, payload: userAttributes });
-        if (userAttributes.email === 'muhammadsaafaan@gmail.com'){
+        if (userAttributes.email === 'muhammadsaafaan@gmail.com' || userAttributes.email === 'alex@altstogether.com'){
           dispatch({type:SAVE_ADMIN});
         }
         callback();

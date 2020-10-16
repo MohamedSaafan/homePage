@@ -29,7 +29,7 @@ if (user) {
           userAttributes[attributes[i].getName()] = attributes[i].getValue();
         }
         console.log(userAttributes,'from user attributes')
-        if(userAttributes.email === 'muhammadsaafaan@gmail.com'){
+        if(userAttributes.email === 'muhammadsaafaan@gmail.com' || userAttributes.email === 'alex@altstogether.com'){
           auth.isAdmin = true
         }
         else{
