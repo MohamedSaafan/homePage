@@ -53,9 +53,9 @@ const Form = (props) => {
   );
 };
 
-export default isAdmin(connect(null,{
+export default connect(null,{
   fetchPosts,
   addPost
 })(reduxForm({
 form:'addPost'
-})(Form)));
+})(isAdmin(Form)));

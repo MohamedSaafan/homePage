@@ -34,7 +34,9 @@ const App = props =>{
         <Route path="/stakepool/guides" component={Guides} />
         <Route path="/blog" exact component={Blog} />
         <Route path="/blog/posts/:id" component={Post} />
-        <Route path="/admin/addpost" component={AddPost} />
+        <Route path="/admin/addpost" >
+          <AddPost isAdmin = {props.isAdmin} />
+        </Route>
         <Route path="/sponsors" exact component={Sponsors} />
         <Route path="/signup" component={SignUp} />
         <Route path="/signin" component={SignIn} />

@@ -118,7 +118,7 @@ const MainNavBar = (props) => {
                 exact
                 style={props.color ? { color: props.color } : {}}
               >
-              {props.isAdmin?'Panel':null}
+              {props.isAdmin?'panel':null}
               </NavLink>
             </li>
           </ul>
