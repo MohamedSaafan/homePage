@@ -1,6 +1,6 @@
 .about {
   margin: 0 auto;
-  height: 241vh;
+  height: 250vh;
 }
 .about .logos {
   display: flex;
@@ -89,7 +89,7 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .about {
-    height: 264vh;
+    height: 274vh;
   }
   .about .logos div {
     width: 12%;
@@ -120,7 +120,7 @@
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .about {
-    height: 374vh;
+    height: 383vh;
     margin-top: -4rem;
   }
   .about-items {
@@ -136,7 +136,7 @@
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .about {
-    height: 459vh;
+    height: 472vh;
     margin-top: -4rem;
   }
   .about-items {
@@ -161,10 +161,5 @@
   }
   .about .info p {
     text-align: center;
-  }
-}
-@media (min-width: 425px) and (max-width: 479px) {
-  .about {
-    height: 459vh;
   }
 }

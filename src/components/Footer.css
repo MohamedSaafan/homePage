@@ -28,11 +28,13 @@
   align-items: center;
   width: 100%;
   flex-direction: row;
-  visibility: hidden;
 }
 .footer-lists ul li {
   margin: 2rem 0;
   color: #fff;
+}
+.footer-lists a {
+  text-decoration: none;
 }
 
 .footer footer {
@@ -77,6 +79,9 @@
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
+  .footer-lists a {
+    font-size: 0.9rem;
+  }
   .footer .socials {
     font-size: 1rem;
   }

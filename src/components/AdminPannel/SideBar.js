@@ -5,7 +5,7 @@ import Styles from './SideBar.module.css';
 
 const SideBar = props => {
     return <div className = {`${Styles.sidebar}`} >
-        <h4 className = {`${Styles.sidebar__heading}`}><span className = {`${Styles.highlighted}`}>ADMIN </span> PANNEL</h4>
+        <h4 className = {`${Styles.sidebar__heading}`}><span className = {`${Styles.highlighted}`}>ADMIN </span> PANEL</h4>
         <nav className = {`${Styles.sidebar__nav}`}>
             <ul className = 'list-unstyled'>
                 <li className = {`${Styles.nav__item}`}><Link to = '/' className = {`${Styles.nav__link}`}>home</Link></li>

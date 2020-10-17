@@ -27,7 +27,7 @@ import AdminPannel from "./pages/AdminPannel";
 const App = props =>{
   return (
     <Router>
-      <FirstNavBar />
+      <FirstNavBar isAdmin = {props.isAdmin}/>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/stakepool" exact component={StakePool} />

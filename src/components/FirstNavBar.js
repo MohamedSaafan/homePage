@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./FirstNavBar.css";
+import {Link} from 'react-router-dom'
 
 const FirstNavBar = (props) => {
   const [coins, setCoins] = useState(null);
@@ -20,7 +21,16 @@ const FirstNavBar = (props) => {
       .then((data) => setCoins(data))
       .catch((err) => console.log(err));
   }, []);
-  console.log(coins, "from coins");
+
+  if(props.isAdmin){
+    return <nav classname = 'firstnavbar'>
+      <ul className = 'list-unstyled firstnavbar__nav'>
+        <li><Link to = '/' className = 'firstnavbar__link'>Site</Link></li>
+        <li><Link to = '/admin' className = 'firstnavbar__link'>Panel</Link></li>
+      </ul>
+    </nav>
+  }
+  
   if (!coins) {
     return (
       <div>

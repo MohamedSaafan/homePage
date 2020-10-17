@@ -1,8 +1,15 @@
 import React from "react";
 import "./Footer.css";
+import {Link} from 'react-router-dom';
 import footer from "../images/Footer.png";
 
 const Footer = (props) => {
+  const handleClick = e => {
+    setTimeout(()=>{
+      const form = document.forms[0];
+     form.scrollIntoView({ behavior: "smooth" });
+    },0)  
+  }
   return (
     <footer className="footer">
       <img src={footer} alt="footer" />
@@ -10,21 +17,21 @@ const Footer = (props) => {
         <div className="container">
           <div className="footer-lists">
             <ul className="list-unstyled">
-              <li>New Feeds</li>
-              <li>Careers</li>
-              <li>Contact Us</li>
+              <li><Link to = '/'>Home</Link></li>
+              <li><Link to = '/about'>About</Link></li>
+              <li><Link to = '/videos'>Videos</Link></li>
+              <li><Link to = '/sponsors'>Sponsor Us</Link></li>
+            </ul>
+            <ul className="list-unstyled">
+              <li><Link to = '/campervan'>Campervan</Link></li>
+              <li><Link to = '/blog'>Blog</Link></li>
+              <li><Link to = '/partners'>Partners</Link></li>
               <li>Privacy Policy</li>
             </ul>
             <ul className="list-unstyled">
               <li>New Feeds</li>
               <li>Careers</li>
-              <li>Contact Us</li>
-              <li>Privacy Policy</li>
-            </ul>
-            <ul className="list-unstyled">
-              <li>New Feeds</li>
-              <li>Careers</li>
-              <li>Contact Us</li>
+              <li onClick ={handleClick}><Link to = '/sponsors'>Contact Us</Link></li>
               <li>Privacy Policy</li>
             </ul>
           </div>

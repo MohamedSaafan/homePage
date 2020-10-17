@@ -7,7 +7,7 @@ const Pannel = props => {
         <div className = {`${Styles.nav}`}>
             
         </div>
-        <div className = {`${Styles.pannel__heading}`}>Dash Board <sub className = {`${Styles.sub}`}>Controle pannel</sub></div>
+        <div className = {`${Styles.pannel__heading}`}>Dash Board <sub className = {`${Styles.sub}`}>Controle panel</sub></div>
         <div className = {`${Styles.cards}`}>
         <Link to = '/admin/addpost' className = {`${Styles.card}`}>
             <i className = 'fa fa-pencil-square-o fa-lg'></i>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './SponsorOfTheWeek.module.css';
 import sponsor from '../images/ECHunterSG (1).png';
+import {Link} from 'react-router-dom'
 
 const SponsorOfTheMonth = props => {
     return <div className = {`${Styles.sponsor}`}>
@@ -17,7 +18,7 @@ const SponsorOfTheMonth = props => {
             Since our inception in 2017, we have transformed the way investors can
              enter into the Cryptocurrency mining sector.
             </p>
-            <button className = {`${Styles.details__button}`}>LEARN MORE</button>
+           <Link to ='/partners'><button className = {`${Styles.details__button}`}>LEARN MORE</button></Link>
         </div>
     </div>
 }

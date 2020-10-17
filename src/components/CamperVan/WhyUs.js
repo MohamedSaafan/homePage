@@ -8,9 +8,7 @@ const WhyUs = (props) => {
     setTimeout(()=>{
       const form = document.forms[0];
      form.scrollIntoView({ behavior: "smooth" });
-    },0)
-    
-    
+    },0)  
   }
   return (
     <section className={`${Styles.whyUs} container`}>

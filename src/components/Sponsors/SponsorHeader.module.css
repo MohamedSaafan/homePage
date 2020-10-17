@@ -30,7 +30,7 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   .header {
-    height: 85vh;
+    height: 95vh;
   }
   .header .headerImage {
     order: 1;
@@ -44,7 +44,7 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .header {
-    height: 70vh;
+    height: 90vh;
   }
   .header .headerImage {
     order: 1;

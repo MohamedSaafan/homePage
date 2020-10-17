@@ -112,15 +112,7 @@ const MainNavBar = (props) => {
                 sponsor us
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/admin"
-                exact
-                style={props.color ? { color: props.color } : {}}
-              >
-              {props.isAdmin?'panel':null}
-              </NavLink>
-            </li>
+         
           </ul>
           <div className="nav-end">
             <i className="fa fa-search fa-xl"></i>

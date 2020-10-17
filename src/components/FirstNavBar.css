@@ -1,3 +1,14 @@
+.firstnavbar__nav {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background: #13699a;
+}
+.firstnavbar__link {
+  padding: 0 2rem;
+  text-decoration: none;
+}
+
 .navbar:nth-child(1) {
   background-color: #13699b;
   color: #fff;
