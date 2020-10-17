@@ -5,6 +5,7 @@ import logo3 from "../images/cinema.png";
 import banner from "../images/Banner.png";
 import "./About.css";
 import { Link } from "react-router-dom";
+import SponsorOfTheWeek from "./SponsorOfTheWeek";
 
 const About = (props) => {
   return (
@@ -48,6 +49,7 @@ const About = (props) => {
             <button>learn more</button>
           </Link>
         </div>
+         <SponsorOfTheWeek />
         <div className="about-items container">
           <div className="about-item">
             <div className="about-item-container">

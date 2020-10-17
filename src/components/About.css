@@ -1,6 +1,6 @@
 .about {
   margin: 0 auto;
-  height: 180vh;
+  height: 241vh;
 }
 .about .logos {
   display: flex;
@@ -63,9 +63,6 @@
 }
 .about-item-container {
   border: 1px solid #f7f7f7;
-  -webkit-box-shadow: 6px 18px 22px -4px rgba(242, 246, 251, 1);
-  -moz-box-shadow: 6px 18px 22px -4px rgba(242, 246, 251, 1);
-  box-shadow: 6px 18px 22px -4px rgba(242, 246, 251, 1);
   border-radius: 3rem 3rem 3rem 3rem;
   margin: 1rem 0;
   overflow: hidden;
@@ -92,7 +89,7 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .about {
-    height: 142vh;
+    height: 264vh;
   }
   .about .logos div {
     width: 12%;
@@ -123,8 +120,7 @@
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .about {
-    height: 256vh;
-
+    height: 374vh;
     margin-top: -4rem;
   }
   .about-items {
@@ -140,7 +136,7 @@
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .about {
-    height: 324vh;
+    height: 459vh;
     margin-top: -4rem;
   }
   .about-items {
@@ -169,6 +165,6 @@
 }
 @media (min-width: 425px) and (max-width: 479px) {
   .about {
-    height: 324vh;
+    height: 459vh;
   }
 }
