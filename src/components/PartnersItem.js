@@ -5,9 +5,11 @@ import coinJar from "../images/coinjar.png";
 import logoIcon from "../images/logoIcon.png";
 
 const PartnerItem = (props) => {
+  const regExp = /%20/;
+  const name = props.name.replace(regExp,' ')
   return (
     <div className={`${Styles.partner}`}>
-      <h4 className={`${Styles.partner__heading}`}>{props.name}</h4>
+      <h4 className={`${Styles.partner__heading}`}>{name}</h4>
       <hr className={`${Styles.partner__hr}`} />
       <div className={`${Styles.partner__wrapper}`}>
         <div className={`${Styles.partner__logo}`}>
@@ -28,7 +30,7 @@ const PartnerItem = (props) => {
             Full Description: {props.fullDescription} <br /> <br />
           </div>
           <div className={`${Styles.partner__website}`}>
-            Website: {props.website} <br /> <br />
+            Website: <a href = {props.link}>{props.website}</a><br /> <br />
           </div>
           {props.follow ? (
             <div className={`${Styles.partner__follow}`}></div>

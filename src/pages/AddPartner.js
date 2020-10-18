@@ -27,7 +27,7 @@ const AddSponsor = (props) => {
     'highlighted',
     'exchanges',
     'mining',
-    'Wallets',
+    'wallets',
     'defi',
     'legal',
     'collectables',
@@ -49,7 +49,7 @@ const AddSponsor = (props) => {
   )
 
   const handleSubmit = (values) => {
-  alert('submitted')
+  alert(JSON.stringify(values))
     fetch(
       `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${values.category}/${values.name}`,
       {
@@ -73,9 +73,9 @@ const AddSponsor = (props) => {
         <Field name="category" component={renderCategorySelector} />
       </div>
       <Field
-        name="name"
+        name=""
         type="text"
-        label="Name: "
+        label="comany name: "
         placeholder="enter a name"
         component={renderField}
       />
@@ -86,20 +86,25 @@ const AddSponsor = (props) => {
         placeholder="enter a location"
         component={renderField}
       />
-      <Field
-        name="shortDescription"
-        type="text"
-        label="Short Description: "
-        placeholder="enter a short description"
-        component={renderField}
-      />
+     
+      <div>
+        <label>short Description: </label><br />
+        <Field
+          component="textarea"
+          name="shortDescription"
+          placeholder="enter the short Description: "
+          rows = '6'
+          
+        />
+        <Field name="shortDescription" component={renderError} />
+      </div>
       <div>
         <label>Long Description: </label><br />
         <Field
           component="textarea"
           name="fullDescription"
           placeholder="enter the full Description: "
-          rows = '12'
+          rows = '6'
           
         />
         <Field name="fullDescription" component={renderError} />
@@ -107,10 +112,24 @@ const AddSponsor = (props) => {
       <Field
         component={renderField}
         type="text"
-        label="Website: "
-        placeholder="enter a website"
-        name="website"
+        label="link: "
+        placeholder="enter a link"
+        name="link"
       />
+      <Field 
+        component = {renderField}
+        type = 'text'
+        placeholder = 'website text goes here...'
+        label = 'website'
+        name = 'website'
+        />
+        <Field 
+        component = {renderField}
+        type = 'text'
+        placeholder = 'logo name in S3 goes here...'
+        label = 'logo: '
+        name = 'logo'
+        />
       <input type = 'submit' />
     </form>
   );
