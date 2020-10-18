@@ -47,9 +47,10 @@ const PartnerItem = (props) => {
             ""
           )}
           <div className={`${Styles.partner__view}`}>
-            <Link to={props.viewLink}>
+            {props.viewLink? <Link to={props.viewLink}>
               <button>View</button>
-            </Link>
+            </Link>:''}
+           
           </div>
         </div>
         <div className={`${Styles.partner__highlighted}`}>

@@ -20,12 +20,38 @@ function renderField  ({
     </div>
   );
 };
+
+
 const AddSponsor = (props) => {
- 
+  const categories = [
+    'highlighted',
+    'exchanges',
+    'mining',
+    'Wallets',
+    'defi',
+    'legal',
+    'collectables',
+    'shop',
+    'charity',
+  ]
+  const renderCategorySelector = ({ input, meta: { touched, error } }) => (
+    <div>
+      <select {...input}>
+        <option value="">Select a category...</option>
+        {categories.map(val => (
+          <option value={val} key={val}>
+            {val}
+          </option>
+        ))}
+      </select>
+      {touched && error && <span>{error}</span>}
+    </div>
+  )
 
   const handleSubmit = (values) => {
+  alert('submitted')
     fetch(
-      `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${props.match.params.name}/${values.name}`,
+      `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${values.category}/${values.name}`,
       {
         method: "POST",
         headers: {
@@ -42,6 +68,10 @@ const AddSponsor = (props) => {
   };
   return (
     <form className={`${Styles.form}`} onSubmit={props.handleSubmit(handleSubmit)}>
+      <div>
+        <label>choose a category</label>
+        <Field name="category" component={renderCategorySelector} />
+      </div>
       <Field
         name="name"
         type="text"
@@ -81,11 +111,19 @@ const AddSponsor = (props) => {
         placeholder="enter a website"
         name="website"
       />
-      <button type="submit">Submit</button>
+      <input type = 'submit' />
     </form>
   );
 };
+const validate = (values) => {
+  const errors = {};
+  if (!values.category) {
+    errors.category = 'required'
+  }
+  return errors
+}
 
 export default reduxForm({
   form: "addSponsor",
+  validate
 })(AddSponsor);

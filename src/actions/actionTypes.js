@@ -8,3 +8,6 @@ export const SIGN_OUT = "SIGN_OUT";
 export const SAVE_CURRENT_USER = 'SAVE_CURRENT_USER';
 export const SAVE_ERROR = 'SAVE_ERROR';
 export const SAVE_ADMIN = 'SAVE_ADMIN';
+export const FETCH_CATEGORY = 'FETCH_CATEGORY';
+export const FETCH_PARTNER = 'FETCH_PARTNER';
+export const FETCH_HILIGHTED = 'FETCH_HIGHLIGHTED';

@@ -7,6 +7,9 @@ import {
   SIGN_UP,
   SAVE_ADMIN,
   FETCH_POST,
+  FETCH_HILIGHTED,
+  FETCH_CATEGORY,
+  FETCH_PARTNER,
   
 } from "./actionTypes";
 import UserPool from "../components/UserPool";
@@ -236,4 +239,44 @@ export const retreiveUserInfo = ()=> async (dispatch,getState) => {
       });
     })
   }
+}
+
+
+
+
+// =============== Starting Partners Actions ==================
+
+export const fetchHighlighted = () => async (dispatch,setState) => {
+ const response = await fetch(
+    "https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/highlighted"
+  );
+  const data = await response.json();
+  dispatch({type:FETCH_HILIGHTED,payload:data});
+}
+export const fetchCategory = (category) => async (dispatch,getState) => {
+  const response = await fetch(
+    `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${category}`
+  );
+  const data = await response.json();
+  dispatch({
+    type:FETCH_CATEGORY,
+     payload:{
+      category,
+      data
+     }
+})
+}
+export const fetchPartner = (category,partnerName) => async (dispatch,getState)=> {
+  const response = await fetch(
+    `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${category}/${partnerName}`
+  );
+  const data = await response.json();
+  dispatch({
+    type:FETCH_PARTNER,
+    payload:{
+      name:partnerName,
+      data
+    }
+  })
+
 }

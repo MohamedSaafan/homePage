@@ -20,7 +20,7 @@ import SignIn from "./components/auth/SignIn";
 import ChangePassword from "./components/auth/ChangePassword";
 import Partners from "./pages/Partners";
 import Partner from "./pages/Partner";
-import AddPartner from "./pages/AddPartner";
+import AddSponsor from "./pages/AddPartner";
 import Sponsor from "./pages/Sponsor";
 import CamparVan from "./pages/CamperVan";
 import AdminPannel from "./pages/AdminPannel";
@@ -42,11 +42,13 @@ const App = props =>{
         <Route path="/signin" component={SignIn} />
         <Route path="/changepassword" component={ChangePassword} />
         <Route path="/partners" exact component={Partners} />
-        <Route path="/partners/:name" exact component={Partner} />
-        <Route path="/partners/:name/add" component={AddPartner} />
-        <Route path="/partners/:name/:parnter" component={Sponsor} />
+        <Route path="/partners/:category" exact component={Partner} />
+        <Route path="/partners/:category/:sponsor" component={Sponsor} />
         <Route path="/campervan" component={CamparVan} />
-        <Route path = '/admin' ><AdminPannel isAdmin = {props.isAdmin}/></Route>
+        <Route path = '/admin' exact><AdminPannel isAdmin = {props.isAdmin}/></Route>
+        <Route path = '/admin/addsponsor'>
+          <AddSponsor isAdmin = {props.isAdmin} />
+        </Route>
         <Redirect to="/" />
       </Switch>
     </Router>

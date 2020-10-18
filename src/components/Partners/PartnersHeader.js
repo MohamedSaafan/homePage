@@ -14,28 +14,28 @@ const PartnerHeader = (props) => {
           </Link>
         </li>
         <li className={`${Styles.partners__item}`}>
-          <Link to="/" className={`${Styles.partners__link}`}>
-            Exchanges
+          <Link to="/partners/mining" className={`${Styles.partners__link}`}>
+            Mining
           </Link>
         </li>
         <li className={`${Styles.partners__item}`}>
-          <Link to="/" className={`${Styles.partners__link}`}>
-            Exchanges
+          <Link to="/partners/Wallets" className={`${Styles.partners__link}`}>
+            Wallets
           </Link>
         </li>
         <li className={`${Styles.partners__item}`}>
-          <Link to="/" className={`${Styles.partners__link}`}>
-            Exchanges
+          <Link to="/partners/defi" className={`${Styles.partners__link}`}>
+            Defi
           </Link>
         </li>
         <li className={`${Styles.partners__item}`}>
-          <Link to="/" className={`${Styles.partners__link}`}>
-            Exchanges
+          <Link to="/partners/legal" className={`${Styles.partners__link}`}>
+            Legal
           </Link>
         </li>
         <li className={`${Styles.partners__item}`}>
-          <Link to="/" className={`${Styles.partners__link}`}>
-            Exchanges
+          <Link to="/partners/collectables" className={`${Styles.partners__link}`}>
+            Collectables
           </Link>
         </li>
       </ul>
