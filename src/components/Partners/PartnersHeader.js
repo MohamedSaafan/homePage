@@ -19,7 +19,7 @@ const PartnerHeader = (props) => {
           </Link>
         </li>
         <li className={`${Styles.partners__item}`}>
-          <Link to="/partners/Wallets" className={`${Styles.partners__link}`}>
+          <Link to="/partners/wallets" className={`${Styles.partners__link}`}>
             Wallets
           </Link>
         </li>
