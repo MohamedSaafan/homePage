@@ -7,6 +7,7 @@ import logoIcon from "../images/logoIcon.png";
 const PartnerItem = (props) => {
   const regExp = /%20/;
   const name = props.name.replace(regExp,' ')
+  console.log(props, 'from partner item')
   return (
     <div className={`${Styles.partner}`}>
       <h4 className={`${Styles.partner__heading}`}>{name}</h4>
@@ -14,7 +15,7 @@ const PartnerItem = (props) => {
       <div className={`${Styles.partner__wrapper}`}>
         <div className={`${Styles.partner__logo}`}>
           <img
-            src={coinJar}
+            src={props.image}
             alt="logo"
             className={`${Styles.partner__image}`}
           />

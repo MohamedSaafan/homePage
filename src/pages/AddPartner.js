@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { reduxForm, Field } from "redux-form";
-import Styles from './AddPartner.module.css'
+import Styles from './AddPartner.module.css';
+
 
 
 function renderField  ({
@@ -34,6 +35,7 @@ const AddSponsor = (props) => {
     'shop',
     'charity',
   ]
+  const fileRef = useRef(null);
   const renderCategorySelector = ({ input, meta: { touched, error } }) => (
     <div>
       <select {...input}>
@@ -48,32 +50,55 @@ const AddSponsor = (props) => {
     </div>
   )
 
-  const handleSubmit = (values) => {
-  alert(JSON.stringify(values))
-    fetch(
-      `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${values.category}/${values.name}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
+
+  const handleSubmit = async (values) => {
+    console.log('from submition')
+   const file = fileRef.current.files[0];
+   
+   const fileName = file.name;
+   const type = file.type;
+   const response = await fetch(`https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/createpresignedurl/${fileName}?filetype=${type}`);
+   const presignedUrl = await response.json();
+   alert(JSON.stringify(presignedUrl))
+    fetch(presignedUrl.postURL,{
+      method: 'PUT',
+      body: file,
+      Headers:{
+        ContentType:type
       }
-    )
-      .then((data) => alert(JSON.stringify(data)))
-      .catch((err) => alert(JSON.stringify(err)));
+    }).then(res =>{
+      
+      if(res.statusText === "OK"){
+        values.image = presignedUrl.getURL;
+        alert(JSON.stringify(values))
+        fetch(
+          `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${values.category}/${values.name}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(values),
+          }
+        )
+          .then((data) => alert('succedded',JSON.stringify(data)))
+          .catch((err) => alert(JSON.stringify(err)));
+      }
+    }).catch(err=> alert('some thing went wrong please try again!'))
+ 
   };
    const renderError = ({ meta: { touched, error } }) => {
     return <div>{touched && error && <span>{error}</span>}</div>;
   };
+  
   return (
-    <form className={`${Styles.form}`} onSubmit={props.handleSubmit(handleSubmit)}>
+    <form className={`${Styles.form}`} onSubmit = {props.handleSubmit(handleSubmit)}>
       <div>
         <label>choose a category</label>
         <Field name="category" component={renderCategorySelector} />
       </div>
       <Field
-        name=""
+        name="name"
         type="text"
         label="comany name: "
         placeholder="enter a name"
@@ -123,13 +148,7 @@ const AddSponsor = (props) => {
         label = 'website'
         name = 'website'
         />
-        <Field 
-        component = {renderField}
-        type = 'text'
-        placeholder = 'logo name in S3 goes here...'
-        label = 'logo: '
-        name = 'logo'
-        />
+        <input type = 'file' ref = {fileRef}  />
       <input type = 'submit' />
     </form>
   );

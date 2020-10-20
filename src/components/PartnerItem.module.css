@@ -17,6 +17,9 @@
   display: flex;
 }
 .partner__logo {
+  width: 7rem;
+  min-width: 8rem;
+  padding-right: 1rem;
 }
 .partner__image {
   width: 100%;

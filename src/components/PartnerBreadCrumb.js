@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const PartnerBreadCrumb = (props) => {
   return (
     <div className={`${Styles.breadCrumb}`}>
-      <Link to="/">Directory</Link>
-      <Link to="/" className={`${Styles.breadCrumb__link}`}>
+      <Link to="/partners">Directory</Link>
+      <Link to="/partners/list" className={`${Styles.breadCrumb__link}`}>
         View All Listings
       </Link>
     </div>
