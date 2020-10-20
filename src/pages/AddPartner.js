@@ -59,7 +59,7 @@ const AddSponsor = (props) => {
    const type = file.type;
    const response = await fetch(`https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/createpresignedurl/${fileName}?filetype=${type}`);
    const presignedUrl = await response.json();
-   alert(JSON.stringify(presignedUrl))
+   
     fetch(presignedUrl.postURL,{
       method: 'PUT',
       body: file,
@@ -70,7 +70,7 @@ const AddSponsor = (props) => {
       
       if(res.statusText === "OK"){
         values.image = presignedUrl.getURL;
-        alert(JSON.stringify(values))
+      
         fetch(
           `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${values.category}/${values.name}`,
           {
@@ -81,7 +81,7 @@ const AddSponsor = (props) => {
             body: JSON.stringify(values),
           }
         )
-          .then((data) => alert('succedded',JSON.stringify(data)))
+          .then((data) => alert('succedded'))
           .catch((err) => alert(JSON.stringify(err)));
       }
     }).catch(err=> alert('some thing went wrong please try again!'))
