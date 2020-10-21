@@ -10,6 +10,7 @@ import {
   FETCH_HILIGHTED,
   FETCH_CATEGORY,
   FETCH_PARTNER,
+  DELETE_PARTNER,
   
 } from "./actionTypes";
 import UserPool from "../components/UserPool";
@@ -279,4 +280,10 @@ export const fetchPartner = (category,partnerName) => async (dispatch,getState)=
     }
   })
 
+}
+export const deletePartner = (category,partnerName)=> async (dispatch,getState) => {
+  dispatch({type:DELETE_PARTNER,payload:{
+    category,
+    partnerName
+  }})
 }

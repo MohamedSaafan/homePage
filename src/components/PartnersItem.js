@@ -3,11 +3,42 @@ import Styles from "./PartnerItem.module.css";
 import { Link } from "react-router-dom";
 import coinJar from "../images/coinjar.png";
 import logoIcon from "../images/logoIcon.png";
+import { connect } from "react-redux";
+import {deletePartner} from '../actions'
 
 const PartnerItem = (props) => {
   const regExp = /%20/;
   const name = props.name.replace(regExp,' ')
   console.log(props, 'from partner item')
+  const handleDelete = (e) => {
+    fetch(`https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/${props.partner}/${props.name}`,{
+      method:'DELETE'
+    }).then(res=> {
+      props.deletePartner(props.partner,props.name)
+    })
+  }
+  const handleHighlighten = async e => {
+    const newProp = {...props};
+    delete newProp.viewLink;
+    delete newProp.isAdmin;
+    delete newProp.partner;
+    delete newProp.deletePartner;
+    console.log(newProp)
+    const response = await fetch(
+      `https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/partners/highlighted/${props.name}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProp),
+      }
+    )
+    const data = await response.json();
+    props.history.push('/partners')
+    
+
+  }
   return (
     <div className={`${Styles.partner}`}>
       <h4 className={`${Styles.partner__heading}`}>{name}</h4>
@@ -53,7 +84,20 @@ const PartnerItem = (props) => {
             {props.viewLink? <Link to={props.viewLink}>
               <button>View</button>
             </Link>:''}
-           
+            {props.isAdmin?<>
+           <button
+              className = {`${Styles.delete}`} 
+              onClick = {handleDelete}
+              >
+                Delete
+              </button>
+            {props.partner === 'highlighted'?'':<button
+                                               className = {`${Styles.highlighted}`} 
+                                               onClick = {handleHighlighten}
+                                               >
+                                                 highlighten
+                                                </button>}
+          </>:''}
           </div>
         </div>
         <div className={`${Styles.partner__highlighted}`}>
@@ -62,10 +106,18 @@ const PartnerItem = (props) => {
             src={logoIcon}
             alt="logo"
           />
+         
         </div>
+       
+       
       </div>
     </div>
   );
 };
 
-export default PartnerItem;
+export default connect(
+  null,
+  {
+    deletePartner
+  }
+)(PartnerItem);

@@ -29,3 +29,17 @@
   right: 2%;
   top: -10%;
 }
+.delete{
+  background-color: red ;
+  background-image: none;
+  height: 2rem;
+  width: 5rem;
+  margin: 0 2rem;
+}
+.highlighted{
+  background-color: #044f8d ;
+  background-image: none;
+  height: 2rem;
+  width: 7rem;
+  margin-left: 2rem;
+}

@@ -14,7 +14,14 @@ const Partner = props => {
  const renderPartners = () => {
     if (props.partner) {
       return props.partner.map((partner) => {
-        return <PartnerItem key={partner.name} {...partner} viewLink = {`/partners/${categoryName}/${partner.name}`} />;
+        return <PartnerItem
+        key={partner.name} 
+        {...partner} 
+        partner = {categoryName} 
+        viewLink = {`/partners/${categoryName}/${partner.name}`} 
+        isAdmin = {props.isAdmin}
+        history = {props.history}
+        />;
       });
     }
     return "";
@@ -31,7 +38,8 @@ const Partner = props => {
 }
 const mapStateToProps = (state,ownProps) => {
   return {
-    partner: state.partners[ownProps.match.params.category]
+    partner: state.partners[ownProps.match.params.category],
+    isAdmin: state.auth.isAdmin
   }
 }
 export default connect(mapStateToProps,{

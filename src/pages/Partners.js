@@ -16,7 +16,13 @@ class Partners extends React.Component {
    renderPartners = () => {
     if (this.props.highlighted) {
       return this.props.highlighted.map((partner) => {
-        return <PartnerItem key={partner.name} {...partner} viewLink = {`/partners/highlighted/${partner.name}`} />;
+        return <PartnerItem 
+        key={partner.name} 
+        {...partner} 
+        partner = 'highlighted' 
+        viewLink = {`/partners/highlighted/${partner.name}`} 
+        isAdmin = {this.props.isAdmin}
+        />;
       });
     }
     return "";
@@ -36,7 +42,8 @@ class Partners extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    highlighted:state.partners.highlighted
+    highlighted:state.partners.highlighted,
+    isAdmin:state.auth.isAdmin
   }
 }
 export default connect(mapStateToProps,{
