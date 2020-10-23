@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import {deletePartner} from '../actions'
 
 const PartnerItem = (props) => {
-  const regExp = /%20/;
+  const regExp = /%20/g;
   const name = props.name.replace(regExp,' ')
   console.log(props, 'from partner item')
   const handleDelete = (e) => {

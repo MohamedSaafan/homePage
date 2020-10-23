@@ -1,5 +1,5 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect,useRef } from "react";
 import { connect } from "react-redux";
 import {Field,reduxForm} from 'redux-form';
 import { addPost, fetchPosts } from "../actions";
@@ -22,13 +22,39 @@ const renderField = ({ input, placeholder,label, type, meta: { touched, error } 
 
 
 const Form = (props) => {
+  
+  const fileRef = useRef(null);
   useEffect(()=>{
     props.fetchPosts()
   },[])
-  const handleSubmit = (data) => {
-    props.addPost(data,()=>{
-      props.history.push('/blog')
-    })
+  const handleSubmit = async (data) => {
+    const file = fileRef.current.files[0];
+   
+   const fileName = file.name;
+   const type = file.type;
+   const response = await fetch(`https://ey5anj8005.execute-api.us-east-2.amazonaws.com/dev/createpresignedurl/${fileName}?filetype=${type}`);
+   const presignedUrl = await response.json();
+   
+    fetch(presignedUrl.postURL,{
+      method: 'PUT',
+      body: file,
+      Headers:{
+        ContentType:type
+      }
+    }).then(res =>{
+      
+      if(res.statusText === "OK"){
+        data.image = presignedUrl.getURL;
+        props.addPost(data,()=>{
+          props.history.push('/blog')
+          alert('succsseded')
+
+        })
+        
+      }
+    }).catch(err=> alert('some thing went wrong please try again!'))
+ 
+   
   }
 
   const renderError = ({ meta: { touched, error } }) =>
@@ -46,9 +72,12 @@ const Form = (props) => {
     <Field component = 'textarea' rows = '12' name = 'body' placeholder = 'body goes here...' />
     <Field name = 'body' component = {renderError}/>
     </div>
-    
-    <Field type = 'text' component = {renderField} name = 'image' placeholder = 'name of the image here...' label = 'image: '/>
-      <button type="submit" className = {`${''} container`}>Submit</button>
+    <div className = 'container'>
+    <input type = 'file' className = {`${Styles.inputFile}`} ref = {fileRef}  />
+
+    </div>
+    <button type="submit" className = {`${''} container`}>Submit</button>
+  
     </form>
   );
 };

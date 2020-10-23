@@ -10,19 +10,38 @@ const Partner = props => {
   const categoryName = props.match.params.category
   useEffect(() =>{
      props.fetchCategory(categoryName)
+     if(!props.highlightedPartners){
+      props.fetchCategory('highlighted');
+     }
+     
+     
   },[])
  const renderPartners = () => {
-    if (props.partner) {
-      return props.partner.map((partner) => {
+  const listOfPartners = []
+      if(props.highlightedPartners){
+      listOfPartners.push( props.highlightedPartners.map((partner) => {
         return <PartnerItem
         key={partner.name} 
         {...partner} 
-        partner = {categoryName} 
+        partner = 'highlighted' 
         viewLink = {`/partners/${categoryName}/${partner.name}`} 
         isAdmin = {props.isAdmin}
         history = {props.history}
         />;
-      });
+      }))}
+      if (props.partner) {
+        
+        listOfPartners.push( props.partner.map((partner) => {
+          return <PartnerItem
+          key={partner.name} 
+          {...partner} 
+          partner = {categoryName} 
+          viewLink = {`/partners/${categoryName}/${partner.name}`} 
+          isAdmin = {props.isAdmin}
+          history = {props.history}
+          />;
+        }))
+      return listOfPartners
     }
     return "";
   };
@@ -39,7 +58,8 @@ const Partner = props => {
 const mapStateToProps = (state,ownProps) => {
   return {
     partner: state.partners[ownProps.match.params.category],
-    isAdmin: state.auth.isAdmin
+    isAdmin: state.auth.isAdmin,
+    highlightedPartners: state.partners.highlighted
   }
 }
 export default connect(mapStateToProps,{

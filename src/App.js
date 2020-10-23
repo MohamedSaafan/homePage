@@ -24,6 +24,7 @@ import AddSponsor from "./pages/AddPartner";
 import Sponsor from "./pages/Sponsor";
 import CamparVan from "./pages/CamperVan";
 import AdminPannel from "./pages/AdminPannel";
+import AllPartners from './pages/AllPartners'
 const App = props =>{
   return (
     <Router>
@@ -49,6 +50,7 @@ const App = props =>{
         <Route path = '/admin/addsponsor'>
           <AddSponsor isAdmin = {props.isAdmin} />
         </Route>
+        <Route path = '/allpartners' component = {AllPartners} />
         <Redirect to="/" />
       </Switch>
     </Router>

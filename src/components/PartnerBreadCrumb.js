@@ -6,7 +6,7 @@ const PartnerBreadCrumb = (props) => {
   return (
     <div className={`${Styles.breadCrumb}`}>
       <Link to="/partners">Directory</Link>
-      <Link to="/partners/list" className={`${Styles.breadCrumb__link}`}>
+      <Link to="/allpartners" className={`${Styles.breadCrumb__link}`}>
         View All Listings
       </Link>
     </div>

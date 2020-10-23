@@ -38,6 +38,16 @@ const PartnerHeader = (props) => {
             Collectables
           </Link>
         </li>
+        <li className={`${Styles.partners__item}`}>
+          <Link to="/partners/charity" className={`${Styles.partners__link}`}>
+            charity
+          </Link>
+        </li>
+        <li className={`${Styles.partners__item}`}>
+          <Link to="/partners/shop" className={`${Styles.partners__link}`}>
+            shop
+          </Link>
+        </li>
       </ul>
     </div>
   );
