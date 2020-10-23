@@ -32,6 +32,16 @@ const Partner = props => {
       if (props.partner) {
         
         listOfPartners.push( props.partner.map((partner) => {
+          let highlighted = false;
+          for(let item = 0; item< props.highlightedPartners.length; item++){
+            if ( props.highlightedPartners[item].name === partner.name){
+              highlighted = true;
+              break;
+            }
+          }
+          if(highlighted){
+            return '';
+          }
           return <PartnerItem
           key={partner.name} 
           {...partner} 

@@ -100,14 +100,13 @@ const PartnerItem = (props) => {
           </>:''}
           </div>
         </div>
-        <div className={`${Styles.partner__highlighted}`}>
+        {props.partner === 'highlighted'? <div className={`${Styles.partner__highlighted}`}>
           <img
             className={`${Styles.partner__image}`}
             src={logoIcon}
             alt="logo"
-          />
-         
-        </div>
+          /> 
+         </div> : ''}
        
        
       </div>
