@@ -112,6 +112,16 @@ const MainNavBar = (props) => {
                 sponsor us
               </NavLink>
             </li>
+            <li>
+            
+              <NavLink
+                to="/news"
+                exact
+                style={props.color ? { color: props.color } : {}}
+              >
+                news
+              </NavLink>
+            </li>
          
           </ul>
           <div className="nav-end">

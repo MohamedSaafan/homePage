@@ -1,0 +1,20 @@
+.header{
+    height: auto;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.header__image{
+    border-radius: 5px;
+}
+.header__heading{
+    font-size: 1.5rem;
+    padding-top: .5rem;
+}
+.header__heading:hover{
+    cursor: pointer;
+    color: #6A7076;
+
+}
+.header p{
+    color: #53575B;
+}

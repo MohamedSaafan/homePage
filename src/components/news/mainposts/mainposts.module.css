@@ -1,0 +1,31 @@
+.posts{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.posts__item{
+    display: flex;
+    margin: 4rem 0;
+}
+.item__content{
+    width: 55%;
+    line-height: 190%;
+}
+.item__heading{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.item__heading:hover{
+    cursor: pointer;
+    color: #6A7076;
+}
+.item__image{
+    width: 45%;
+    background-image: url('../../../images/side-posts-1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-left: .5rem;
+}
+.item__details{
+    margin-bottom: .75rem;
+}

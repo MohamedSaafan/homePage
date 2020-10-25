@@ -17,8 +17,8 @@
   display: flex;
 }
 .partner__logo {
-  width: 7rem;
-  min-width: 8rem;
+  width: 10rem;
+  min-width: 10rem;
   padding-right: 1rem;
 }
 .partner__image {

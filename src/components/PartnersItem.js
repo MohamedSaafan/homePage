@@ -1,7 +1,6 @@
 import React from "react";
 import Styles from "./PartnerItem.module.css";
 import { Link } from "react-router-dom";
-import coinJar from "../images/coinjar.png";
 import logoIcon from "../images/logoIcon.png";
 import { connect } from "react-redux";
 import {deletePartner} from '../actions'
@@ -95,7 +94,7 @@ const PartnerItem = (props) => {
                                                className = {`${Styles.highlighted}`} 
                                                onClick = {handleHighlighten}
                                                >
-                                                 highlighten
+                                                 highlight
                                                 </button>}
           </>:''}
           </div>

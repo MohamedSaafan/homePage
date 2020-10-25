@@ -1,0 +1,8 @@
+.news{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 75%;
+    column-gap: 2rem;
+    margin-top: 2rem;
+    overflow: visible;
+}

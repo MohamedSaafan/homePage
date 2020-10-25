@@ -17,7 +17,6 @@ const AllPartners = props => {
     'shop',
     'charity',
     ];
-    const [isPartnerFetched,setIsPartnerFetched] = useState(false)
     useEffect(  () =>{
         const fetchHighlighted = async ()=>  await props.fetchCategory('highlighted');
         fetchHighlighted();
@@ -25,7 +24,6 @@ const AllPartners = props => {
             if(category === 'highlighted') return;
             await props.fetchCategory(category)
         })
-        setIsPartnerFetched(true) 
        
     }, [])
     const renderPartners = ()=> {

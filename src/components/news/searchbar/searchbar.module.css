@@ -1,0 +1,27 @@
+.searchbar{
+    border: 1px solid #C2C7CC;
+    margin: 0 auto 2rem;
+    display: flex;
+    height: 2.5rem;
+    border-radius: 2px;
+
+}
+.searchbar__input{
+    width: calc(105% - 2rem);
+    color: #C2D2E3;
+    height: calc(2rem - 2px);
+    padding: 5px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+.searchbar__icon{
+    background-color: #2FABE1;
+    width: 2.5rem;
+    height: 101%;
+    font: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-weight: 100;
+}
