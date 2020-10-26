@@ -10,3 +10,15 @@
 .sidebar__list li{
     margin: 1.5rem 0;
 }
+@media only screen and (max-width:1200px){
+  .sidebar{
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+}
+@media only screen and (max-width:768px){
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from './mainposts.module.css';
-import bitcoin from '../../../images/news/bitcoin.jpg'
 
 const MainPosts = props => {
     return (
@@ -16,7 +15,7 @@ const MainPosts = props => {
                         statements in favour of the use of crypto 
                         money, thus supporting its massive adoption…
                     </p>
-                    <p>
+                    <p className = {`${Styles.item__date}`}>
                     AUGUST 20, 2020
                     </p>
                 </div>
@@ -33,7 +32,7 @@ const MainPosts = props => {
                         statements in favour of the use of crypto 
                         money, thus supporting its massive adoption…
                     </p>
-                    <p>
+                    <p className = {`${Styles.item__date}`}>
                     AUGUST 20, 2020
                     </p>
                 </div>
@@ -50,7 +49,7 @@ const MainPosts = props => {
                         statements in favour of the use of crypto 
                         money, thus supporting its massive adoption…
                     </p>
-                    <p>
+                    <p className = {`${Styles.item__date}`}>
                     AUGUST 20, 2020
                     </p>
                 </div>
@@ -67,7 +66,7 @@ const MainPosts = props => {
                         statements in favour of the use of crypto 
                         money, thus supporting its massive adoption…
                     </p>
-                    <p>
+                    <p className = {`${Styles.item__date}`}>
                     AUGUST 20, 2020
                     </p>
                 </div>

@@ -18,13 +18,13 @@ const Header = props => {
                     in court
                 </h3>
                 <br />
-                <p>
+                <p className = {`${Styles.header__details}`}>
                     When a group of miners achieves 51% of the
                     mining power, it can branch off the network
                     or cause double expenditure…
                 </p>
                 <br />
-                <p>
+                <p className = {`${Styles.header__date}`}>
                  AUGUST 21, 2020
 
                 </p>

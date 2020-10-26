@@ -29,3 +29,41 @@
 .item__details{
     margin-bottom: .75rem;
 }
+@media only screen and  (max-width:767px) and (min-width:469px){
+    .posts__item{
+        flex-direction: column;
+    }
+    .item__content{
+        width: 100%;
+    }
+    .item__image{
+        width: 100%;
+        order: -1;
+        height: 15rem;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:469px){
+    .posts__item{
+        flex-direction: column;
+    }
+    .item__content{
+        width: 100%;
+    }
+    .item__image{
+        width: 100%;
+        order: -1;
+        height: 15rem;
+        margin: auto;
+    }
+    .item__heading{
+        font-size: 1rem;
+    }
+    .item__details{
+        font-size: .8rem;
+    }
+    .item__date{
+        font-size: .5rem;
+    }
+
+}

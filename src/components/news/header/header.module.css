@@ -18,3 +18,14 @@
 .header p{
     color: #53575B;
 }
+@media only screen and (max-width:469px){
+    .header__heading{
+        font-size: 1rem;
+    }
+    .header__details{
+        font-size:.8rem;
+    }
+    .header__date{
+        font-size: .5rem;
+    }
+}
